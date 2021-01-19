@@ -18,6 +18,8 @@
         @import url("Project.css");
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Yellowtail&display=swap" rel="stylesheet">
     <title>Hollywood star who looks like me.</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -32,7 +34,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script data-ad-client="ca-pub-2137718561795055" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-2137718561795055" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
@@ -51,11 +54,19 @@
         <p id="notice">※ 얼굴이 잘 보이는 사진을 추가해주세요.</p>
         <div class="file-upload-content">
             <img class="file-upload-image" id="Face-image" src="#" alt="your image" />
+            <div class="result-title"></div>
+            <a class="file-upload-image3" href="" target="_blank"><img class="file-upload-image2" id="Face-image2"
+                    src="" title=""></a>
+            <a class="file-upload-image5" href="" target="_blank"><img class="file-upload-image4" id="Face-image4"
+                    src="" title=""></a>
+            <div class="actor-name"></div>
             <div id="loading" class="animated bounce">
                 <div class="spinner-grow" role="status"></div>
                 <p class="text-center">. . . Analyzing</p>
             </div>
             <div id="label-container"></div>
+            <div class="actor-list"></div>
+            <div class="notice2"></div>
             <div class="image-title-wrap">
                 <button type="button" onclick="removeUpload()" class="remove-image">다른 사진으로 <span
                         class="image-title">재시도</span></button>
@@ -64,7 +75,6 @@
     </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="addthis_inline_share_toolbox"></div>
-
 
     <!-- <button type="button" onclick="init()">Start</button>
     <button type="button" onclick="predict()">예측</button> -->
@@ -93,7 +103,7 @@
             maxPredictions = model.getTotalClasses();
 
             labelContainer = document.getElementById("label-container");
-            for (let i = 0; i < maxPredictions; i++) { // and class labels
+            for (let i = 13; i < maxPredictions; i++) { // and class labels
                 var elemnt = document.createElement("div")
                 elemnt.classList.add("result");
                 labelContainer.appendChild(elemnt);
@@ -106,60 +116,271 @@
             const prediction = await model.predict(image, false);
 
             if (prediction[0].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 1960년대 미국 할리우드를 주름잡았던 매력적인 남성배우들과 유사한 분위기와 이미지를 가지고 있습니다. 강인한 선과 중후한 남성미는 그들의 시그니처 포인트이며, 『낮은 목소리로 말하고, 천천히 말하고, 너무 많이 말하지 말라.』라는 명언으로 잘 알려진 John Wayne은 현재까지도 남성미의 대표로 추앙받고 있습니다. 이 당시 대표적인 배우로는 Albert Finney, Anthony Perkins, John Wayne, Marcello Mastroianni, Max von Sydow, Rex Harrison, Robert Mitchum 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 166)"
+                labelContainer.childNodes[0].innerHTML = "당신은 1960년대 미국 할리우드를 주름잡았던 매력적인 남성배우들과 유사한 분위기와 이미지를 가지고 있습니다. 강인한 선과 중후한 남성미는 그들의 시그니처 포인트이며, “낮은 목소리로 말하고, 천천히 말하고, 너무 많이 말하지 말라.”라는 명언으로 잘 알려진 John Wayne은 현재까지도 남성미의 대표로 추앙받고 있습니다."
+                $('.result-title').html('<p class="result-title">1960 HOLLYWOOD ACTOR</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 남성배우로는 Albert Finney, Anthony Perkins, John Wayne, Marcello Mastroianni, Max von Sydow, Rex Harrison, Robert Mitchum 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://jooinn.com/img/get')
+                $('.file-upload-image2').attr('src', './img2/John Wayne.jpg')
+                $('.file-upload-image2').attr('title', 'Jooin – Free stock photos')
+
+                $('.file-upload-image5').attr('href', 'https://commons.wikimedia.org/wiki/File:Robert_Mitchum_1955.jpg')
+                $('.file-upload-image4').attr('src', './img2/Robert Mitchum.jpg')
+                $('.file-upload-image4').attr('title', 'National Archives of Norway, CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons')
+
+                $('.actor-name').html('<p class="actor-name">JOHN WAYNE / Robert Mitchum</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 166)</p>')
+
             } else if (prediction[1].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 1960년대 미국 할리우드를 매혹적인 색체로 담뿍 적신 여성배우들과 비슷한 감정을 들게 만듭니다. 이성의 마음을 뒤흔드는 고혹적인 매력은 그녀들의 시그니처 포인트이며, Marilyn Monroe은 지금까지도 세계적인 섹시 심벌로 기억되고 있습니다. 그리고 『아름다운 머리카락을 갖고 싶으면 하루에 한 번 어린이가 손가락으로 너의 머리를 쓰다듬게 하라.』라는 말로 전 세계적인 기부문화를 이끌어낸 『세기의 연인』 Audrey Hepburn 역시 현재까지 아름다움의 대명사로 여겨지고 있습니다. 이 당시 대표적인 배우로는 Audrey Hepburn, Brigitte Bardot, Catherine Deneuve, Elizabeth Taylor, Marilyn Monroe, Sophia Loren 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 290)"
+                labelContainer.childNodes[0].innerHTML = "당신은 1960년대 미국 할리우드를 매혹적인 색체로 담뿍 적신 여성배우들과 비슷한 감정을 들게 만듭니다. 이성의 마음을 뒤흔드는 고혹적인 매력은 그녀들의 시그니처 포인트이며, Marilyn Monroe은 지금까지도 세계적인 섹시심벌로 기억되고 있습니다. 그리고 『아름다운 머리카락을 갖고 싶으면 하루에 한 번 어린이가 손가락으로 너의 머리를 쓰다듬게 하라.』라는 말로 전 세계적인 기부문화를 이끌어낸 『세기의 연인』 Audrey Hepburn 역시 현재까지 아름다움의 대명사로 여겨지고 있습니다."
+                $('.result-title').html('<p class="result-title">1960 HOLLYWOOD ACTRESS</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 여성배우로는 Audrey Hepburn, Brigitte Bardot, Catherine Deneuve, Elizabeth Taylor, Marilyn Monroe, Sophia Loren 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://commons.wikimedia.org/wiki/File:Monroe_1953_publicity.jpg')
+                $('.file-upload-image2').attr('src', './img2/Marilyn Monroe.jpg')
+                $('.file-upload-image2').attr('title', 'Frank Powolny, Public domain, via Wikimedia Commons')
+
+                $('.file-upload-image5').attr('href', 'https://commons.wikimedia.org/wiki/File:Audrey_Hepburn_smokes.jpg')
+                $('.file-upload-image4').attr('src', './img2/Audrey Hepburn.jpg')
+                $('.file-upload-image4').attr('title', 'Audrey Hepburn, Public domain, via Wikimedia Commons')
+
+                $('.actor-name').html('<p class="actor-name">MARILYN MONROE & AUDREY HEPBURN</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 290)</p>')
+
             } else if (prediction[2].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 1970년대 미국 할리우드에 새로운 가능성과 매력을 선사한 남성배우들과 유사한 결을 보입니다. 날카로우면서도 음영이 확실한 이목구비와 자신만의 독특한 매력을 자신 있게 내보이는 모습은 그들의 시그니처 포인트이며, 경쾌한 미소와 상대를 꿰뚫어보는 듯한 강렬한 눈빛의 주인공인 Jack Nicholson은 현재까지도 영화사의 한 획을 그은 천재로 일컬어집니다. 그리고 상대를 끌어당기는 깊은 눈빛을 지닌 Dustin Hoffman 역시 할리우드 영화 산업에 새 생명을 불어넣은 주역으로 평가받고 있습니다. 이 당시 대표적인 배우로는 Art Carney, Dustin Hoffman, Gene Hackman, George C. Scott, Jack Lemmon, Jack Nicholson, Jon Voight, Marlon Brando, Peter Finch, Richard Dreyfuss 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 212)"
+                labelContainer.childNodes[0].innerHTML = "당신은 1970년대 미국 할리우드에 새로운 가능성과 매력을 선사한 남성배우들과 유사한 결을 보입니다. 날카로우면서도 음영이 확실한 이목구비와 자신만의 독특한 매력을 자신 있게 내보이는 모습은 그들의 시그니처 포인트이며, 경쾌한 미소와 상대를 꿰뚫어보는 듯한 강렬한 눈빛의 주인공인 Jack Nicholson은 현재까지도 영화사의 한 획을 그은 천재로 일컬어집니다. 그리고 상대를 끌어당기는 깊은 눈빛을 지닌 Dustin Hoffman 역시 할리우드 영화산업에 새 생명을 불어넣은 주역으로 평가받고 있습니다."
+                $('.result-title').html('<p class="result-title">1970 HOLLYWOOD ACTOR</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 남성배우로는 Art Carney, Dustin Hoffman, Gene Hackman, George C. Scott, Jack Lemmon, Jack Nicholson, Jon Voight, Marlon Brando, Peter Finch, Richard Dreyfuss 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://www.photofromtheworld.com/photo_Jack%20Nicholson.asp')
+                $('.file-upload-image2').attr('src', './img2/Jack Nicholson.jpg')
+                $('.file-upload-image2').attr('title', 'https://www.photofromtheworld.com/photo_Jack%20Nicholson.asp')
+
+                $('.file-upload-image5').attr('href', 'https://commons.wikimedia.org/wiki/File:Dustin_Hoffman_-_1968.jpg?uselang=ko')
+                $('.file-upload-image4').attr('src', './img2/Dustin Hoffman.jpg')
+                $('.file-upload-image4').attr('title', 'Studio, Public domain, via Wikimedia Commons')
+
+                $('.actor-name').html('<p class="actor-name">JACK NICHOLSON & DUSTIN HOFFMAN</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 212)</p>')
+
             } else if (prediction[3].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 1970년대 미국 할리우드를 모든 이들에게 각인시켰던 여성배우들과 비슷한 매력을 지니고 있습니다. 금세 사랑에 빠져버릴 것 같은 아름다운 눈동자와 수려하게 피어있는 꽃과 같은 아름다움은 그녀들의 시그니처 포인트입니다. 모든 남성들의 첫사랑이라고 불리는 스타워즈의 레아공주 역의 Carrie Fisher는 지금까지도 남성들의 가슴속에 자리 잡고 있으며, 아역출신 배우 중 엄청난 성공을 거둔 Jodie Foster역시 현재까지 전 세계 사람들의 사랑을 받고 있습니다. 이 당시 대표적인 배우로는 Carrie Fisher, Cheryl Ladd, Farrah Fawcett, Faye Dunaway, Goldie Hawn, Jodie Foster, Lynda Carter, Meryl Streep, Olivia Newton-John 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 308)"
+                labelContainer.childNodes[0].innerHTML = "당신은 1970년대 미국 할리우드를 모든 이들에게 각인시켰던 여성배우들과 비슷한 매력을 지니고 있습니다. 금세 사랑에 빠져버릴 것 같은 아름다운 눈동자와 수려하게 피어있는 꽃과 같은 아름다움은 그녀들의 시그니처 포인트입니다. 모든 남성들의 첫사랑이라고 불리는 스타워즈의 레아공주 역의 Carrie Fisher는 지금까지도 남성들의 가슴속에 자리 잡고 있으며, 아역출신 배우 중 엄청난 성공을 거둔 Jodie Foster역시 현재까지 전 세계 사람들의 사랑을 받고 있습니다."
+
+                $('.result-title').html('<p class="result-title">1970 HOLLYWOOD ACTRESS</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 여성배우로는 Carrie Fisher, Cheryl Ladd, Farrah Fawcett, Faye Dunaway, Goldie Hawn, Jodie Foster, Lynda Carter, Meryl Streep, Olivia Newton-John 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://twitter.com/rollingstone/status/813806029599363077')
+                $('.file-upload-image2').attr('src', './img2/Carrie Fisher.jpg')
+                $('.file-upload-image2').attr('title', 'https://www.rollingstone.com/movies/movie-news/carrie-fisher-princess-leia-in-star-wars-dead-at-60-114018/')
+
+                $('.file-upload-image5').attr('href', 'https://wallpaperaccess.com/jodie-foster')
+                $('.file-upload-image4').attr('src', './img2/Jodie Foster.jpg')
+                $('.file-upload-image4').attr('title', 'https://wallpaperaccess.com/jodie-foster')
+
+                $('.actor-name').html('<p class="actor-name">CARRIE FISHER & JODIE FOSTER</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 308)</p>')
+
             } else if (prediction[4].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 1980년대 미국 할리우드에 적포도주의 진한 향과 묵직한 바디감 같은 남성미를 스며들게 한 남성배우들과 비슷한 이미지와 향을 가지고 있습니다. 목탄으로 그린 것 같은 진한 이목구비와 동시에 풍겨오는 부드럽게 번지는 안정감은 그들의 시그니처 포인트입니다. 40년에 걸쳐 왕성한 활동을 하고 있는 Robert De Niro은 현재까지도 사랑 받는 대표적인 할리우드 스타입니다. 이 당시 대표적인 배우로는 Daniel Day-Lewis, F. Murray Abraham, Robert De Niro 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 89)"
+                labelContainer.childNodes[0].innerHTML = "당신은 1980년대 미국 할리우드에 적포도주의 진한 향과 묵직한 바디감 같은 남성미를 스며들게 한 남성배우들과 비슷한 이미지와 향을 가지고 있습니다. 목탄으로 그린 것 같은 진한 이목구비와 동시에 풍겨오는 부드럽게 번지는 안정감은 그들의 시그니처 포인트입니다. 40년에 걸쳐 왕성한 활동을 하고 있는 Robert De Niro은 현재까지도 사랑 받는 대표적인 할리우드 스타입니다."
+
+                $('.result-title').html('<p class="result-title">1980 HOLLYWOOD ACTOR</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 남성배우로는 Daniel Day-Lewis, F. Murray Abraham, Robert De Niro 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://commons.wikimedia.org/wiki/File:Robert_De_Niro_KVIFF_portrait.jpg')
+                $('.file-upload-image2').attr('src', './img2/Robert De Niro.jpg')
+                $('.file-upload-image2').attr('title', 'che (Please credit as "Petr Novák, Wikipedia" in case you use this outside Wikimedia projects.), CC BY-SA 2.5 <https://creativecommons.org/licenses/by-sa/2.5>, via Wikimedia Commons')
+
+                $('.file-upload-image5').attr('href', 'https://commons.wikimedia.org/wiki/File:Dustin_Hoffman_-_1968.jpg?uselang=ko')
+                $('.file-upload-image4').attr('src', './img2/Dustin Hoffman.jpg')
+                $('.file-upload-image4').attr('title', 'Studio, Public domain, via Wikimedia Commons')
+
+                $('.actor-name').html('<p class="actor-name">ROBERT DE NIRO & DUSTIN HOFFMAN</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 89)</p>')
+
             } else if (prediction[5].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 1980년대 할리우드에 순수함과 섹시함의 공존이 가능하다는 확장성을 열어준 여성배우들과 비슷한 색과 분위기를 갖고 있습니다. 순수함과 매혹적인 섹시함을 동시에 발산하며 본인들만의 영역을 재창조하는 능력은 그녀들의 시그니처 포인트이며, 다양한 분야에서 두각을 보여준 Demi Moore의 경우 현재까지도 매력적인 심벌로 남아있습니다. 이 당시 배우로는 Demi Moore, Lisa Bonet, Marlee Matlin, Sissy Spacek 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 90)"
+                labelContainer.childNodes[0].innerHTML = "당신은 1980년대 할리우드에 순수함과 섹시함의 공존이 가능하다는 확장성을 열어준 여성배우들과 비슷한 색과 분위기를 갖고 있습니다. 순수함과 매혹적인 섹시함을 동시에 발산하며 본인들만의 영역을 재창조하는 능력은 그녀들의 시그니처 포인트이며, 다양한 분야에서 두각을 보여준 Demi Moore의 경우 현재까지도 매력적인 심벌로 남아있습니다."
+
+                $('.result-title').html('<p class="result-title">1980 HOLLYWOOD ACTRESS</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 여성배우로는 Demi Moore, Lisa Bonet, Marlee Matlin, Sissy Spacek 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://commons.wikimedia.org/wiki/File:Demi_Moore_2012_(cropped).jpg?uselang=ko')
+                $('.file-upload-image2').attr('src', './img2/Demi Moore.jpg')
+                $('.file-upload-image2').attr('title', 'Oriflame Cosmetics, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons')
+
+                $('.file-upload-image5').attr('href', 'https://mysweetcharity.com/2017/07/mysweetcharity-opportunity-each-moment-matters/')
+                $('.file-upload-image4').attr('src', './img2/Marlee Matlin.jpg')
+                $('.file-upload-image4').attr('title', 'https://mysweetcharity.com/2017/07/mysweetcharity-opportunity-each-moment-matters/')
+
+                $('.actor-name').html('<p class="actor-name">DEMI MOORE & MARLEE MATLIN</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 90)</p>')
+
             } else if (prediction[6].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 1990년대 할리우드를 묵직한 담배 향과 건실한 이미지로 수놓은 남성배우들과 비슷한 결과 풍미를 가지고 있습니다. 야성미를 드러내며 압도적인 눈빛과 향이 짙은 럼주처럼 포근함과 안정감을 함께 불러오는 능력은 그들의 시그니처 포인트이며, 영화 대부로 잘 알려진 Al Pacino는 현재까지도 그의 이미지를 넘어선 배우가 없다고 할 만큼 확고한 정체성을 가지고 있습니다. 그리고 건실하면서도 퇴폐적인 매력을 뽐내는 Nicolas Cage의 경우에도 현재까지 꾸준한 사랑을 받고 있습니다. 이 당시 배우로는 Al Pacino, Nicolas Cage, Tom Hanks 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 64)"
+                labelContainer.childNodes[0].innerHTML = "당신은 1990년대 할리우드를 묵직한 담배 향과 건실한 이미지로 수놓은 남성배우들과 비슷한 결과 풍미를 가지고 있습니다. 야성미를 드러내며 압도적인 눈빛과 향이 짙은 럼주처럼 포근함과 안정감을 함께 불러오는 능력은 그들의 시그니처 포인트이며, 영화 대부로 잘 알려진 Al Pacino는 현재까지도 그의 이미지를 넘어선 배우가 없다고 할 만큼 확고한 정체성을 가지고 있습니다. 그리고 건실하면서도 퇴폐적인 매력을 뽐내는 Nicolas Cage의 경우에도 현재까지 꾸준한 사랑을 받고 있습니다."
+
+                $('.result-title').html('<p class="result-title">1990 HOLLYWOOD ACTOR</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 남성배우로는 Al Pacino, Nicolas Cage, Tom Hanks 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://commons.wikimedia.org/wiki/File:Al_Pacino_-_Hummel.jpg')
+                $('.file-upload-image2').attr('src', './img2/Al Pacino.jpg')
+                $('.file-upload-image2').attr('title', 'Theater Company of Boston, Public domain, via Wikimedia Commons')
+
+                $('.file-upload-image5').attr('href', 'https://mocah.org/161502-nicolas-cage-1920x1200.html')
+                $('.file-upload-image4').attr('src', './img2/Nicolas Cage.jpg')
+                $('.file-upload-image4').attr('title', 'https://mocah.org/161502-nicolas-cage-1920x1200.html')
+
+                $('.actor-name').html('<p class="actor-name">AL PACINO & NICOLAS CAGE</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 64)</p>')
+
             } else if (prediction[7].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 1990년대 할리우드에 기분 좋은 미소와 자연스런 아름다움을 뿌리내린 여성배우들과 비슷한 향내를 품고 있습니다. 가공되어 있으면서도 수수함을 잃지 않고 자연스러운 아름다움을 뽐내는 능력은 그녀들의 시그니처 포인트이며, Gwyneth Paltrow의 경우 전 세계를 히어로무비의 광팬으로 만들어버린 어벤져스 : 엔드게임(페퍼 포츠역)에 출연하며 꾸준한 사랑을 받고 있습니다. 이 당시 배우로는 Gillian Anderson, Gwyneth Paltrow, Helen Hunt, Karyn Parsons, Kate Winslet, Tiffani Thiessen 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 117)"
+                labelContainer.childNodes[0].innerHTML = "당신은 1990년대 할리우드에 기분 좋은 미소와 자연스런 아름다움을 뿌리내린 여성배우들과 비슷한 향내를 품고 있습니다. 가공되어 있으면서도 수수함을 잃지 않고 자연스러운 아름다움을 뽐내는 능력은 그녀들의 시그니처 포인트이며, Gwyneth Paltrow의 경우 전 세계를 히어로무비의 광팬으로 만들어버린 어벤져스 : 엔드게임(페퍼 포츠역)에 출연하며 꾸준한 사랑을 받고 있습니다."
+
+                $('.result-title').html('<p class="result-title">1990 HOLLYWOOD ACTRESS</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 여성배우로는 Gillian Anderson, Gwyneth Paltrow, Helen Hunt, Karyn Parsons, Kate Winslet, Tiffani Thiessen 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://mocah.org/167155-gwyneth-paltrow-1920x1200.html')
+                $('.file-upload-image2').attr('src', './img2/Gwyneth Paltrow.jpg')
+                $('.file-upload-image2').attr('title', 'https://mocah.org/167155-gwyneth-paltrow-1920x1200.html')
+
+                $('.file-upload-image5').attr('href', 'https://mocah.org/157403-kate-winslet-1920x1200.html')
+                $('.file-upload-image4').attr('src', './img2/Kate Winslet.jpg')
+                $('.file-upload-image4').attr('title', 'https://mocah.org/157403-kate-winslet-1920x1200.html')
+
+                $('.actor-name').html('<p class="actor-name">GWYNETH PALTROW & KATE WINSLET</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 117)</p>')
+
             } else if (prediction[8].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 2000년대 할리우드의 황금기를 다시금 불러온 남성배우들과 비슷한 분위기와 이미지를 갖고 있습니다. 마치 소설과 만화책 속에서 방금 나온 듯한 느낌을 주며, 바라보고 있는 것만으로도 사랑에 빠져버릴 것 같은 아우라는 그들의 시그니처 포인트입니다. 지금도 당신의 마음을 훔쳤을 거라고 자신 있게 말할 수 있는 Leonardo DiCaprio는 현재도 전 세계 사람들의 사랑을 한 몸에 받고 있으며, “Fall Forward” 졸업연설로 잘 알려진 Denzel Washington 역시 사람들의 가슴속에 아로새겨 있습니다. 이 당시 배우로는 Adrien Brody, Denzel Washington, Eddie Redmayne, Leonardo DiCaprio, Russell Crowe 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 117)"
+                labelContainer.childNodes[0].innerHTML = "당신은 2000년대 할리우드의 황금기를 다시금 불러온 남성배우들과 비슷한 분위기와 이미지를 갖고 있습니다. 마치 소설과 만화책 속에서 방금 나온 듯한 느낌을 주며, 바라보고 있는 것만으로도 사랑에 빠져버릴 것 같은 아우라는 그들의 시그니처 포인트입니다. 지금도 당신의 마음을 훔쳤을 거라고 자신 있게 말할 수 있는 Leonardo DiCaprio는 현재도 전 세계 사람들의 사랑을 한 몸에 받고 있으며, 『Fall Forward』 졸업연설로 잘 알려진 Denzel Washington 역시 사람들의 가슴속에 아로새겨 있습니다."
+
+                $('.result-title').html('<p class="result-title">2000 HOLLYWOOD ACTOR</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 남성배우로는 Adrien Brody, Denzel Washington, Eddie Redmayne, Leonardo DiCaprio, Russell Crowe 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_2002.jpg')
+                $('.file-upload-image2').attr('src', './img2/Leonardo DiCaprio.jpg')
+                $('.file-upload-image2').attr('title', 'Georges Biard, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons')
+
+                $('.file-upload-image5').attr('href', 'https://mocah.org/157163-denzel-washington-1920x1200.html')
+                $('.file-upload-image4').attr('src', './img2/Denzel Washington.jpg')
+                $('.file-upload-image4').attr('title', 'https://mocah.org/157163-denzel-washington-1920x1200.html')
+
+                $('.actor-name').html('<p class="actor-name">LEONARDO DICAPRIO & DENZEL WASHINGTON</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 117)</p>')
+
             } else if (prediction[9].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 2000년대 할리우드를 달콤하고 상큼한 향내로 가득 채운 여성배우들과 비슷한 이미지와 분위기를 갖고 있습니다. 톡톡 튀며 상큼하고 건강미 넘치는 독보적인 매력은 그녀들의 시그니처 포인트이며, 현재도 아메리칸 스윗하트의 대명사로 사용되는 Julia Roberts는 웃음기 가득한 모습으로 만인의 연인으로 자리매김 하였습니다. 그리고 장르를 가리지 않고 자신의 역량을 마음껏 보여준 Nicole Kidman 역시 현재까지도 최고의 할리우드 여배우 중 하나로 손꼽히고 있습니다. 이 당시 배우로는 Halle Berry, Hilary Swank, Julia Roberts, Nicole Kidman, Reese Witherspoon, Sandra Bullock 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 142)"
+                labelContainer.childNodes[0].innerHTML = "당신은 2000년대 할리우드를 달콤하고 상큼한 향내로 가득 채운 여성배우들과 비슷한 이미지와 분위기를 갖고 있습니다. 톡톡 튀며 상큼하고 건강미 넘치는 독보적인 매력은 그녀들의 시그니처 포인트이며, 현재도 아메리칸 스윗하트의 대명사로 사용되는 Julia Roberts는 웃음기 가득한 모습으로 만인의 연인으로 자리매김 하였습니다. 그리고 장르를 가리지 않고 자신의 역량을 마음껏 보여준 Nicole Kidman역시 현재까지도 최고의 할리우드 여성배우 중 하나로 손꼽히고 있습니다.)"
+
+                $('.result-title').html('<p class="result-title">2000 HOLLYWOOD ACTRESS</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 여성배우로는 Halle Berry, Hilary Swank, Julia Roberts, Nicole Kidman, Reese Witherspoon, Sandra Bullock 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://mocah.org/166992-julia-roberts-1920x1200.html')
+                $('.file-upload-image2').attr('src', './img2/Julia Roberts.jpg')
+                $('.file-upload-image2').attr('title', 'https://mocah.org/166992-julia-roberts-1920x1200.html')
+
+                $('.file-upload-image5').attr('href', 'https://commons.wikimedia.org/wiki/File:Nicole_Kidman_Cannes_2017_2.jpg')
+                $('.file-upload-image4').attr('src', './img2/Nicole Kidman.jpg')
+                $('.file-upload-image4').attr('title', 'Georges Biard, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons')
+
+                $('.actor-name').html('<p class="actor-name">JULIA ROBERTS & NICOLE KIDMAN</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 142)</p>')
+
             } else if (prediction[10].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 2010년대 할리우드에 다시금 야성적인 남성미와 깊은 여운을 남긴 남성배우들과 비슷한 결을 갖고 있습니다. 야성적인 가면 뒤에 깊은 남성미를 숨기고 있어 상대로 하여금 헤어 나올 수 없게 만드는 매력은 그들의 시그니처 포인트이며, 베트맨으로 잘 알려진 Ben Affleck과 본 시리즈로 잘 알려진 Matt Damon은 격투선수와 견주어도 전혀 밀리지 않는 운동실력과 민첩함으로 그들의 매력을 더욱 더 부가시키고 있습니다. 이 당시 배우로는 Ben Affleck, Christian Bale, Colin Firth, Daniel Radcliffe, Matt Damon, Ryan Reynolds 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 153)"
+                labelContainer.childNodes[0].innerHTML = "당신은 2010년대 할리우드에 다시금 야성적인 남성미와 깊은 여운을 남긴 남성배우들과 비슷한 결을 갖고 있습니다. 야성적인 가면 뒤에 깊은 남성미를 숨기고 있어 상대로 하여금 헤어 나올 수 없게 만드는 매력은 그들의 시그니처 포인트이며, 베트맨으로 잘 알려진 Ben Affleck과 본 시리즈로 잘 알려진 Matt Damon은 격투선수와 견주어도 전혀 밀리지 않는 운동실력과 민첩함으로 그들의 매력을 더욱 더 부가시키고 있습니다."
+
+                $('.result-title').html('<p class="result-title">2010 HOLLYWOOD ACTOR</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 남성배우로는 Ben Affleck, Christian Bale, Colin Firth, Daniel Radcliffe, Matt Damon, Ryan Reynolds 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://commons.wikimedia.org/wiki/File:Ben_Affleck_by_Gage_Skidmore_3.jpg')
+                $('.file-upload-image2').attr('src', './img2/Ben Affleck.jpg')
+                $('.file-upload-image2').attr('title', 'Gage Skidmore, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons')
+
+                $('.file-upload-image5').attr('href', 'https://commons.wikimedia.org/wiki/File:Damon_cropped.jpg')
+                $('.file-upload-image4').attr('src', './img2/Matt Damon.jpg')
+                $('.file-upload-image4').attr('title', 'nicolas genin from Paris, France, CC BY-SA 2.0 <https://creativecommons.org/licenses/by-sa/2.0>, via Wikimedia Commons')
+
+                $('.actor-name').html('<p class="actor-name">BEN AFFLECK & MATT DAMON</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 153)</p>')
+
             } else if (prediction[11].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 2010년대 할리우드를 고혹적인 매력과 아름다움으로 매료시킨 여성배우들과 비슷한 분위기와 이미지를 갖고 있습니다. 지적이며 자신만의 아름다움을 바로세울 수 있는 매력은 그녀들의 시그니처 포인트이며, 정변의 아이콘이라 불리는 Emma Watson은 아역배우 시절부터 성인이 된 지금까지 전 세계 사람들로부터 꾸준한 사랑을 받고 있습니다. 그리고 매력적인 미소로 유명한 Anne Hathaway와 Natalie Portman 역시 대표적인 아름다운 여성배우로 사랑받고 있습니다. 이 당시 배우로는 Amy Adams, Anne Hathaway, Emma Watson, Helena Bonham Carter, Jennifer Lawrence, Julianne Moore, Kristen Stewart, Michelle Williams, Natalie Portman 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 223)"
+                labelContainer.childNodes[0].innerHTML = "당신은 2010년대 할리우드를 고혹적인 매력과 아름다움으로 매료시킨 여성배우들과 비슷한 분위기와 이미지를 갖고 있습니다. 지적이며 자신만의 아름다움을 바로세울 수 있는 매력은 그녀들의 시그니처 포인트이며, 정변의 아이콘이라 불리는 Emma Watson은 아역배우 시절부터 성인이 된 지금까지 전 세계 사람들로부터 꾸준한 사랑을 받고 있습니다. 그리고 매력적인 미소로 유명한 Anne Hathaway와 Natalie Portman역시 대표적인 아름다운 여성배우로 사랑받고 있습니다."
+
+                $('.result-title').html('<p class="result-title">2010 HOLLYWOOD ACTRESS</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 여성배우로는 Amy Adams, Anne Hathaway, Emma Watson, Helena Bonham Carter, Jennifer Lawrence, Julianne Moore, Kristen Stewart, Michelle Williams, Natalie Portman 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://mocah.org/112268-emma-watson-em-emma-charlotte-duerre-watson-sofa-black-dress.html')
+                $('.file-upload-image2').attr('src', './img2/Emma Watson.jpg')
+                $('.file-upload-image2').attr('title', 'https://mocah.org/112268-emma-watson-em-emma-charlotte-duerre-watson-sofa-black-dress.html')
+
+                $('.file-upload-image5').attr('href', 'https://mocah.org/1149342-white-women-model-brunette-celebrity-actress-dress-shirt-pattern-fashion-anne-hathaway-clothing-desi.html')
+                $('.file-upload-image4').attr('src', './img2/Anne Hathaway.jpg')
+                $('.file-upload-image4').attr('title', 'https://mocah.org/1149342-white-women-model-brunette-celebrity-actress-dress-shirt-pattern-fashion-anne-hathaway-clothing-desi.html')
+
+                $('.actor-name').html('<p class="actor-name">EMMA WATSON & ANNE HATHAWAY</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 223)</p>')
+
             } else if (prediction[12].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 2020년대 할리우드를 지켜낸 히어로로 칭해지는 남성배우들과 유사한 매력을 지니고 있습니다. 조각과 견주어도 부족함 없는 완벽한 몸매와 부드러움과 강인함을 동시에 갖춘 이미지는 그들의 시그니처 포인트이며, 이제는 본명보다는 『캡』 또는 『캡틴아메리카』로 더 알려진 Chris Evans와 『천둥의 신』 Chris Hemsworth는 하나의 키워드로 자리 잡았습니다. 그리고 히어로무비의 연대기의 시작과 끝을 책임졌던 우리들의 『아이언맨』 Robert Downey Jr역시 시대를 대표하는 아이콘이 되었습니다. 이 당시 배우로는 Benedict Cumberbatch, Bradley Cooper, Chris Evans, Chris Hemsworth, Johnny Depp, Robert Downey Jr, Tom Holland 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 181)"
+                labelContainer.childNodes[0].innerHTML = "당신은 2020년대 할리우드를 지켜낸 히어로로 칭해지는 남성배우들과 유사한 매력을 지니고 있습니다. 조각과 견주어도 부족함 없는 완벽한 몸매와 부드러움과 강인함을 동시에 갖춘 이미지는 그들의 시그니처 포인트이며, 이제는 본명보다는 『캡』 또는 『캡틴아메리카』로 더 알려진 Chris Evans와 『천둥의 신』 Chris Hemsworth는 하나의 키워드로 자리 잡았습니다. 그리고 히어로무비의 연대기의 시작과 끝을 책임졌던 우리들의 『아이언맨』 Robert Downey Jr역시 시대를 대표하는 아이콘이 되었습니다.)"
+
+                $('.result-title').html('<p class="result-title">2020 HOLLYWOOD ACTOR</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 남성배우로는 Benedict Cumberbatch, Bradley Cooper, Chris Evans, Chris Hemsworth, Johnny Depp, Robert Downey Jr, Tom Holland 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://mocah.org/106412-chris-evans-4k-photo.html')
+                $('.file-upload-image2').attr('src', './img2/Chris Evans.jpg')
+                $('.file-upload-image2').attr('title', 'https://mocah.org/106412-chris-evans-4k-photo.html')
+
+                $('.file-upload-image5').attr('href', 'https://commons.wikimedia.org/wiki/File:Chris_Hemsworth_by_Gage_Skidmore.jpg')
+                $('.file-upload-image4').attr('src', './img2/Chris Hemsworth.jpg')
+                $('.file-upload-image4').attr('title', 'Gage Skidmore, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons')
+
+                $('.actor-name').html('<p class="actor-name">CHRIS EVANS & CHRIS HEMSWORTH</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 181)</p>')
+
             } else if (prediction[13].probability.toFixed(2) > 0.95) {
-                labelContainer.childNodes[0].innerHTML = " 당신은 2020년대 할리우드에 신선한 바람과 다채로운 아름다운을 선사한 여성배우들과 비슷한 이미지와 분위기를 갖고 있습니다. 본인들만의 아름다움과 건강한 여성의 아름다움은 그녀들의 시그니처 포인트입니다. 우리에게 잘 알려져 있는 『블랙위도우』 Scarlett Johansson은 말로 표현할 수 없을 정도의 다양한 매력을 발산하여 전 세계 사람들의 사랑을 받고 있습니다. 이 당시 배우로는 Emily Blunt, Eva Green, Jessica Alba, Karen Gillan, Megan Fox, Scarlett Johansson, Sophie Turner, Tessa Thompson 등이 있습니다. ※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 203)"
-            } else { labelContainer.childNodes[0].innerHTML = " 당신은 매우 신선한 매력과 아름다움을 가지고 있습니다. 당신의 매력은 1960년대부터 2020년대까지 할리우드에서 보여줬던 사회 통념적 아름다움과 그 결을 다르게 걸어왔습니다. 이제 곧 당신의 아름다움이 도래할 것입니다. ※ 얼굴이 잘 보이지 않는 사진은 분석 시 오류를 유발 할 수 있습니다." }
+                labelContainer.childNodes[0].innerHTML = "당신은 2020년대 할리우드에 신선한 바람과 다채로운 아름다운을 선사한 여성배우들과 비슷한 이미지와 분위기를 갖고 있습니다. 본인들만의 아름다움과 건강한 여성의 아름다움은 그녀들의 시그니처 포인트입니다. 우리에게 잘 알려져 있는 『블랙위도우』 Scarlett Johansson은 말로 표현할 수 없을 정도의 다양한 매력을 발산하여 전 세계 사람들의 사랑을 받고 있습니다."
+
+                $('.result-title').html('<p class="result-title">2020 HOLLYWOOD ACTRESS</p>')
+                $('.actor-list').html('<p id=actor-list>이 당시 대표적인 여성배우로는 Emily Blunt, Eva Green, Jessica Alba, Karen Gillan, Megan Fox, Scarlett Johansson, Sophie Turner, Tessa Thompson 등이 있습니다.</p>')
+
+                $('.file-upload-image3').attr('href', 'https://mocah.org/4590679-scarlett-johansson-women-actress-celebrity-simple-background.html')
+                $('.file-upload-image2').attr('src', './img2/Scarlett Johansson.jpg')
+                $('.file-upload-image2').attr('title', 'https://mocah.org/4590679-scarlett-johansson-women-actress-celebrity-simple-background.html')
+
+                $('.file-upload-image5').attr('href', 'https://commons.wikimedia.org/wiki/File:EvaGreenByTFL2009TIFF.jpg')
+                $('.file-upload-image4').attr('src', './img2/Eva Green.jpg')
+                $('.file-upload-image4').attr('title', 'Dan Shao, CC BY-SA 2.0 <https://creativecommons.org/licenses/by-sa/2.0>, via Wikimedia Commons')
+
+                $('.actor-name').html('<p class="actor-name">SCARLETT JOHANSSON & EVA GREEN</p>')
+                $('.notice2').html('<p id=notice2>※ 해당 이미지분석은 Teachable Machine을 이용하였으며 다양한 요인으로 인해 분석에 차이가 생길 수 있습니다. (Analysis Data : 203)</p>')
+
+            } else {
+                labelContainer.childNodes[0].innerHTML = "당신은 매우 신선한 매력과 아름다움을 가지고 있습니다. 당신의 매력은 1960년대부터 2020년대까지 할리우드에서 보여줬던 사회 통념적 아름다움과 그 결을 다르게 걸어왔습니다. 이제 곧 당신의 아름다움이 도래할 것입니다."
+
+                $('.result-title').html('<p class="result-title">You have a special charm.</p>')
+                $('.notice2').html('<p id=notice2>※ 얼굴이 잘 보이지 않는 사진은 분석 시 오류를 유발 할 수 있습니다.')
+            }
 
             //  for (let i = 0; i < maxPredictions; i++) {
             //      const classPrediction =
             //          prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             //      labelContainer.childNodes[i].innerHTML = classPrediction;
             //  }
-        }
+        }    
     </script>
-        <br>
-	<div class="footer">
-        <ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-fNlUn4lj75qgKeh5" 
- data-ad-width   = "320" 
- data-ad-height  = "100"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-
-    <script src="./Project.js"></script>
     <br>
-    <script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-	new PartnersCoupang.G({"id":420023,"template":"carousel","trackingCode":"AF8995958","width":"370","height":"140"});
-</script>
-	<br>
-	<a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" targe="_blank"><img src="special_thanks_to.jpg"
-            width="370px"></a>
-	</div>
+    <div class="footer">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-fNlUn4lj75qgKeh5" data-ad-width="320"
+            data-ad-height="100"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+        <script src="./Project.js"></script>
+        <br>
+        <script src="https://ads-partners.coupang.com/g.js"></script>
+        <script>
+            new PartnersCoupang.G({ "id": 420023, "template": "carousel", "trackingCode": "AF8995958", "width": "370", "height": "140" });
+        </script>
+        <br>
+        <br>
+        <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" target="_blank"><img
+                src="./img2/special_thanks_to.jpg" width="370px"></a>
+    </div>
 </body>
 <!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
