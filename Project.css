@@ -129,11 +129,14 @@ body {
 .result {
     text-align: center;
     background-color: #f0ede4;
-    font-size: 1.0rem;
+    font-size: 1.5rem;
     color: grey;
     word-break: keep-all;
     word-wrap: break-word;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Nanum Pen Script', cursive;
 }
 
 #notice {
@@ -142,6 +145,71 @@ body {
     margin-top: 5px;
 }
 
-.addthis_inline_share_toolbox {text-align: center;}
+.addthis_inline_share_toolbox {
+  text-align: center;
+}
 
-.footer {text-align: center;}
+.footer {
+  text-align: center;
+}
+
+p.result-title {
+  background-color: #f0ede4; font-size: 2.0rem; 
+  margin-bottom: 0px; 
+  font-family: 'Staatliches', cursive; 
+  color: gray;
+}
+
+img.file-upload-image2 {
+  width: 330px;
+  text-align: center;
+  filter: blur(5px);
+  transition: all, 0.5s;
+}
+
+img.file-upload-image4 {
+  width: 330px;
+  text-align: center;
+  filter: blur(5px);
+  transition: all, 0.5s;
+}
+
+img#Face-image2:hover {
+  width: 330px;
+  text-align: center;
+  filter: blur(0px);
+  transition: all, 0.5s;
+}
+
+img#Face-image4:hover {
+  width: 330px;
+  text-align: center;
+  filter: blur(0px);
+  transition: all, 0.5s;
+}
+
+p#actor-list {
+  text-align: center;
+  background-color: #f0ede4;
+  font-size: 0.8rem;
+  color: grey;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+  p#notice2 {
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
+    word-break: keep-all;
+    word-wrap: break-word;
+  }
+  
+.actor-name {
+  background-color: #f0ede4;
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+  font-family: 'Staatliches', cursive;
+  color: gray;
+  margin-bottom: 1px;}
