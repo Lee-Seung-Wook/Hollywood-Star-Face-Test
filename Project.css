@@ -163,18 +163,18 @@ p.result-title {
 img.file-upload-image2 {
   width: 330px;
   text-align: center;
-  filter: blur(5px);
-  transition: all, 0.5s;
+  /* filter: blur(5px);
+  transition: all, 0.5s; */
 }
 
 img.file-upload-image4 {
   width: 330px;
   text-align: center;
-  filter: blur(5px);
-  transition: all, 0.5s;
+  /* filter: blur(5px);
+  transition: all, 0.5s; */
 }
 
-img#Face-image2:hover {
+/* img#Face-image2:hover {
   width: 330px;
   text-align: center;
   filter: blur(0px);
@@ -186,7 +186,7 @@ img#Face-image4:hover {
   text-align: center;
   filter: blur(0px);
   transition: all, 0.5s;
-}
+} */
 
 p#actor-list {
   text-align: center;
