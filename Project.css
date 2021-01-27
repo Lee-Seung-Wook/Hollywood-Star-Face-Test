@@ -118,11 +118,12 @@ body {
 
   p#head {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-top: 15px;
     margin-bottom: 0;
-    font-weight: bold;
-    font-family: 'Staatliches', cursive;
+    /* font-weight: bold; */
+    /* font-family: 'Staatliches', cursive; */
+    font-family: 'Nanum Pen Script', cursive;
     color: gray;
 }
 
