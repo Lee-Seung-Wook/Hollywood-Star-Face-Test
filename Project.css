@@ -7,7 +7,10 @@ body {
     background-color: #ffffff;
     width: 370px;
     margin: 0 auto;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px; 
   }
   
   .file-upload-btn {
