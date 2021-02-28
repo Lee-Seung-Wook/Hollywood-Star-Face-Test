@@ -162,7 +162,7 @@ body {
     text-align: center;
     color: rgb(253, 151, 132);
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 .addthis_inline_share_toolbox {
@@ -246,5 +246,6 @@ p#actor-list {
   color: gray;
   text-align: center;
   font-size: 0.5rem;
-  margin-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 0px;
 }
