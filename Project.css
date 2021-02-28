@@ -10,7 +10,7 @@ body {
     padding-top: 20px;
     padding-bottom: 0px;
     padding-left: 20px;
-    padding-right: 20px; 
+    padding-right: 20px;
   }
   
   .file-upload-btn {
@@ -162,6 +162,7 @@ body {
     text-align: center;
     color: rgb(253, 151, 132);
     margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 .addthis_inline_share_toolbox {
@@ -237,3 +238,12 @@ p#actor-list {
     font-size: 1.0rem;
     font-family: 'Nanum Pen Script', cursive;
     color: #cd4535};
+
+.park {margin-bottom: 8px;}
+
+#visitor {
+  font-family: 'Staatliches', cursive; 
+  color: gray;
+  text-align: center;
+  font-size: 0.5rem;
+}
