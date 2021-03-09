@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>걱정인형</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #Main_select {
+            background-color: orange;
+            color: black;
+        }
+
+        .main_notice_title {
+            border: solid 1px black;
+        }
+
+        .sub_question_answer_yes {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px skyblue;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            color: skyblue;
+            background-color: white;
+        }
+
+        .sub_question_answer_yes:hover {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px orange;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            color: orange;
+            background-color: white;
+        }
+
+        .sub_question_answer_yes:focus {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px orange;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            color: orange;
+            background-color: white;
+        }
+
+        .sub_question_answer_no {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px skyblue;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            color: skyblue;
+            background-color: white;
+        }
+
+        .sub_question_answer_no:hover {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px orange;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            color: orange;
+            background-color: white;
+        }
+
+        .sub_question_answer_no:focus {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px orange;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            color: orange;
+            background-color: white;
+        }
+
+        .main_answer_submit {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px skyblue;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            color: skyblue;
+            background-color: white;
+            margin-top: 2rem;
+        }
+
+        .main_answer_submit:hover {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px orange;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            color: orange;
+            background-color: white;
+            margin-top: 2rem;
+        }
+
+        .Sub_Question_Answer {
+            border-radius: 60%;
+            width: 2em;
+            height: 2rem;
+            background-color: white;
+            border: solid 1px black;
+            margin: 0.5rem;
+        }
+
+        .footnote {
+            word-spacing: 15rem
+        }
+
+        #none {
+            display: none;
+        }
+
+        .Sub_Q1 {
+            background-color: powderblue;
+        }
+
+        .Sub_Q2 {
+            background-color: papayawhip;
+        }
+
+        .Sub_Q3 {
+            background-color: plum;
+        }
+
+        .sub_answer1_submit {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px skyblue;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            color: skyblue;
+            background-color: white;
+            margin-top: 2rem;
+        }
+
+        .sub_answer1_submit :hover {
+            width: 10em;
+            height: 5rem;
+            border: solid 1px skyblue;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            color: skyblue;
+            background-color: white;
+            margin-top: 2rem;
+        }
+
+        .sub_answer1_submit {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_title">
+        <h2>당신을 지켜주는 걱정인형</h2>
+    </div>
+    <div class="main_notice_title">
+        <h4>본 심리테스트는 당신을 지켜주고 있는 걱정인형을 알아보는 유희성 심리테스트 입니다.</h4>
+    </div>
+    <div class="main_question_a">
+        <h3>Question1. 당신은 현재 취업과 관련된 고민을 하고 있나요?</h3>
+        <div class="sub_question1"><button class="sub_question_answer_yes"
+                onclick="MainQuestion1_1()">YES</button><button class="sub_question_answer_no"
+                onclick="MainQuestion1_2()">NO</button></div>
+    </div>
+    <div class="main_question_b">
+        <h3>Question2. 당신은 현재 이성관계와 관련된 고민을 하고 있나요?</h3>
+        <div class="sub_question2"><button class="sub_question_answer_yes"
+                onclick="MainQuestion2_1()">YES</button><button class="sub_question_answer_no"
+                onclick="MainQuestion2_2()">NO</button></div>
+    </div>
+    <div class="main_question_c">
+        <h3>Question3. 당신은 현재 건강 또는 외모와 관련된 고민을 하고 있나요?</h3>
+        <div class="sub_question3"><button class="sub_question_answer_yes"
+                onclick="MainQuestion3_1()">YES</button><button class="sub_question_answer_no"
+                onclick="MainQuestion3_2()">NO</button></div>
+    </div>
+    <div class="Main_question_value_data" style="display: none;">
+        <input type="text" value="0" id="MQA1">
+        <input type="text" value="0" id="MQA2">
+        <input type="text" value="0" id="MQA3">
+    </div>
+    <div><button class="main_answer_submit" onclick="MainResult()">여행 시작하기</button></div>
+
+    <div class="Sub_Q1" id="none">
+        <div>
+            <h3>Question. 당신은 현재 당신의 적성에 대한 자신이 없다.</h3>
+            <div class="Sub_Question1_1">
+                <button class="Sub_Question_Answer" id="SQ1_1_1" style=></button>
+                <button class="Sub_Question_Answer" id="SQ1_1_2"></button>
+                <button class="Sub_Question_Answer" id="SQ1_1_3"></button>
+                <button class="Sub_Question_Answer" id="SQ1_1_4"></button>
+                <button class="Sub_Question_Answer" id="SQ1_1_5"></button>
+                <button class="Sub_Question_Answer" id="SQ1_1_6"></button>
+                <button class="Sub_Question_Answer" id="SQ1_1_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+            <h3>Question. 당신은 현재 취업난을 겪고 있다.</h3>
+            <div class="Sub_Question1_2">
+                <button class="Sub_Question_Answer" id="SQ1_2_1"></button>
+                <button class="Sub_Question_Answer" id="SQ1_2_2"></button>
+                <button class="Sub_Question_Answer" id="SQ1_2_3"></button>
+                <button class="Sub_Question_Answer" id="SQ1_2_4"></button>
+                <button class="Sub_Question_Answer" id="SQ1_2_5"></button>
+                <button class="Sub_Question_Answer" id="SQ1_2_6"></button>
+                <button class="Sub_Question_Answer" id="SQ1_2_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+            <h3>Question. 당신은 현재 가족들의 눈치를 보고 있다.</h3>
+            <div class="Sub_Question1_3">
+                <button class="Sub_Question_Answer" id="SQ1_3_1"></button>
+                <button class="Sub_Question_Answer" id="SQ1_3_2"></button>
+                <button class="Sub_Question_Answer" id="SQ1_3_3"></button>
+                <button class="Sub_Question_Answer" id="SQ1_3_4"></button>
+                <button class="Sub_Question_Answer" id="SQ1_3_5"></button>
+                <button class="Sub_Question_Answer" id="SQ1_3_6"></button>
+                <button class="Sub_Question_Answer" id="SQ1_3_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div class="Sub_question1_value_date" style="display: none;">
+            <input type="text" value="0" id="SQA1_1">
+            <input type="text" value="0" id="SQA1_2">
+            <input type="text" value="0" id="SQA1_3">
+            <input type="text" value="0" id="TSQA1">
+        </div>
+        <div><button class="sub_answer1_submit" id="sub1result">기록하기</button></div>
+    </div>
+    <div class="Sub_Q2" id="none">
+        <div>
+            <h3>Question. 누군가를 생각하며 휴대폰 알림에 민감하게 반응하나요?</h3>
+            <div class="Sub_Question2_1">
+                <button class="Sub_Question_Answer" id="SQ2_1_1"></button>
+                <button class="Sub_Question_Answer" id="SQ2_1_2"></button>
+                <button class="Sub_Question_Answer" id="SQ2_1_3"></button>
+                <button class="Sub_Question_Answer" id="SQ2_1_4"></button>
+                <button class="Sub_Question_Answer" id="SQ2_1_5"></button>
+                <button class="Sub_Question_Answer" id="SQ2_1_6"></button>
+                <button class="Sub_Question_Answer" id="SQ2_1_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+            <h3>Question. 늦은 새벽 문뜩 떠오르는 사람이 있나요?.</h3>
+            <div class="Sub_Question2_2">
+                <button class="Sub_Question_Answer" id="SQ2_2_1"></button>
+                <button class="Sub_Question_Answer" id="SQ2_2_2"></button>
+                <button class="Sub_Question_Answer" id="SQ2_2_3"></button>
+                <button class="Sub_Question_Answer" id="SQ2_2_4"></button>
+                <button class="Sub_Question_Answer" id="SQ2_2_5"></button>
+                <button class="Sub_Question_Answer" id="SQ2_2_6"></button>
+                <button class="Sub_Question_Answer" id="SQ2_2_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+            <h3>Question. 매번 똑같은 삶에 지치고 새로움이 필요하다고 느끼나요?</h3>
+            <div class="Sub_Question2_3">
+                <button class="Sub_Question_Answer" id="SQ2_3_1"></button>
+                <button class="Sub_Question_Answer" id="SQ2_3_2"></button>
+                <button class="Sub_Question_Answer" id="SQ2_3_3"></button>
+                <button class="Sub_Question_Answer" id="SQ2_3_4"></button>
+                <button class="Sub_Question_Answer" id="SQ2_3_5"></button>
+                <button class="Sub_Question_Answer" id="SQ2_3_6"></button>
+                <button class="Sub_Question_Answer" id="SQ2_3_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div class="Sub_question1_value_date" style="display: none;">
+            <input type="text" value="0" id="SQA2_1">
+            <input type="text" value="0" id="SQA2_2">
+            <input type="text" value="0" id="SQA2_3">
+            <input type="text" value="0" id="TSQA2">
+        </div>
+        <div><button class="sub_answer1_submit" id="sub2result">기록하기</button></div>
+    </div>
+    <div class="Sub_Q3" id="none">
+        <div>
+            <h3>Question. 옷가게에 들어가는 게 자신 없나요?</h3>
+            <div class="Sub_Question3_1">
+                <button class="Sub_Question_Answer" id="SQ3_1_1"></button>
+                <button class="Sub_Question_Answer" id="SQ3_1_2"></button>
+                <button class="Sub_Question_Answer" id="SQ3_1_3"></button>
+                <button class="Sub_Question_Answer" id="SQ3_1_4"></button>
+                <button class="Sub_Question_Answer" id="SQ3_1_5"></button>
+                <button class="Sub_Question_Answer" id="SQ3_1_6"></button>
+                <button class="Sub_Question_Answer" id="SQ3_1_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+            <h3>Question. 건강식품에 대해 관심이 생겼나요?</h3>
+            <div class="Sub_Question3_2">
+                <button class="Sub_Question_Answer" id="SQ3_2_1"></button>
+                <button class="Sub_Question_Answer" id="SQ3_2_2"></button>
+                <button class="Sub_Question_Answer" id="SQ3_2_3"></button>
+                <button class="Sub_Question_Answer" id="SQ3_2_4"></button>
+                <button class="Sub_Question_Answer" id="SQ3_2_5"></button>
+                <button class="Sub_Question_Answer" id="SQ3_2_6"></button>
+                <button class="Sub_Question_Answer" id="SQ3_2_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+            <h3>Question. 키와 관련된 이야기가 나오면 왠지 위축되나요?</h3>
+            <div class="Sub_Question3_3">
+                <button class="Sub_Question_Answer" id="SQ3_3_1"></button>
+                <button class="Sub_Question_Answer" id="SQ3_3_2"></button>
+                <button class="Sub_Question_Answer" id="SQ3_3_3"></button>
+                <button class="Sub_Question_Answer" id="SQ3_3_4"></button>
+                <button class="Sub_Question_Answer" id="SQ3_3_5"></button>
+                <button class="Sub_Question_Answer" id="SQ3_3_6"></button>
+                <button class="Sub_Question_Answer" id="SQ3_3_7"></button>
+                <div class="footnote">
+                    <h5>부정 긍정</h4>
+                </div>
+            </div>
+        </div>
+        <div class="Sub_question1_value_date" style="display: none;">
+            <input type="text" value="0" id="SQA3_1">
+            <input type="text" value="0" id="SQA3_2">
+            <input type="text" value="0" id="SQA3_3">
+            <input type="text" value="0" id="TSQA3">
+        </div>
+        <div><button class="sub_answer1_submit" id="sub3result">기록하기</button></div>
+    </div>
+
+    <div class="rseultbt" id="none"><button class="sub_answer1_submit" onclick="result()">결과 확인하기</button></div>
+
+    <script>
+        // Main Question > Answer > Value Change
+        function MainQuestion1_1() {
+            $('#MQA1').attr('value', +1);
+            $('.sub_question1 > .sub_question_answer_yes').attr('id', 'Main_select')
+            $('.sub_question1 > .sub_question_answer_no').attr('id', '')
+        }
+        function MainQuestion1_2() {
+            $('#MQA1').attr('value', 0);
+            $('.sub_question1 > .sub_question_answer_no').attr('id', 'Main_select')
+            $('.sub_question1 > .sub_question_answer_yes').attr('id', '')
+        }
+        function MainQuestion2_1() {
+            $('#MQA2').attr('value', +1);
+            $('.sub_question2 > .sub_question_answer_yes').attr('id', 'Main_select')
+            $('.sub_question2 > .sub_question_answer_no').attr('id', '')
+        }
+        function MainQuestion2_2() {
+            $('#MQA2').attr('value', 0);
+            $('.sub_question2 > .sub_question_answer_no').attr('id', 'Main_select')
+            $('.sub_question2 > .sub_question_answer_yes').attr('id', '')
+        }
+        function MainQuestion3_1() {
+            $('#MQA3').attr('value', +1);
+            $('.sub_question3 > .sub_question_answer_yes').attr('id', 'Main_select')
+            $('.sub_question3 > .sub_question_answer_no').attr('id', '')
+        }
+        function MainQuestion3_2() {
+            $('#MQA3').attr('value', 0);
+            $('.sub_question3 > .sub_question_answer_no').attr('id', 'Main_select')
+            $('.sub_question3 > .sub_question_answer_yes').attr('id', '')
+        }
+        // Main Question Result
+        function MainResult() {
+            var MAQ1 = $('#MQA1').val();
+            var MAQ2 = $('#MQA2').val();
+            var MAQ3 = $('#MQA3').val();
+            if (MAQ1 == 1) {
+                $('.main_question_a').attr('id', 'none');
+                $('.main_answer_submit').attr('id', 'none');
+                $('.Sub_Q1').attr('id', '');
+            } else {
+                $('.main_question_a').attr('id', 'none');
+                $('.main_answer_submit').attr('id', 'none');
+            } if (MAQ2 == 1) {
+                $('.main_question_b').attr('id', 'none');
+                $('.main_answer_submit').attr('id', 'none');
+                $('.Sub_Q2').attr('id', '');
+            } else {
+                $('.main_question_b').attr('id', 'none');
+                $('.main_answer_submit').attr('id', 'none');
+            } if (MAQ3 == 1) {
+                $('.main_question_c').attr('id', 'none');
+                $('.main_answer_submit').attr('id', 'none');
+                $('.Sub_Q3').attr('id', '');
+            } else {
+                $('.main_question_c').attr('id', 'none');
+                $('.main_answer_submit').attr('id', 'none');
+            } if (MAQ1 == 0 && MAQ2 == 0 && MAQ3 == 0) {
+                alert("최소 1개 이상의 Yes를 선택해주세요.")
+                window.location.reload();
+            }
+        }
+        // Sub Question1_1 Answer > Value > Change
+        $('#SQ1_1_1').click(function () {
+            $('#SQA1_1').attr('value', '-3');
+            $('#SQ1_1_1').css("background-color", "red");
+            $('#SQ1_1_2').css("background-color", "");
+            $('#SQ1_1_3').css("background-color", "");
+            $('#SQ1_1_4').css("background-color", "");
+            $('#SQ1_1_5').css("background-color", "");
+            $('#SQ1_1_6').css("background-color", "");
+            $('#SQ1_1_7').css("background-color", "");
+            var SQ1_1_1 = $('#SQ1_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_1_1.top }, 500);
+        })
+        $('#SQ1_1_2').click(function () {
+            $('#SQA1_1').attr('value', '-2');
+            $('#SQ1_1_1').css("background-color", "");
+            $('#SQ1_1_2').css("background-color", "orange");
+            $('#SQ1_1_3').css("background-color", "");
+            $('#SQ1_1_4').css("background-color", "");
+            $('#SQ1_1_5').css("background-color", "");
+            $('#SQ1_1_6').css("background-color", "");
+            $('#SQ1_1_7').css("background-color", "");
+            var SQ1_1_1 = $('#SQ1_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_1_1.top }, 500);
+        })
+        $('#SQ1_1_3').click(function () {
+            $('#SQA1_1').attr('value', '-1');
+            $('#SQ1_1_1').css("background-color", "");
+            $('#SQ1_1_2').css("background-color", "");
+            $('#SQ1_1_3').css("background-color", "yellow");
+            $('#SQ1_1_4').css("background-color", "");
+            $('#SQ1_1_5').css("background-color", "");
+            $('#SQ1_1_6').css("background-color", "");
+            $('#SQ1_1_7').css("background-color", "");
+            var SQ1_1_1 = $('#SQ1_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_1_1.top }, 500);
+        })
+        $('#SQ1_1_4').click(function () {
+            $('#SQA1_1').attr('value', '0');
+            $('#SQ1_1_1').css("background-color", "");
+            $('#SQ1_1_2').css("background-color", "");
+            $('#SQ1_1_3').css("background-color", "");
+            $('#SQ1_1_4').css("background-color", "green");
+            $('#SQ1_1_5').css("background-color", "");
+            $('#SQ1_1_6').css("background-color", "");
+            $('#SQ1_1_7').css("background-color", "");
+            var SQ1_1_1 = $('#SQ1_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_1_1.top }, 500);
+        })
+        $('#SQ1_1_5').click(function () {
+            $('#SQA1_1').attr('value', '1');
+            $('#SQ1_1_1').css("background-color", "");
+            $('#SQ1_1_2').css("background-color", "");
+            $('#SQ1_1_3').css("background-color", "");
+            $('#SQ1_1_4').css("background-color", "");
+            $('#SQ1_1_5').css("background-color", "blue");
+            $('#SQ1_1_6').css("background-color", "");
+            $('#SQ1_1_7').css("background-color", "");
+            var SQ1_1_1 = $('#SQ1_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_1_1.top }, 500);
+        })
+        $('#SQ1_1_6').click(function () {
+            $('#SQA1_1').attr('value', '2');
+            $('#SQ1_1_1').css("background-color", "");
+            $('#SQ1_1_2').css("background-color", "");
+            $('#SQ1_1_3').css("background-color", "");
+            $('#SQ1_1_4').css("background-color", "");
+            $('#SQ1_1_5').css("background-color", "");
+            $('#SQ1_1_6').css("background-color", "navy");
+            $('#SQ1_1_7').css("background-color", "");
+            var SQ1_1_1 = $('#SQ1_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_1_1.top }, 500);
+        })
+        $('#SQ1_1_7').click(function () {
+            $('#SQA1_1').attr('value', '3');
+            $('#SQ1_1_1').css("background-color", "");
+            $('#SQ1_1_2').css("background-color", "");
+            $('#SQ1_1_3').css("background-color", "");
+            $('#SQ1_1_4').css("background-color", "");
+            $('#SQ1_1_5').css("background-color", "");
+            $('#SQ1_1_6').css("background-color", "");
+            $('#SQ1_1_7').css("background-color", "violet");
+            var SQ1_1_1 = $('#SQ1_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_1_1.top }, 500);
+        })
+        // Sub Question1_2 Answer > Value > Change
+        $('#SQ1_2_1').click(function () {
+            $('#SQA1_2').attr('value', '-3');
+            $('#SQ1_2_1').css("background-color", "red");
+            $('#SQ1_2_2').css("background-color", "");
+            $('#SQ1_2_3').css("background-color", "");
+            $('#SQ1_2_4').css("background-color", "");
+            $('#SQ1_2_5').css("background-color", "");
+            $('#SQ1_2_6').css("background-color", "");
+            $('#SQ1_2_7').css("background-color", "");
+            var SQ1_2_1 = $('#SQ1_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_2_1.top }, 500);
+        })
+        $('#SQ1_2_2').click(function () {
+            $('#SQA1_2').attr('value', '-2');
+            $('#SQ1_2_1').css("background-color", "");
+            $('#SQ1_2_2').css("background-color", "orange");
+            $('#SQ1_2_3').css("background-color", "");
+            $('#SQ1_2_4').css("background-color", "");
+            $('#SQ1_2_5').css("background-color", "");
+            $('#SQ1_2_6').css("background-color", "");
+            $('#SQ1_2_7').css("background-color", "");
+            var SQ1_2_1 = $('#SQ1_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_2_1.top }, 500);
+        })
+        $('#SQ1_2_3').click(function () {
+            $('#SQA1_2').attr('value', '-1');
+            $('#SQ1_2_1').css("background-color", "");
+            $('#SQ1_2_2').css("background-color", "");
+            $('#SQ1_2_3').css("background-color", "yellow");
+            $('#SQ1_2_4').css("background-color", "");
+            $('#SQ1_2_5').css("background-color", "");
+            $('#SQ1_2_6').css("background-color", "");
+            $('#SQ1_2_7').css("background-color", "");
+            var SQ1_2_1 = $('#SQ1_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_2_1.top }, 500);
+        })
+        $('#SQ1_2_4').click(function () {
+            $('#SQA1_2').attr('value', '0');
+            $('#SQ1_2_1').css("background-color", "");
+            $('#SQ1_2_2').css("background-color", "");
+            $('#SQ1_2_3').css("background-color", "");
+            $('#SQ1_2_4').css("background-color", "green");
+            $('#SQ1_2_5').css("background-color", "");
+            $('#SQ1_2_6').css("background-color", "");
+            $('#SQ1_2_7').css("background-color", "");
+            var SQ1_2_1 = $('#SQ1_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_2_1.top }, 500);
+        })
+        $('#SQ1_2_5').click(function () {
+            $('#SQA1_2').attr('value', '1');
+            $('#SQ1_2_1').css("background-color", "");
+            $('#SQ1_2_2').css("background-color", "");
+            $('#SQ1_2_3').css("background-color", "");
+            $('#SQ1_2_4').css("background-color", "");
+            $('#SQ1_2_5').css("background-color", "blue");
+            $('#SQ1_2_6').css("background-color", "");
+            $('#SQ1_2_7').css("background-color", "");
+            var SQ1_2_1 = $('#SQ1_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_2_1.top }, 500);
+        })
+        $('#SQ1_2_6').click(function () {
+            $('#SQA1_2').attr('value', '2');
+            $('#SQ1_2_1').css("background-color", "");
+            $('#SQ1_2_2').css("background-color", "");
+            $('#SQ1_2_3').css("background-color", "");
+            $('#SQ1_2_4').css("background-color", "");
+            $('#SQ1_2_5').css("background-color", "");
+            $('#SQ1_2_6').css("background-color", "navy");
+            $('#SQ1_2_7').css("background-color", "");
+            var SQ1_2_1 = $('#SQ1_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_2_1.top }, 500);
+        })
+        $('#SQ1_2_7').click(function () {
+            $('#SQA1_2').attr('value', '3');
+            $('#SQ1_2_1').css("background-color", "");
+            $('#SQ1_2_2').css("background-color", "");
+            $('#SQ1_2_3').css("background-color", "");
+            $('#SQ1_2_4').css("background-color", "");
+            $('#SQ1_2_5').css("background-color", "");
+            $('#SQ1_2_6').css("background-color", "");
+            $('#SQ1_2_7').css("background-color", "violet");
+            var SQ1_2_1 = $('#SQ1_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_2_1.top }, 500);
+        })
+        // Sub Question1_3 Answer > Value > Change
+        $('#SQ1_3_1').click(function () {
+            $('#SQA1_3').attr('value', '-3');
+            $('#SQ1_3_1').css("background-color", "red");
+            $('#SQ1_3_2').css("background-color", "");
+            $('#SQ1_3_3').css("background-color", "");
+            $('#SQ1_3_4').css("background-color", "");
+            $('#SQ1_3_5').css("background-color", "");
+            $('#SQ1_3_6').css("background-color", "");
+            $('#SQ1_3_7').css("background-color", "");
+            var SQ1_3_1 = $('#SQ1_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_3_1.top }, 500);
+        })
+        $('#SQ1_3_2').click(function () {
+            $('#SQA1_3').attr('value', '-2');
+            $('#SQ1_3_1').css("background-color", "");
+            $('#SQ1_3_2').css("background-color", "orange");
+            $('#SQ1_3_3').css("background-color", "");
+            $('#SQ1_3_4').css("background-color", "");
+            $('#SQ1_3_5').css("background-color", "");
+            $('#SQ1_3_6').css("background-color", "");
+            $('#SQ1_3_7').css("background-color", "");
+            var SQ1_3_1 = $('#SQ1_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_3_1.top }, 500);
+        })
+        $('#SQ1_3_3').click(function () {
+            $('#SQA1_3').attr('value', '-1');
+            $('#SQ1_3_1').css("background-color", "");
+            $('#SQ1_3_2').css("background-color", "");
+            $('#SQ1_3_3').css("background-color", "yellow");
+            $('#SQ1_3_4').css("background-color", "");
+            $('#SQ1_3_5').css("background-color", "");
+            $('#SQ1_3_6').css("background-color", "");
+            $('#SQ1_3_7').css("background-color", "");
+            var SQ1_3_1 = $('#SQ1_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_3_1.top }, 500);
+        })
+        $('#SQ1_3_4').click(function () {
+            $('#SQA1_3').attr('value', '0');
+            $('#SQ1_3_1').css("background-color", "");
+            $('#SQ1_3_2').css("background-color", "");
+            $('#SQ1_3_3').css("background-color", "");
+            $('#SQ1_3_4').css("background-color", "green");
+            $('#SQ1_3_5').css("background-color", "");
+            $('#SQ1_3_6').css("background-color", "");
+            $('#SQ1_3_7').css("background-color", "");
+            var SQ1_3_1 = $('#SQ1_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_3_1.top }, 500);
+        })
+        $('#SQ1_3_5').click(function () {
+            $('#SQA1_3').attr('value', '1');
+            $('#SQ1_3_1').css("background-color", "");
+            $('#SQ1_3_2').css("background-color", "");
+            $('#SQ1_3_3').css("background-color", "");
+            $('#SQ1_3_4').css("background-color", "");
+            $('#SQ1_3_5').css("background-color", "blue");
+            $('#SQ1_3_6').css("background-color", "");
+            $('#SQ1_3_7').css("background-color", "");
+            var SQ1_3_1 = $('#SQ1_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_3_1.top }, 500);
+        })
+        $('#SQ1_3_6').click(function () {
+            $('#SQA1_3').attr('value', '2');
+            $('#SQ1_3_1').css("background-color", "");
+            $('#SQ1_3_2').css("background-color", "");
+            $('#SQ1_3_3').css("background-color", "");
+            $('#SQ1_3_4').css("background-color", "");
+            $('#SQ1_3_5').css("background-color", "");
+            $('#SQ1_3_6').css("background-color", "navy");
+            $('#SQ1_3_7').css("background-color", "");
+            var SQ1_3_1 = $('#SQ1_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_3_1.top }, 500);
+        })
+        $('#SQ1_3_7').click(function () {
+            $('#SQA1_3').attr('value', '3');
+            $('#SQ1_3_1').css("background-color", "");
+            $('#SQ1_3_2').css("background-color", "");
+            $('#SQ1_3_3').css("background-color", "");
+            $('#SQ1_3_4').css("background-color", "");
+            $('#SQ1_3_5').css("background-color", "");
+            $('#SQ1_3_6').css("background-color", "");
+            $('#SQ1_3_7').css("background-color", "violet");
+            var SQ1_3_1 = $('#SQ1_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ1_3_1.top }, 500);
+        })
+        // Sub Question1 Answer Result
+        $('#sub1result').click(function () {
+            var SQA1_1 = $('#SQA1_1').val();
+            var SQA1_2 = $('#SQA1_2').val();
+            var SQA1_3 = $('#SQA1_3').val();
+            var TSQA1 = SQA1_1 * 1 + SQA1_2 * 1 + SQA1_3 * 1
+            $('#TSQA1').attr('value', TSQA1);
+            $('.Sub_Q1').fadeOut("fast").delay(1000).attr('id', 'none');
+            $('#sub1result').fadeOut("fast");
+            var resultbt1 = $('.Sub_Q1').attr('id');
+            var resultbt2 = $('.Sub_Q2').attr('id');
+            var resultbt3 = $('.Sub_Q3').attr('id');
+            if (resultbt1 == "none" && resultbt2 == "none" && resultbt3 == "none") {
+                $('.rseultbt').fadeIn("fast")
+            }
+        })
+        // Sub Question2_1 Answer > Value > Change
+        $('#SQ2_1_1').click(function () {
+            $('#SQA2_1').attr('value', '-3');
+            $('#SQ2_1_1').css("background-color", "red");
+            $('#SQ2_1_2').css("background-color", "");
+            $('#SQ2_1_3').css("background-color", "");
+            $('#SQ2_1_4').css("background-color", "");
+            $('#SQ2_1_5').css("background-color", "");
+            $('#SQ2_1_6').css("background-color", "");
+            $('#SQ2_1_7').css("background-color", "");
+            var SQ2_1_1 = $('#SQ2_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_1_1.top }, 500);
+        })
+        $('#SQ2_1_2').click(function () {
+            $('#SQA2_1').attr('value', '-2');
+            $('#SQ2_1_1').css("background-color", "");
+            $('#SQ2_1_2').css("background-color", "orange");
+            $('#SQ2_1_3').css("background-color", "");
+            $('#SQ2_1_4').css("background-color", "");
+            $('#SQ2_1_5').css("background-color", "");
+            $('#SQ2_1_6').css("background-color", "");
+            $('#SQ2_1_7').css("background-color", "");
+            var SQ2_1_1 = $('#SQ2_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_1_1.top }, 500);
+        })
+        $('#SQ2_1_3').click(function () {
+            $('#SQA2_1').attr('value', '-1');
+            $('#SQ2_1_1').css("background-color", "");
+            $('#SQ2_1_2').css("background-color", "");
+            $('#SQ2_1_3').css("background-color", "yellow");
+            $('#SQ2_1_4').css("background-color", "");
+            $('#SQ2_1_5').css("background-color", "");
+            $('#SQ2_1_6').css("background-color", "");
+            $('#SQ2_1_7').css("background-color", "");
+            var SQ2_1_1 = $('#SQ2_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_1_1.top }, 500);
+        })
+        $('#SQ2_1_4').click(function () {
+            $('#SQA2_1').attr('value', '0');
+            $('#SQ2_1_1').css("background-color", "");
+            $('#SQ2_1_2').css("background-color", "");
+            $('#SQ2_1_3').css("background-color", "");
+            $('#SQ2_1_4').css("background-color", "green");
+            $('#SQ2_1_5').css("background-color", "");
+            $('#SQ2_1_6').css("background-color", "");
+            $('#SQ2_1_7').css("background-color", "");
+            var SQ2_1_1 = $('#SQ2_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_1_1.top }, 500);
+        })
+        $('#SQ2_1_5').click(function () {
+            $('#SQA2_1').attr('value', '1');
+            $('#SQ2_1_1').css("background-color", "");
+            $('#SQ2_1_2').css("background-color", "");
+            $('#SQ2_1_3').css("background-color", "");
+            $('#SQ2_1_4').css("background-color", "");
+            $('#SQ2_1_5').css("background-color", "blue");
+            $('#SQ2_1_6').css("background-color", "");
+            $('#SQ2_1_7').css("background-color", "");
+            var SQ2_1_1 = $('#SQ2_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_1_1.top }, 500);
+        })
+        $('#SQ2_1_6').click(function () {
+            $('#SQA2_1').attr('value', '2');
+            $('#SQ2_1_1').css("background-color", "");
+            $('#SQ2_1_2').css("background-color", "");
+            $('#SQ2_1_3').css("background-color", "");
+            $('#SQ2_1_4').css("background-color", "");
+            $('#SQ2_1_5').css("background-color", "");
+            $('#SQ2_1_6').css("background-color", "navy");
+            $('#SQ2_1_7').css("background-color", "");
+            var SQ2_1_1 = $('#SQ2_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_1_1.top }, 500);
+        })
+        $('#SQ2_1_7').click(function () {
+            $('#SQA2_1').attr('value', '3');
+            $('#SQ2_1_1').css("background-color", "");
+            $('#SQ2_1_2').css("background-color", "");
+            $('#SQ2_1_3').css("background-color", "");
+            $('#SQ2_1_4').css("background-color", "");
+            $('#SQ2_1_5').css("background-color", "");
+            $('#SQ2_1_6').css("background-color", "");
+            $('#SQ2_1_7').css("background-color", "violet");
+            var SQ2_1_1 = $('#SQ2_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_1_1.top }, 500);
+        })
+        // Sub Question2_2 Answer > Value > Change
+        $('#SQ2_2_1').click(function () {
+            $('#SQA2_2').attr('value', '-3');
+            $('#SQ2_2_1').css("background-color", "red");
+            $('#SQ2_2_2').css("background-color", "");
+            $('#SQ2_2_3').css("background-color", "");
+            $('#SQ2_2_4').css("background-color", "");
+            $('#SQ2_2_5').css("background-color", "");
+            $('#SQ2_2_6').css("background-color", "");
+            $('#SQ2_2_7').css("background-color", "");
+            var SQ2_2_1 = $('#SQ2_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_2_1.top }, 500);
+        })
+        $('#SQ2_2_2').click(function () {
+            $('#SQA2_2').attr('value', '-2');
+            $('#SQ2_2_1').css("background-color", "");
+            $('#SQ2_2_2').css("background-color", "orange");
+            $('#SQ2_2_3').css("background-color", "");
+            $('#SQ2_2_4').css("background-color", "");
+            $('#SQ2_2_5').css("background-color", "");
+            $('#SQ2_2_6').css("background-color", "");
+            $('#SQ2_2_7').css("background-color", "");
+            var SQ2_2_1 = $('#SQ2_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_2_1.top }, 500);
+        })
+        $('#SQ2_2_3').click(function () {
+            $('#SQA2_2').attr('value', '-1');
+            $('#SQ2_2_1').css("background-color", "");
+            $('#SQ2_2_2').css("background-color", "");
+            $('#SQ2_2_3').css("background-color", "yellow");
+            $('#SQ2_2_4').css("background-color", "");
+            $('#SQ2_2_5').css("background-color", "");
+            $('#SQ2_2_6').css("background-color", "");
+            $('#SQ2_2_7').css("background-color", "");
+            var SQ2_2_1 = $('#SQ2_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_2_1.top }, 500);
+        })
+        $('#SQ2_2_4').click(function () {
+            $('#SQA2_2').attr('value', '0');
+            $('#SQ2_2_1').css("background-color", "");
+            $('#SQ2_2_2').css("background-color", "");
+            $('#SQ2_2_3').css("background-color", "");
+            $('#SQ2_2_4').css("background-color", "green");
+            $('#SQ2_2_5').css("background-color", "");
+            $('#SQ2_2_6').css("background-color", "");
+            $('#SQ2_2_7').css("background-color", "");
+            var SQ2_2_1 = $('#SQ2_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_2_1.top }, 500);
+        })
+        $('#SQ2_2_5').click(function () {
+            $('#SQA2_2').attr('value', '1');
+            $('#SQ2_2_1').css("background-color", "");
+            $('#SQ2_2_2').css("background-color", "");
+            $('#SQ2_2_3').css("background-color", "");
+            $('#SQ2_2_4').css("background-color", "");
+            $('#SQ2_2_5').css("background-color", "blue");
+            $('#SQ2_2_6').css("background-color", "");
+            $('#SQ2_2_7').css("background-color", "");
+            var SQ2_2_1 = $('#SQ2_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_2_1.top }, 500);
+        })
+        $('#SQ2_2_6').click(function () {
+            $('#SQA2_2').attr('value', '2');
+            $('#SQ2_2_1').css("background-color", "");
+            $('#SQ2_2_2').css("background-color", "");
+            $('#SQ2_2_3').css("background-color", "");
+            $('#SQ2_2_4').css("background-color", "");
+            $('#SQ2_2_5').css("background-color", "");
+            $('#SQ2_2_6').css("background-color", "navy");
+            $('#SQ2_2_7').css("background-color", "");
+            var SQ2_2_1 = $('#SQ2_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_2_1.top }, 500);
+        })
+        $('#SQ2_2_7').click(function () {
+            $('#SQA2_2').attr('value', '3');
+            $('#SQ2_2_1').css("background-color", "");
+            $('#SQ2_2_2').css("background-color", "");
+            $('#SQ2_2_3').css("background-color", "");
+            $('#SQ2_2_4').css("background-color", "");
+            $('#SQ2_2_5').css("background-color", "");
+            $('#SQ2_2_6').css("background-color", "");
+            $('#SQ2_2_7').css("background-color", "violet");
+            var SQ2_2_1 = $('#SQ2_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_2_1.top }, 500);
+        })
+        // Sub Question2_3 Answer > Value > Change
+        $('#SQ2_3_1').click(function () {
+            $('#SQA2_3').attr('value', '-3');
+            $('#SQ2_3_1').css("background-color", "red");
+            $('#SQ2_3_2').css("background-color", "");
+            $('#SQ2_3_3').css("background-color", "");
+            $('#SQ2_3_4').css("background-color", "");
+            $('#SQ2_3_5').css("background-color", "");
+            $('#SQ2_3_6').css("background-color", "");
+            $('#SQ2_3_7').css("background-color", "");
+            var SQ2_3_1 = $('#SQ2_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_3_1.top }, 500);
+        })
+        $('#SQ2_3_2').click(function () {
+            $('#SQA2_3').attr('value', '-2');
+            $('#SQ2_3_1').css("background-color", "");
+            $('#SQ2_3_2').css("background-color", "orange");
+            $('#SQ2_3_3').css("background-color", "");
+            $('#SQ2_3_4').css("background-color", "");
+            $('#SQ2_3_5').css("background-color", "");
+            $('#SQ2_3_6').css("background-color", "");
+            $('#SQ2_3_7').css("background-color", "");
+            var SQ2_3_1 = $('#SQ2_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_3_1.top }, 500);
+        })
+        $('#SQ2_3_3').click(function () {
+            $('#SQA2_3').attr('value', '-1');
+            $('#SQ2_3_1').css("background-color", "");
+            $('#SQ2_3_2').css("background-color", "");
+            $('#SQ2_3_3').css("background-color", "yellow");
+            $('#SQ2_3_4').css("background-color", "");
+            $('#SQ2_3_5').css("background-color", "");
+            $('#SQ2_3_6').css("background-color", "");
+            $('#SQ2_3_7').css("background-color", "");
+            var SQ2_3_1 = $('#SQ2_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_3_1.top }, 500);
+        })
+        $('#SQ2_3_4').click(function () {
+            $('#SQA2_3').attr('value', '0');
+            $('#SQ2_3_1').css("background-color", "");
+            $('#SQ2_3_2').css("background-color", "");
+            $('#SQ2_3_3').css("background-color", "");
+            $('#SQ2_3_4').css("background-color", "green");
+            $('#SQ2_3_5').css("background-color", "");
+            $('#SQ2_3_6').css("background-color", "");
+            $('#SQ2_3_7').css("background-color", "");
+            var SQ2_3_1 = $('#SQ2_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_3_1.top }, 500);
+        })
+        $('#SQ2_3_5').click(function () {
+            $('#SQA2_3').attr('value', '1');
+            $('#SQ2_3_1').css("background-color", "");
+            $('#SQ2_3_2').css("background-color", "");
+            $('#SQ2_3_3').css("background-color", "");
+            $('#SQ2_3_4').css("background-color", "");
+            $('#SQ2_3_5').css("background-color", "blue");
+            $('#SQ2_3_6').css("background-color", "");
+            $('#SQ2_3_7').css("background-color", "");
+            var SQ2_3_1 = $('#SQ2_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_3_1.top }, 500);
+        })
+        $('#SQ2_3_6').click(function () {
+            $('#SQA2_3').attr('value', '2');
+            $('#SQ2_3_1').css("background-color", "");
+            $('#SQ2_3_2').css("background-color", "");
+            $('#SQ2_3_3').css("background-color", "");
+            $('#SQ2_3_4').css("background-color", "");
+            $('#SQ2_3_5').css("background-color", "");
+            $('#SQ2_3_6').css("background-color", "navy");
+            $('#SQ2_3_7').css("background-color", "");
+            var SQ2_3_1 = $('#SQ2_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_3_1.top }, 500);
+        })
+        $('#SQ2_3_7').click(function () {
+            $('#SQA2_3').attr('value', '3');
+            $('#SQ2_3_1').css("background-color", "");
+            $('#SQ2_3_2').css("background-color", "");
+            $('#SQ2_3_3').css("background-color", "");
+            $('#SQ2_3_4').css("background-color", "");
+            $('#SQ2_3_5').css("background-color", "");
+            $('#SQ2_3_6').css("background-color", "");
+            $('#SQ2_3_7').css("background-color", "violet");
+            var SQ2_3_1 = $('#SQ2_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ2_3_1.top }, 500);
+        })
+        // Sub Question2 Answer Result
+        $('#sub2result').click(function () {
+            var SQA2_1 = $('#SQA2_1').val();
+            var SQA2_2 = $('#SQA2_2').val();
+            var SQA2_3 = $('#SQA2_3').val();
+            var TSQA2 = SQA2_1 * 1 + SQA2_2 * 1 + SQA2_3 * 1
+            $('#TSQA2').attr('value', TSQA2);
+            $('.Sub_Q2').fadeOut().delay(1000).attr('id', 'none');
+            $('#sub2result').fadeOut("fast");
+            $('html, body').scrollTop("fast");
+            var resultbt1 = $('.Sub_Q1').attr('id');
+            var resultbt2 = $('.Sub_Q2').attr('id');
+            var resultbt3 = $('.Sub_Q3').attr('id');
+            if (resultbt1 == "none" && resultbt2 == "none" && resultbt3 == "none") {
+                $('.rseultbt').fadeIn("fast");
+            }
+        })
+        // Sub Question3_1 Answer > Value > Change
+        $('#SQ3_1_1').click(function () {
+            $('#SQA3_1').attr('value', '-3');
+            $('#SQ3_1_1').css("background-color", "red");
+            $('#SQ3_1_2').css("background-color", "");
+            $('#SQ3_1_3').css("background-color", "");
+            $('#SQ3_1_4').css("background-color", "");
+            $('#SQ3_1_5').css("background-color", "");
+            $('#SQ3_1_6').css("background-color", "");
+            $('#SQ3_1_7').css("background-color", "");
+            var SQ3_1_1 = $('#SQ3_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_1_1.top }, 500);
+        })
+        $('#SQ3_1_2').click(function () {
+            $('#SQA3_1').attr('value', '-2');
+            $('#SQ3_1_1').css("background-color", "");
+            $('#SQ3_1_2').css("background-color", "orange");
+            $('#SQ3_1_3').css("background-color", "");
+            $('#SQ3_1_4').css("background-color", "");
+            $('#SQ3_1_5').css("background-color", "");
+            $('#SQ3_1_6').css("background-color", "");
+            $('#SQ3_1_7').css("background-color", "");
+            var SQ3_1_1 = $('#SQ3_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_1_1.top }, 500);
+        })
+        $('#SQ3_1_3').click(function () {
+            $('#SQA3_1').attr('value', '-1');
+            $('#SQ3_1_1').css("background-color", "");
+            $('#SQ3_1_2').css("background-color", "");
+            $('#SQ3_1_3').css("background-color", "yellow");
+            $('#SQ3_1_4').css("background-color", "");
+            $('#SQ3_1_5').css("background-color", "");
+            $('#SQ3_1_6').css("background-color", "");
+            $('#SQ3_1_7').css("background-color", "");
+            var SQ3_1_1 = $('#SQ3_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_1_1.top }, 500);
+        })
+        $('#SQ3_1_4').click(function () {
+            $('#SQA3_1').attr('value', '0');
+            $('#SQ3_1_1').css("background-color", "");
+            $('#SQ3_1_2').css("background-color", "");
+            $('#SQ3_1_3').css("background-color", "");
+            $('#SQ3_1_4').css("background-color", "green");
+            $('#SQ3_1_5').css("background-color", "");
+            $('#SQ3_1_6').css("background-color", "");
+            $('#SQ3_1_7').css("background-color", "");
+            var SQ3_1_1 = $('#SQ3_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_1_1.top }, 500);
+        })
+        $('#SQ3_1_5').click(function () {
+            $('#SQA3_1').attr('value', '1');
+            $('#SQ3_1_1').css("background-color", "");
+            $('#SQ3_1_2').css("background-color", "");
+            $('#SQ3_1_3').css("background-color", "");
+            $('#SQ3_1_4').css("background-color", "");
+            $('#SQ3_1_5').css("background-color", "blue");
+            $('#SQ3_1_6').css("background-color", "");
+            $('#SQ3_1_7').css("background-color", "");
+            var SQ3_1_1 = $('#SQ3_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_1_1.top }, 500);
+        })
+        $('#SQ3_1_6').click(function () {
+            $('#SQA3_1').attr('value', '2');
+            $('#SQ3_1_1').css("background-color", "");
+            $('#SQ3_1_2').css("background-color", "");
+            $('#SQ3_1_3').css("background-color", "");
+            $('#SQ3_1_4').css("background-color", "");
+            $('#SQ3_1_5').css("background-color", "");
+            $('#SQ3_1_6').css("background-color", "navy");
+            $('#SQ3_1_7').css("background-color", "");
+            var SQ3_1_1 = $('#SQ3_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_1_1.top }, 500);
+        })
+        $('#SQ3_1_7').click(function () {
+            $('#SQA3_1').attr('value', '3');
+            $('#SQ3_1_1').css("background-color", "");
+            $('#SQ3_1_2').css("background-color", "");
+            $('#SQ3_1_3').css("background-color", "");
+            $('#SQ3_1_4').css("background-color", "");
+            $('#SQ3_1_5').css("background-color", "");
+            $('#SQ3_1_6').css("background-color", "");
+            $('#SQ3_1_7').css("background-color", "violet");
+            var SQ3_1_1 = $('#SQ3_1_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_1_1.top }, 500);
+        })
+        // Sub Question3_2 Answer > Value > Change
+        $('#SQ3_2_1').click(function () {
+            $('#SQA3_2').attr('value', '-3');
+            $('#SQ3_2_1').css("background-color", "red");
+            $('#SQ3_2_2').css("background-color", "");
+            $('#SQ3_2_3').css("background-color", "");
+            $('#SQ3_2_4').css("background-color", "");
+            $('#SQ3_2_5').css("background-color", "");
+            $('#SQ3_2_6').css("background-color", "");
+            $('#SQ3_2_7').css("background-color", "");
+            var SQ3_2_1 = $('#SQ3_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_2_1.top }, 500);
+        })
+        $('#SQ3_2_2').click(function () {
+            $('#SQA3_2').attr('value', '-2');
+            $('#SQ3_2_1').css("background-color", "");
+            $('#SQ3_2_2').css("background-color", "orange");
+            $('#SQ3_2_3').css("background-color", "");
+            $('#SQ3_2_4').css("background-color", "");
+            $('#SQ3_2_5').css("background-color", "");
+            $('#SQ3_2_6').css("background-color", "");
+            $('#SQ3_2_7').css("background-color", "");
+            var SQ3_2_1 = $('#SQ3_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_2_1.top }, 500);
+        })
+        $('#SQ3_2_3').click(function () {
+            $('#SQA3_2').attr('value', '-1');
+            $('#SQ3_2_1').css("background-color", "");
+            $('#SQ3_2_2').css("background-color", "");
+            $('#SQ3_2_3').css("background-color", "yellow");
+            $('#SQ3_2_4').css("background-color", "");
+            $('#SQ3_2_5').css("background-color", "");
+            $('#SQ3_2_6').css("background-color", "");
+            $('#SQ3_2_7').css("background-color", "");
+            var SQ3_2_1 = $('#SQ3_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_2_1.top }, 500);
+        })
+        $('#SQ3_2_4').click(function () {
+            $('#SQA3_2').attr('value', '0');
+            $('#SQ3_2_1').css("background-color", "");
+            $('#SQ3_2_2').css("background-color", "");
+            $('#SQ3_2_3').css("background-color", "");
+            $('#SQ3_2_4').css("background-color", "green");
+            $('#SQ3_2_5').css("background-color", "");
+            $('#SQ3_2_6').css("background-color", "");
+            $('#SQ3_2_7').css("background-color", "");
+            var SQ3_2_1 = $('#SQ3_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_2_1.top }, 500);
+        })
+        $('#SQ3_2_5').click(function () {
+            $('#SQA3_2').attr('value', '1');
+            $('#SQ3_2_1').css("background-color", "");
+            $('#SQ3_2_2').css("background-color", "");
+            $('#SQ3_2_3').css("background-color", "");
+            $('#SQ3_2_4').css("background-color", "");
+            $('#SQ3_2_5').css("background-color", "blue");
+            $('#SQ3_2_6').css("background-color", "");
+            $('#SQ3_2_7').css("background-color", "");
+            var SQ3_2_1 = $('#SQ3_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_2_1.top }, 500);
+        })
+        $('#SQ3_2_6').click(function () {
+            $('#SQA3_2').attr('value', '2');
+            $('#SQ3_2_1').css("background-color", "");
+            $('#SQ3_2_2').css("background-color", "");
+            $('#SQ3_2_3').css("background-color", "");
+            $('#SQ3_2_4').css("background-color", "");
+            $('#SQ3_2_5').css("background-color", "");
+            $('#SQ3_2_6').css("background-color", "navy");
+            $('#SQ3_2_7').css("background-color", "");
+            var SQ3_2_1 = $('#SQ3_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_2_1.top }, 500);
+        })
+        $('#SQ3_2_7').click(function () {
+            $('#SQA3_2').attr('value', '3');
+            $('#SQ3_2_1').css("background-color", "");
+            $('#SQ3_2_2').css("background-color", "");
+            $('#SQ3_2_3').css("background-color", "");
+            $('#SQ3_2_4').css("background-color", "");
+            $('#SQ3_2_5').css("background-color", "");
+            $('#SQ3_2_6').css("background-color", "");
+            $('#SQ3_2_7').css("background-color", "violet");
+            var SQ3_2_1 = $('#SQ3_2_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_2_1.top }, 500);
+        })
+        // Sub Question3_3 Answer > Value > Change
+        $('#SQ3_3_1').click(function () {
+            $('#SQA3_3').attr('value', '-3');
+            $('#SQ3_3_1').css("background-color", "red");
+            $('#SQ3_3_2').css("background-color", "");
+            $('#SQ3_3_3').css("background-color", "");
+            $('#SQ3_3_4').css("background-color", "");
+            $('#SQ3_3_5').css("background-color", "");
+            $('#SQ3_3_6').css("background-color", "");
+            $('#SQ3_3_7').css("background-color", "");
+            var SQ3_3_1 = $('#SQ3_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_3_1.top }, 500);
+        })
+        $('#SQ3_3_2').click(function () {
+            $('#SQA3_3').attr('value', '-2');
+            $('#SQ3_3_1').css("background-color", "");
+            $('#SQ3_3_2').css("background-color", "orange");
+            $('#SQ3_3_3').css("background-color", "");
+            $('#SQ3_3_4').css("background-color", "");
+            $('#SQ3_3_5').css("background-color", "");
+            $('#SQ3_3_6').css("background-color", "");
+            $('#SQ3_3_7').css("background-color", "");
+            var SQ3_3_1 = $('#SQ3_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_3_1.top }, 500);
+        })
+        $('#SQ3_3_3').click(function () {
+            $('#SQA3_3').attr('value', '-1');
+            $('#SQ3_3_1').css("background-color", "");
+            $('#SQ3_3_2').css("background-color", "");
+            $('#SQ3_3_3').css("background-color", "yellow");
+            $('#SQ3_3_4').css("background-color", "");
+            $('#SQ3_3_5').css("background-color", "");
+            $('#SQ3_3_6').css("background-color", "");
+            $('#SQ3_3_7').css("background-color", "");
+            var SQ3_3_1 = $('#SQ3_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_3_1.top }, 500);
+        })
+        $('#SQ3_3_4').click(function () {
+            $('#SQA3_3').attr('value', '0');
+            $('#SQ3_3_1').css("background-color", "");
+            $('#SQ3_3_2').css("background-color", "");
+            $('#SQ3_3_3').css("background-color", "");
+            $('#SQ3_3_4').css("background-color", "green");
+            $('#SQ3_3_5').css("background-color", "");
+            $('#SQ3_3_6').css("background-color", "");
+            $('#SQ3_3_7').css("background-color", "");
+            var SQ3_3_1 = $('#SQ3_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_3_1.top }, 500);
+        })
+        $('#SQ3_3_5').click(function () {
+            $('#SQA3_3').attr('value', '1');
+            $('#SQ3_3_1').css("background-color", "");
+            $('#SQ3_3_2').css("background-color", "");
+            $('#SQ3_3_3').css("background-color", "");
+            $('#SQ3_3_4').css("background-color", "");
+            $('#SQ3_3_5').css("background-color", "blue");
+            $('#SQ3_3_6').css("background-color", "");
+            $('#SQ3_3_7').css("background-color", "");
+            var SQ3_3_1 = $('#SQ3_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_3_1.top }, 500);
+        })
+        $('#SQ3_3_6').click(function () {
+            $('#SQA3_3').attr('value', '2');
+            $('#SQ3_3_1').css("background-color", "");
+            $('#SQ3_3_2').css("background-color", "");
+            $('#SQ3_3_3').css("background-color", "");
+            $('#SQ3_3_4').css("background-color", "");
+            $('#SQ3_3_5').css("background-color", "");
+            $('#SQ3_3_6').css("background-color", "navy");
+            $('#SQ3_3_7').css("background-color", "");
+            var SQ3_3_1 = $('#SQ3_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_3_1.top }, 500);
+        })
+        $('#SQ3_3_7').click(function () {
+            $('#SQA3_3').attr('value', '3');
+            $('#SQ3_3_1').css("background-color", "");
+            $('#SQ3_3_2').css("background-color", "");
+            $('#SQ3_3_3').css("background-color", "");
+            $('#SQ3_3_4').css("background-color", "");
+            $('#SQ3_3_5').css("background-color", "");
+            $('#SQ3_3_6').css("background-color", "");
+            $('#SQ3_3_7').css("background-color", "violet");
+            var SQ3_3_1 = $('#SQ3_3_1').offset();
+            $('html, body').animate({ scrollTop: SQ3_3_1.top }, 500);
+        })
+        // Sub Question3 Answer Result
+        $('#sub3result').click(function () {
+            var SQA3_1 = $('#SQA3_1').val();
+            var SQA3_2 = $('#SQA3_2').val();
+            var SQA3_3 = $('#SQA3_3').val();
+            var TSQA3 = SQA3_1 * 1 + SQA3_2 * 1 + SQA3_3 * 1
+            $('#TSQA3').attr('value', TSQA3);
+            $('.Sub_Q3').fadeOut().delay(1000).attr('id', 'none');
+            $('#sub3result').fadeOut("fast");
+            $('html, body').scrollTop("fast");
+            var resultbt1 = $('.Sub_Q1').attr('id');
+            var resultbt2 = $('.Sub_Q2').attr('id');
+            var resultbt3 = $('.Sub_Q3').attr('id');
+            if (resultbt1 == "none" && resultbt2 == "none" && resultbt3 == "none") {
+                $('.rseultbt').fadeIn("fast");
+            }
+        })
+        // final result
+        function result() {
+            var first_first = $('#SQA1_1').val();
+            var first_second = $('#SQA1_2').val();
+            var first_third = $('#SQA1_3').val();
+            var second_first = $('#SQA2_1').val();
+            var second_second = $('#SQA2_2').val();
+            var second_third = $('#SQA2_3').val();
+            var third_first = $('#SQA3_1').val();
+            var third_second = $('#SQA3_2').val();
+            var third_third = $('#SQA3_3').val();
+            var Arry = [first_first * 1, first_second * 1, first_third * 1, second_first * 1, second_second * 1, second_third * 1, third_first * 1, third_second * 1, third_third * 1]
+            console.log(Arry)
+            var TopScore = Math.max.apply(null, Arry);
+            console.log(TopScore);
+            if (first_first == first_second || first_first == first_third || first_first == second_first || first_first == second_second || first_first == second_third || first_first == third_first || first_first == third_second || first_first == third_third) {
+                var RandomPlusScore = Math.random() * 1;
+                var RandomMinusScore = Math.random() * -1;
+                var FinalModifyScore = $('#SQA1_1').val();
+                var ModitySecondScore = FinalModifyScore * 1 + RandomPlusScore + RandomMinusScore
+                $('#SQA1_1').attr('value', ModitySecondScore);
+                result();
+            } else if (TopScore == first_first) {
+                alert("당신의 걱정은 지금 적성에 관한 걱정입니다.")
+            } else if (first_second == first_third || first_second == second_first || first_second == second_second || first_second == second_third || first_second == third_first || first_second == third_second || first_second == third_third) {
+                var RandomPlusScore = Math.random() * 1;
+                var RandomMinusScore = Math.random() * -1;
+                var FinalModifyScore = $('#SQA1_2').val();
+                var ModitySecondScore = FinalModifyScore * 1 + RandomPlusScore + RandomMinusScore
+                $('#SQA1_2').attr('value', ModitySecondScore);
+                result();
+            } else if (TopScore == first_second) {
+                alert("당신의 걱정은 지금 취업에 관한 걱정입니다.")
+            } else if (first_third == second_first || first_third == second_second || first_third == second_third || first_third == third_first || first_third == third_second || first_third == third_third) {
+                var RandomPlusScore = Math.random() * 1;
+                var RandomMinusScore = Math.random() * -1;
+                var FinalModifyScore = $('#SQA1_3').val();
+                var ModitySecondScore = FinalModifyScore * 1 + RandomPlusScore + RandomMinusScore
+                $('#SQA1_3').attr('value', ModitySecondScore);
+                result();
+            } else if (TopScore == first_third) {
+                alert("당신의 걱정은 지금 가족눈치에 관한 걱정입니다.")
+            } else if (second_first == second_second || second_first == second_third || second_first == third_first || second_first == third_second || second_first == third_third) {
+                var RandomPlusScore = Math.random() * 1;
+                var RandomMinusScore = Math.random() * -1;
+                var FinalModifyScore = $('#SQA2_1').val();
+                var ModitySecondScore = FinalModifyScore * 1 + RandomPlusScore + RandomMinusScore
+                $('#SQA2_1').attr('value', ModitySecondScore);
+                result();
+            } else if (TopScore == second_first) {
+                alert("당신의 걱정은 지금 짝사랑에 관한 걱정입니다.")
+            } else if (second_second == second_third || second_second == third_first || second_second == third_second || second_second == third_third) {
+                var RandomPlusScore = Math.random() * 1;
+                var RandomMinusScore = Math.random() * -1;
+                var FinalModifyScore = $('#SQA2_2').val();
+                var ModitySecondScore = FinalModifyScore * 1 + RandomPlusScore + RandomMinusScore
+                $('#SQA2_2').attr('value', ModitySecondScore);
+                result();
+            } else if (TopScore == second_second) {
+                alert("당신의 걱정은 지금 미련에 관한 걱정입니다.")
+            } else if (second_third == third_first || second_third == third_second || second_third == third_third) {
+                var RandomPlusScore = Math.random() * 1;
+                var RandomMinusScore = Math.random() * -1;
+                var FinalModifyScore = $('#SQA2_3').val();
+                var ModitySecondScore = FinalModifyScore * 1 + RandomPlusScore + RandomMinusScore
+                $('#SQA2_3').attr('value', ModitySecondScore);
+                result();
+            } else if (TopScore == second_third) {
+                alert("당신의 걱정은 지금 권태기에 관한 걱정입니다.")
+            } else if (third_first == third_second || third_first == third_third) {
+                var RandomPlusScore = Math.random() * 1;
+                var RandomMinusScore = Math.random() * -1;
+                var FinalModifyScore = $('#SQA3_1').val();
+                var ModitySecondScore = FinalModifyScore * 1 + RandomPlusScore + RandomMinusScore
+                $('#SQA3_1').attr('value', ModitySecondScore);
+                result();
+            } else if (TopScore == third_first) {
+                alert("당신의 걱정은 지금 몸무게에 관한 걱정입니다.")
+            } else if (third_second == third_third) {
+                var RandomPlusScore = Math.random() * 1;
+                var RandomMinusScore = Math.random() * -1;
+                var FinalModifyScore = $('#SQA3_2').val();
+                var ModitySecondScore = FinalModifyScore * 1 + RandomPlusScore + RandomMinusScore
+                $('#SQA3_2').attr('value', ModitySecondScore);
+                result();
+            } else if (TopScore == third_second) {
+                alert("당신의 걱정은 지금 건강에 관한 걱정입니다.")
+            } else if (TopScore == third_third) {
+                alert("당신의 걱정은 지금 키에 관한 걱정입니다.")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
