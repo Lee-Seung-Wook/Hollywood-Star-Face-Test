@@ -268,31 +268,43 @@
             $('#Main_Question1').attr('value', 1);
             $('#M_B_1_Y').attr('class', 'Main_Button_Click');
             $('#M_B_1_N').attr('class', 'Main_Button');
+            var offset = $('.M_B_1_Y').offset();
+            $('html, body').animate({ scrollTop: offset.top }, 500);
         })
         $('#M_B_1_N').click(function () {
             $('#Main_Question1').attr('value', 0);
             $('#M_B_1_N').attr('class', 'Main_Button_Click');
             $('#M_B_1_Y').attr('class', 'Main_Button');
+            var offset = $('.M_B_1_N').offset();
+            $('html, body').animate({ scrollTop: offset.top }, 500);
         })
         $('#M_B_2_Y').click(function () {
             $('#Main_Question2').attr('value', 1);
             $('#M_B_2_Y').attr('class', 'Main_Button_Click');
             $('#M_B_2_N').attr('class', 'Main_Button');
+            var offset = $('.M_B_2_Y').offset();
+            $('html, body').animate({ scrollTop: offset.top }, 500);
         })
         $('#M_B_2_N').click(function () {
             $('#Main_Question2').attr('value', 0);
             $('#M_B_2_N').attr('class', 'Main_Button_Click');
             $('#M_B_2_Y').attr('class', 'Main_Button');
+            var offset = $('.M_B_2_N').offset();
+            $('html, body').animate({ scrollTop: offset.top }, 500);
         })
         $('#M_B_3_Y').click(function () {
             $('#Main_Question3').attr('value', 1);
             $('#M_B_3_Y').attr('class', 'Main_Button_Click');
             $('#M_B_3_N').attr('class', 'Main_Button');
+            var offset = $('.M_B_3_Y').offset();
+            $('html, body').animate({ scrollTop: offset.top }, 500);
         })
         $('#M_B_3_N').click(function () {
             $('#Main_Question3').attr('value', 0);
             $('#M_B_3_N').attr('class', 'Main_Button_Click');
             $('#M_B_3_Y').attr('class', 'Main_Button');
+            var offset = $('.M_B_3_N').offset();
+            $('html, body').animate({ scrollTop: offset.top }, 500);
         })
 
         // 여행 기록하기 결과 함수
