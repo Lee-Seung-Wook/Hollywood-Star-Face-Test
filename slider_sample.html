@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .Slider1 {
+            -webkit-appearance: none;
+            width: 50%;
+            height: 25px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .Slider1:hover {
+            opacity: 1;
+        }
+
+        .Slider1::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        .Slider1::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        .Slider2 {
+            -webkit-appearance: none;
+            width: 50%;
+            height: 25px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .Slider2:hover {
+            opacity: 1;
+        }
+
+        .Slider2::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        .Slider2::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        .Slider1Bt {
+            display: none;
+        }
+
+        .Result1Bt {
+            display: none;
+        }
+
+        .Slider2Bt {
+            display: none;
+        }
+
+        .Result2Bt {
+            display: none;
+        }
+
+        .ResultData {
+            display: none;
+        }
+
+        #sum {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h3 class="h3_1">Q1.</h3>
+        </div>
+        <div>
+            <input class="Slider1" type="range" min="0" max="10" value="0">
+            <button class="Slider1Bt"></button><button class="Result1Bt"></button>
+        </div>
+        <div>
+            <h3 class="h3_2">Q2.</h3>
+        </div>
+        <div>
+            <input class="Slider2" type="range" min="0" max="10" value="0">
+            <button class="Slider2Bt"></button><button class="Result2Bt"></button>
+        </div>
+    </div>
+    <div>
+        <button id="Next" onclick="Next()">Start</button>
+        <button id="sum" onclick="sum()">NEXT</button>
+    </div>
+    <div class="ResultData">
+        <div id="Result1_1"></div>
+        <div id="Result1_2"></div>
+        <div id="Result2_1"></div>
+        <div id="Result2_2"></div>
+    </div>
+    <div>
+        <input class="Result1_1"></input><br>
+        <input class="Result1_2"></input><br>
+        <input class="Result2_1"></input><br>
+        <input class="Result2_2"></input><br>
+    </div>
+
+    <script>
+
+        var number = 0;
+        var array = {
+            1: { "h3_1": "Q1. 현재 당신은 행복합니까?", "h3_2": "Q2. 현재 당신은 불행합니까?", "Slider1Bt": "Slider1", "Result1Bt": "Result1_1", "Slider2Bt": "Slider2", "Result2Bt": "Result2_1" },
+            2: { "h3_1": "Q1. 현재 당신은 배가 고픕니까?", "h3_2": "Q2. 현재 당신은 졸립니까?", "Slider1Bt": "Slider1", "Result1Bt": "Result1_2", "Slider2Bt": "Slider2", "Result2Bt": "Result2_2" }
+        }
+
+        function Next() {
+            number++;
+            $(".h3_1").html(array[number]["h3_1"]);
+            $(".h3_2").html(array[number]["h3_2"]);
+            $('.Slider1Bt').val(array[number]["Slider1Bt"]);
+            $('.Result1Bt').val(array[number]["Result1Bt"]);
+            $('.Slider2Bt').val(array[number]["Slider2Bt"]);
+            $('.Result2Bt').val(array[number]["Result2Bt"]);
+
+            var a = $('.Slider1Bt').val();
+            var b = $('.Result1Bt').val();
+            var slider = $("." + a);
+            var result = $("#" + b);
+            slider.on('input', function () {
+                result.html($(this).val());
+
+            });
+
+            var c = $('.Slider2Bt').val();
+            var d = $('.Result2Bt').val();
+            var slider1 = $("." + c);
+            var result1 = $("#" + d);
+            slider1.on('input', function () {
+                result1.html($(this).val());
+
+            });
+            $('#Next').fadeOut("fast");
+            $('#sum').fadeIn("fast");
+        }
+
+        function sum() {
+            var a = $('.Slider1Bt').val();
+            var b = $('.Result1Bt').val();
+            var c = $('.Slider2Bt').val();
+            var d = $('.Result2Bt').val();
+            var r = $("#" + b).html();
+            $("." + b).attr('value', r);
+            var s = $("#" + d).html();
+            $("." + d).attr('value', s);
+            $("." + a).val(0)
+            $("." + c).val(0)
+            Next();
+        }
+
+    </script>
+
+</body>
+
+</html>
