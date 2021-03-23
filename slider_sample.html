@@ -140,6 +140,9 @@
 
         function Next() {
             number++;
+            if (number == 3) {
+                alert("F")
+            }
             $(".h3_1").html(array[number]["h3_1"]);
             $(".h3_2").html(array[number]["h3_2"]);
             $('.Slider1Bt').val(array[number]["Slider1Bt"]);
