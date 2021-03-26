@@ -12,7 +12,7 @@
         .Slider1 {
             -webkit-appearance: none;
             width: 350px;
-            height: 25px;
+            height: 15px;
             background: #f7f7f7;
             outline: none;
             opacity: 0.7;
@@ -141,6 +141,60 @@
         #Slider20 {
             background: linear-gradient(to right, rgb(194, 55, 30), black 100%, white 0%, white);
         }
+
+        #qwe {
+            display: inline-block;
+            background-color: rgb(177, 177, 177);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-left: 42px;
+        }
+
+        #qwe1 {
+            display: inline-block;
+            background-color: rgb(30, 107, 194);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-left: 42px;
+        }
+
+        #qwe2 {
+            display: inline-block;
+            background-color: rgb(30, 194, 71);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-left: 42px;
+        }
+
+        #qwe3 {
+            display: inline-block;
+            background-color: rgb(137, 194, 30);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-left: 42px;
+        }
+
+        #qwe4 {
+            display: inline-block;
+            background-color: rgb(194, 118, 30);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-left: 42px;
+        }
+
+        #qwe5 {
+            display: inline-block;
+            background-color: rgb(194, 55, 30);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-left: 42px;
+        }
     </style>
 </head>
 
@@ -150,6 +204,13 @@
             <h3 class="h3_1">Q1.</h3>
         </div>
         <div>
+            <div>
+                <div class="div1" id="qwe"></div>
+                <div class="div2" id="qwe"></div>
+                <div class="div3" id="qwe"></div>
+                <div class="div4" id="qwe"></div>
+                <div class="div5" id="qwe"></div>
+            </div>
             <input class="Slider1" type="range" min="1" max="10" value="1">
             <button class="Slider1Bt"></button><button class="Result1Bt"></button>
         </div>
@@ -227,6 +288,39 @@
                     $('.Slider1').attr('id', 'Slider20')
                 }
 
+                var SlideDisplay = $('#Result1_1').html();
+                if (SlideDisplay == 1 || SlideDisplay == 2) {
+                    $('.div1').attr('id', 'qwe1')
+                    $('.div2').attr('id', 'qwe')
+                    $('.div3').attr('id', 'qwe')
+                    $('.div4').attr('id', 'qwe')
+                    $('.div5').attr('id', 'qwe')
+                    $('#qweq').attr('src', '../Teachable Machine Model/2020(c)/Actress(c)/Scarlett Johansson.jpg')
+                } if (SlideDisplay == 3 || SlideDisplay == 4) {
+                    $('.div1').attr('id', 'qwe1')
+                    $('.div2').attr('id', 'qwe2')
+                    $('.div3').attr('id', 'qwe')
+                    $('.div4').attr('id', 'qwe')
+                    $('.div5').attr('id', 'qwe')
+                } if (SlideDisplay == 5 || SlideDisplay == 6) {
+                    $('.div1').attr('id', 'qwe1')
+                    $('.div2').attr('id', 'qwe2')
+                    $('.div3').attr('id', 'qwe3')
+                    $('.div4').attr('id', 'qwe')
+                    $('.div5').attr('id', 'qwe')
+                } if (SlideDisplay == 7 || SlideDisplay == 8) {
+                    $('.div1').attr('id', 'qwe1')
+                    $('.div2').attr('id', 'qwe2')
+                    $('.div3').attr('id', 'qwe3')
+                    $('.div4').attr('id', 'qwe4')
+                    $('.div5').attr('id', 'qwe')
+                } if (SlideDisplay == 9 || SlideDisplay == 10) {
+                    $('.div1').attr('id', 'qwe1')
+                    $('.div2').attr('id', 'qwe2')
+                    $('.div3').attr('id', 'qwe3')
+                    $('.div4').attr('id', 'qwe4')
+                    $('.div5').attr('id', 'qwe5')
+                }
             });
 
             var c = $('.Slider2Bt').val();
