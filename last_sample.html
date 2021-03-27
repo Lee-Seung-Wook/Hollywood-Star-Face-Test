@@ -351,6 +351,12 @@
                 </p>
                 <button class="Fist_Question_Bt" id="FQBt4">&#xE806</button>
             </div>
+            <div class="">
+                <p class="Fist_Question">
+                    Q4. 당신의 일상이 무너지고 있다는 생각을 할 때가 있나요?
+                </p>
+                <button class="Fist_Question_Bt" id="FQBt4">&#xE806</button>
+            </div>
             <div>
                 <input class="First_Question_value1" type="hidden" value="0">
                 <input class="First_Question_value2" type="hidden" value="0">
@@ -376,8 +382,8 @@
         $(document).ready(function () {
             if (StartNumber == 0) {
                 setTimeout(function () {
-                    $('.Main_Page').fadeOut(1500);
-                    $('.Second_Page').fadeIn(1500);
+                    $('.Main_Page').fadeOut(1000);
+                    $('.Second_Page').fadeIn(1000);
                 }, 2500);
                 StartNumber++;
                 window.scrollTo(0, 0);
