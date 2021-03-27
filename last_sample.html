@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Jquery 적용 Script -->
-    <link rel="stylesheet" href=".//fontello-bc12bb57/css/fontello.css">
+    <link rel="stylesheet" href="./fontello-09c69b1b/css/fontello.css">
+    <link rel="stylesheet" href="./fontello-09c69b1b/css/animation.css">
     <!-- Fontello 적용 CSS -->
     <title>나만의 걱정인형</title>
     <style>
@@ -133,25 +134,26 @@
         }
 
         .Third_Page_Div {
-            margin-top: 4rem;
+            margin-top: 3rem;
             margin-left: 1rem;
             margin-right: 1rem;
             display: grid;
-            grid-template-columns: 40% 60%
+            grid-template-columns: 40% 60%;
+            border-bottom: 1px dashed rgb(32,32,32);
         }
 
         .Third_Page_Div2 {
-            margin-top: 4rem;
+            margin-top: 3rem;
             margin-left: 1rem;
             margin-right: 1rem;
             display: grid;
-            grid-template-columns: 60% 40%
+            grid-template-columns: 60% 40%;
+            border-bottom: 1px dashed rgb(32,32,32);
         }
 
         .Fist_Question_Bt {
-            padding-right: 1.5rem;
-            width: 6rem;
-            height: 5rem;
+            width: 80%;
+            height: 80%;
             border: 0px;
             border-radius: 10%;
             font-family: 'fontello';
@@ -260,13 +262,13 @@
         .Next {
             margin-top: 2rem;
             margin-bottom: 0.5rem;
-            width: 12rem;
-            height: 8rem;
+            width: 10rem;
+            height: 4rem;
             background-color: rgb(32, 32, 32);
             border: 0px;
             border-radius: 10%;
             color: rgb(114, 114, 114);
-            font-size: 3rem;
+            font-size: 2rem;
             font-family: 'fontello';
             transition: 0.5s;
         }
@@ -283,6 +285,10 @@
                 0 0 50px #fff,
                 -10px 0 80px #f0f,
                 10px 0 80px #0ff;
+        }
+
+        .padding {
+            padding:0.5rem;
         }
     </style>
 </head>
@@ -320,27 +326,28 @@
 
     <div class="Third_Page">
         <div>
+            <p class="padding"></p>
             <div class="Third_Page_Div">
                 <button class="Fist_Question_Bt" id="FQBt1">&#xE802</button>
                 <p class="Fist_Question">
-                    <Br>Q1. 취업이나 이직에 대한 생각을 하면 가슴이 답답해지나요?
+                    Q1. 취업이나 이직에 대한 생각을 하면 가슴이 답답해지나요?
                 </p>
             </div>
             <div class="Third_Page_Div2">
                 <p class="Fist_Question">
-                    <Br>Q2. 인간관계에 대한 고민으로 쉽게 잠을 이루지 못할 때가 있나요?
+                    Q2. 인간관계에 대한 고민으로 쉽게 잠을 이루지 못할 때가 있나요?
                 </p>
                 <button class="Fist_Question_Bt" id="FQBt2">&#xE803</button>
             </div>
             <div class="Third_Page_Div">
                 <button class="Fist_Question_Bt" id="FQBt3">&#xF2BE</button>
                 <p class="Fist_Question">
-                    <Br>Q3. 최근에 미용이나 건강에 관한 영상이나 기사를 찾아 본 적이 있나요?
+                    Q3. 최근에 미용이나 건강에 관한 영상이나 기사를 찾아 본 적이 있나요?
                 </p>
             </div>
             <div class="Third_Page_Div2">
                 <p class="Fist_Question">
-                    <Br>Q4. 당신의 일상이 무너지고 있다는 생각을 할 때가 있나요?
+                    Q4. 당신의 일상이 무너지고 있다는 생각을 할 때가 있나요?
                 </p>
                 <button class="Fist_Question_Bt" id="FQBt4">&#xE806</button>
             </div>
@@ -352,7 +359,7 @@
             </div>
             <div>
                 <br>
-                <button class="Next">&#xE800</button>
+                <button class="Next"><span id="span" class="">&#xE834</span></button>
             </div>
         </div>
 
@@ -381,8 +388,8 @@
         $('.Start').click(function () {
             if (StartNumber == 1) {
                 setTimeout(function () {
-                    $('.Second_Page').fadeOut(1500);
-                    $('.Third_Page').fadeIn(1500);
+                    $('.Second_Page').fadeOut(1000);
+                    $('.Third_Page').fadeIn(1000);
                 }, 1000);
                 StartNumber++;
                 window.scrollTo(0, 0);
@@ -455,6 +462,11 @@
                 $('html, body').animate({ scrollTop: offset.top }, 500);
             }
 
+        })
+
+        //
+        $('.Next').click(function(){
+            $('#span').addClass('icon-spin4-alt animate-spin');
         })
 
     </script>
