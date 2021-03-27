@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Jquery 적용 Script -->
+    <link rel="stylesheet" href=".//fontello-bc12bb57/css/fontello.css">
+    <!-- Fontello 적용 CSS -->
+    <title>나만의 걱정인형</title>
+    <style>
+        html,
+        body {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(62, 60, 98);
+            text-align: center;
+        }
+
+        .Main_Page {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-image: url('./3.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: rgb(62, 60, 98)
+        }
+
+        .Second_Page {
+            display: none;
+        }
+
+        /* 배민 주아체 */
+        @font-face {
+            font-family: 'BMJUA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .Second_Page_Notice {
+            color: #FFE8F5;
+            margin-top: 3.5rem;
+            font-family: 'BMJUA';
+            font-weight: normal;
+            font-size: 2.0rem;
+            white-space: normal;
+
+        }
+
+        .Second_Page_Notice_P {
+            color: #FFE8F5;
+            margin-top: 2.0rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'BMJUA';
+            font-weight: normal;
+            font-size: 1.0rem;
+            white-space: normal;
+
+        }
+
+        .Second_Page_Notice_P_Notice {
+            text-align: left;
+            color: #FFE8F5;
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            padding-bottom: 0.5rem;
+            font-family: 'BMJUA';
+            font-weight: normal;
+            font-size: 0.5rem;
+            white-space: normal;
+
+        }
+
+        .Second_Page_Notice_P_Notice_Fontello {
+            text-align: left;
+            color: #FFE8F5;
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            padding-bottom: 0.5rem;
+            font-family: 'fontello';
+            font-weight: normal;
+            font-size: 0.5rem;
+            white-space: normal;
+        }
+
+        .Second_Page_Notice_P_Notice_Fontello>a:link {
+            color: #FFE8F5;
+        }
+
+        .Second_Page_Notice_P_Notice_Fontello>a:visited {
+            color: #FFE8F5;
+        }
+
+        .Start {
+            margin-top: 3rem;
+            margin-bottom: 2.5rem;
+            width: 20rem;
+            height: 15rem;
+            background-color: rgb(32, 32, 32);
+            border: 0px;
+            border-radius: 10%;
+            color: rgb(114, 114, 114);
+            font-size: 4rem;
+            font-family: 'fontello';
+            transition: 0.5s;
+        }
+
+        .Start:hover {
+            color: whitesmoke;
+            border-radius: 10%;
+            box-shadow:
+                inset 0 0 60px whitesmoke,
+                inset 15px 0 80px #f0f,
+                inset -15px 0 80px #0ff,
+                inset 15px 0 300px #f0f,
+                inset -15px 0 300px #0ff,
+                0 0 50px #fff,
+                -10px 0 80px #f0f,
+                10px 0 80px #0ff;
+        }
+
+        .Third_Page {
+            display: none;
+        }
+
+        .Third_Page_Div {
+            margin-top: 4rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            display: grid;
+            grid-template-columns: 40% 60%
+        }
+
+        .Third_Page_Div2 {
+            margin-top: 4rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            display: grid;
+            grid-template-columns: 60% 40%
+        }
+
+        .Fist_Question_Bt {
+            width: 7rem;
+            height: 7rem;
+            border: 0px;
+            border-radius: 10%;
+            font-family: 'fontello';
+            font-size: 5rem;
+            background-color: rgb(32, 32, 32);
+            color: rgb(114, 114, 114);
+            justify-self: center;
+
+        }
+
+        .Fist_Question_Bt_Click {
+            color: whitesmoke;
+            background-color: rgb(32, 32, 32);
+            border-radius: 10%;
+            width: 7rem;
+            height: 7rem;
+            border: 0px;
+            border-radius: 10%;
+            font-family: 'fontello';
+            font-size: 5rem;
+            justify-self: center;
+            box-shadow:
+                inset 0 0 60px whitesmoke,
+                inset 15px 0 80px rgb(0, 153, 33),
+                inset -15px 0 80px #0ff,
+                inset 15px 0 300px rgb(0, 153, 33),
+                inset -15px 0 300px #0ff,
+                0 0 50px #fff,
+                -10px 0 80px rgb(0, 153, 33),
+                10px 0 80px #0ff;
+        }
+
+        .Fist_Question_Bt_Click2 {
+            color: whitesmoke;
+            background-color: rgb(32, 32, 32);
+            border-radius: 10%;
+            width: 7rem;
+            height: 7rem;
+            border: 0px;
+            border-radius: 10%;
+            font-family: 'fontello';
+            font-size: 5rem;
+            justify-self: center;
+            box-shadow:
+                inset 0 0 60px whitesmoke,
+                inset 15px 0 80px rgb(150, 153, 0),
+                inset -15px 0 80px rgb(204, 0, 255),
+                inset 15px 0 300px rgb(150, 153, 0),
+                inset -15px 0 300px rgb(204, 0, 255),
+                0 0 50px #fff,
+                -10px 0 80px rgb(150, 153, 0),
+                10px 0 80px rgb(204, 0, 255);
+        }
+
+        .Fist_Question_Bt_Click3 {
+            color: whitesmoke;
+            background-color: rgb(32, 32, 32);
+            border-radius: 10%;
+            width: 7rem;
+            height: 7rem;
+            border: 0px;
+            border-radius: 10%;
+            font-family: 'fontello';
+            font-size: 5rem;
+            justify-self: center;
+            box-shadow:
+                inset 0 0 60px whitesmoke,
+                inset 15px 0 80px rgb(71, 0, 153),
+                inset -15px 0 80px rgb(43, 255, 0),
+                inset 15px 0 300px rgb(71, 0, 153),
+                inset -15px 0 300px rgb(43, 255, 0),
+                0 0 50px #fff,
+                -10px 0 80px rgb(71, 0, 153),
+                10px 0 80px rgb(43, 255, 0);
+        }
+
+        .Fist_Question_Bt_Click4 {
+            color: whitesmoke;
+            background-color: rgb(32, 32, 32);
+            border-radius: 10%;
+            width: 7rem;
+            height: 7rem;
+            border: 0px;
+            border-radius: 10%;
+            font-family: 'fontello';
+            font-size: 5rem;
+            justify-self: center;
+            box-shadow:
+                inset 0 0 60px whitesmoke,
+                inset 15px 0 80px rgb(204, 92, 0),
+                inset -15px 0 80px rgb(255, 0, 98),
+                inset 15px 0 300px rgb(204, 92, 0),
+                inset -15px 0 300px rgb(255, 0, 98),
+                0 0 50px #fff,
+                -10px 0 80px rgb(204, 92, 0),
+                10px 0 80px rgb(255, 0, 98);
+        }
+
+        .Fist_Question {
+            font-family: 'BMJUA';
+            font-weight: normal;
+            font-size: 1.0rem;
+            color: #FFE8F5;
+        }
+
+        .Next {
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            width: 12rem;
+            height: 8rem;
+            background-color: rgb(32, 32, 32);
+            border: 0px;
+            border-radius: 10%;
+            color: rgb(114, 114, 114);
+            font-size: 4rem;
+            font-family: 'fontello';
+            transition: 0.5s;
+        }
+
+        .Next:hover {
+            color: whitesmoke;
+            border-radius: 10%;
+            box-shadow:
+                inset 0 0 60px whitesmoke,
+                inset 15px 0 80px #f0f,
+                inset -15px 0 80px #0ff,
+                inset 15px 0 300px #f0f,
+                inset -15px 0 300px #0ff,
+                0 0 50px #fff,
+                -10px 0 80px #f0f,
+                10px 0 80px #0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Main_Page">
+    </div>
+
+    <div class="Second_Page">
+        <article class="Second_Page_Notice">
+            나만의 걱정인형
+        </article>
+        <p class="Second_Page_Notice_P">
+            &nbsp;본 심리테스트는 현재 당신이 겪고 있는 스트레스의 원인파악을 목적으로 하고 있는 유희성 테스트로 전문적인 심리 상담이 아님을 미리 말씀드립니다.
+        </p>
+        <p class="Second_Page_Notice_P">
+            &nbsp;다양한 자극과 피로감에 둘러싸인 오늘날의 현대인이 겪고 있는 스트레스의 원인을 대분류와 하위분류로 나누어 테스트를 진행하며, 가급적 문항을 보자마자 느껴지는 감정을 그대로
+            입력해주시기 바랍니다.
+        </p>
+        <button class="Start">&#xE804</button>
+        <p class="Second_Page_Notice_P">
+            &nbsp;안내사항<br>
+        </p>
+        <p class="Second_Page_Notice_P_Notice">
+            · 해당 심리테스트는 의학적, 심리학적 전문성이 없는 단순 유희성 테스트입니다.<br>
+            · 결과로 도출되는 재화나 서비스 등에 대해 어떠한 유료광고도 포함하고 있지 않습니다.<br>
+            &nbsp;(CoupangAd, KakaoAdFit, GoogleAdsense 제외)<br>
+        </p>
+        <p class="Second_Page_Notice_P_Notice_Fontello">
+            · &#xE805 : <a href="mailto:blue_notion@naver.com">blue_notion@naver.com</a><br>
+            · &#xE801 : 고성현, 김세은, 이승욱 <br>
+            · &#xF1F9 : CopyRight [TeamName] All Rights Reserved.<br>
+        </p>
+    </div>
+
+    <div class="Third_Page">
+        <div>
+            <div class="Third_Page_Div">
+                <button class="Fist_Question_Bt" id="FQBt1">&#xE802</button>
+                <p class="Fist_Question">
+                    <Br>Q1. 취업이나 이직에 대한 생각을 하면 가슴이 답답해지나요?
+                </p>
+            </div>
+            <div class="Third_Page_Div2">
+                <p class="Fist_Question">
+                    <Br>Q2. 인간관계에 대한 고민으로 쉽게 잠을 이루지 못할 때가 있나요?
+                </p>
+                <button class="Fist_Question_Bt" id="FQBt2">&#xE803</button>
+            </div>
+            <div class="Third_Page_Div">
+                <button class="Fist_Question_Bt" id="FQBt3">&#xF2BE</button>
+                <p class="Fist_Question">
+                    <Br>Q3. 최근에 미용이나 건강에 관한 영상이나 기사를 찾아 본 적이 있나요?
+                </p>
+            </div>
+            <div class="Third_Page_Div2">
+                <p class="Fist_Question">
+                    <Br>Q4. 당신의 일상이 무너지고 있다는 생각을 할 때가 있나요?
+                </p>
+                <button class="Fist_Question_Bt" id="FQBt4">&#xE806</button>
+            </div>
+            <div>
+                <input class="First_Question_value1" type="hidden" value="0">
+                <input class="First_Question_value2" type="hidden" value="0">
+                <input class="First_Question_value3" type="hidden" value="0">
+                <input class="First_Question_value4" type="hidden" value="0">
+            </div>
+            <div>
+                <br>
+                <button class="Next">&#xE800</button>
+            </div>
+        </div>
+
+        <div class="Fourth_Page">
+
+        </div>
+
+
+    </div>
+
+    <script>
+        // For FadeOut [Main Page] and FadeIn [Second Page]
+        var StartNumber = 0
+        $(document).ready(function () {
+            if (StartNumber == 0) {
+                setTimeout(function () {
+                    $('.Main_Page').fadeOut(500);
+                    $('.Second_Page').fadeIn(500);
+                }, 500);
+                StartNumber++;
+                window.scrollTo(0, 0);
+            }
+        })
+
+        // For FadeOut [Second Page] and FadeIn [Third Page]
+        $('.Start').click(function () {
+            if (StartNumber == 1) {
+                setTimeout(function () {
+                    $('.Second_Page').fadeOut(500);
+                    $('.Third_Page').fadeIn(500);
+                }, 500);
+                StartNumber++;
+                window.scrollTo(0, 0);
+            }
+        })
+
+        // For Select First Question Button [Color, Value]
+        $('#FQBt1').click(function () {
+            var value = $('.First_Question_value1').val();
+            if (value == 0) {
+                $('#FQBt1').attr('class', 'Fist_Question_Bt_Click');
+                $('.First_Question_value1').val(1);
+                var offset = $('#FQBt1').offset();
+                $('html, body').animate({ scrollTop: offset.top }, 500);
+            } else if (value == 1) {
+                $('#FQBt1').attr('class', 'Fist_Question_Bt');
+                $('.First_Question_value1').val(0);
+                var offset = $('#FQBt1').offset();
+                $('html, body').animate({ scrollTop: offset.top }, 500);
+            }
+
+        })
+
+        // For Select Second Question Button [Color, Value]
+        $('#FQBt2').click(function () {
+            var value = $('.First_Question_value2').val();
+            if (value == 0) {
+                $('#FQBt2').attr('class', 'Fist_Question_Bt_Click2');
+                $('.First_Question_value2').val(1);
+                var offset = $('#FQBt2').offset();
+                $('html, body').animate({ scrollTop: offset.top }, 500);
+            } else if (value == 1) {
+                $('#FQBt2').attr('class', 'Fist_Question_Bt');
+                $('.First_Question_value2').val(0);
+                var offset = $('#FQBt2').offset();
+                $('html, body').animate({ scrollTop: offset.top }, 500);
+            }
+
+        })
+
+        // For Select Third Question Button [Color, Value]
+        $('#FQBt3').click(function () {
+            var value = $('.First_Question_value3').val();
+            if (value == 0) {
+                $('#FQBt3').attr('class', 'Fist_Question_Bt_Click3');
+                $('.First_Question_value3').val(1);
+                var offset = $('#FQBt3').offset();
+                $('html, body').animate({ scrollTop: offset.top }, 500);
+            } else if (value == 1) {
+                $('#FQBt3').attr('class', 'Fist_Question_Bt');
+                $('.First_Question_value3').val(0);
+                var offset = $('#FQBt3').offset();
+                $('html, body').animate({ scrollTop: offset.top }, 500);
+            }
+
+        })
+
+        // For Select Fourth Question Button [Color, Value]
+        $('#FQBt4').click(function () {
+            var value = $('.First_Question_value4').val();
+            if (value == 0) {
+                $('#FQBt4').attr('class', 'Fist_Question_Bt_Click4');
+                $('.First_Question_value4').val(1);
+                var offset = $('#FQBt4').offset();
+                $('html, body').animate({ scrollTop: offset.top }, 500);
+            } else if (value == 1) {
+                $('#FQBt4').attr('class', 'Fist_Question_Bt');
+                $('.First_Question_value4').val(0);
+                var offset = $('#FQBt4').offset();
+                $('html, body').animate({ scrollTop: offset.top }, 500);
+            }
+
+        })
+
+    </script>
+</body>
+
+<!-- Copyright (c) 2021 by quangdao (https://codepen.io/lincohn/pen/JjPZgXw)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
+</html>
