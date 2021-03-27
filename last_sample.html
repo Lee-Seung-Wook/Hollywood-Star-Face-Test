@@ -149,7 +149,6 @@
         }
 
         .Fist_Question_Bt {
-            text-align: center;
             width: 6rem;
             height: 5rem;
             border: 0px;
@@ -158,7 +157,7 @@
             font-size: 3rem;
             background-color: rgb(32, 32, 32);
             color: rgb(114, 114, 114);
-            justify-self: stretch;
+            justify-self: center;
 
         }
 
@@ -369,9 +368,9 @@
         $(document).ready(function () {
             if (StartNumber == 0) {
                 setTimeout(function () {
-                    $('.Main_Page').fadeOut(500);
-                    $('.Second_Page').fadeIn(500);
-                }, 500);
+                    $('.Main_Page').fadeOut(1500);
+                    $('.Second_Page').fadeIn(1500);
+                }, 2500);
                 StartNumber++;
                 window.scrollTo(0, 0);
             }
@@ -381,9 +380,9 @@
         $('.Start').click(function () {
             if (StartNumber == 1) {
                 setTimeout(function () {
-                    $('.Second_Page').fadeOut(500);
-                    $('.Third_Page').fadeIn(500);
-                }, 500);
+                    $('.Second_Page').fadeOut(1500);
+                    $('.Third_Page').fadeIn(1500);
+                }, 1500);
                 StartNumber++;
                 window.scrollTo(0, 0);
             }
