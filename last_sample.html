@@ -165,6 +165,20 @@
 
         }
 
+        .Next11 {
+            margin-top: 0rem;
+            margin-bottom: 0.0rem;
+            width: 6rem;
+            height: 4rem;
+            background-color: rgb(32, 32, 32);
+            border: 0px;
+            border-radius: 10%;
+            color: rgb(114, 114, 114);
+            font-size: 3rem;
+            font-family: 'fontello';
+            transition: 0.5s;
+        }
+
         .Fist_Question_Bt_Click {
             color: whitesmoke;
             background-color: rgb(32, 32, 32);
@@ -334,6 +348,7 @@
             <p class="padding"></p>
             <div class="Third_Page_Div">
                 <button class="Fist_Question_Bt" id="FQBt1">&#xE802</button>
+                <button class="Next11">&#xE834</button>
                 <p class="Fist_Question">
                     Q1. 취업이나 이직에 대한 생각을 하면 가슴이 답답해지나요?
                 </p>
@@ -381,9 +396,9 @@
         $(document).ready(function () {
             if (StartNumber == 0) {
                 setTimeout(function () {
-                    $('.Main_Page').fadeOut(1000);
-                    $('.Second_Page').fadeIn(1000);
-                }, 2500);
+                    $('.Main_Page').fadeOut(500);
+                    $('.Second_Page').fadeIn(500);
+                }, 500);
                 StartNumber++;
                 window.scrollTo(0, 0);
             }
@@ -393,9 +408,9 @@
         $('.Start').click(function () {
             if (StartNumber == 1) {
                 setTimeout(function () {
-                    $('.Second_Page').fadeOut(1000);
-                    $('.Third_Page').fadeIn(1000);
-                }, 1000);
+                    $('.Second_Page').fadeOut(500);
+                    $('.Third_Page').fadeIn(500);
+                }, 500);
                 StartNumber++;
                 window.scrollTo(0, 0);
             }
