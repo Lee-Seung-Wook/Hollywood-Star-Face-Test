@@ -458,6 +458,36 @@
                 -5px 0 40px rgb(204, 0, 0),
                 5px 0 40px rgb(255, 0, 0);
         }
+
+        /* Next Question Move Button */
+        .Second_Next {
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            width: 8rem;
+            height: 4rem;
+            background-color: rgb(32, 32, 32);
+            border: 0px;
+            border-radius: 10%;
+            color: rgb(114, 114, 114);
+            font-size: 1.5rem;
+            font-family: 'fontello';
+            transition: 0.5s;
+        }
+
+        /* Next Question Move Button : Hover */
+        .Second_Next:hover {
+            color: whitesmoke;
+            border-radius: 10%;
+            box-shadow:
+                inset 0 0 60px whitesmoke,
+                inset 15px 0 80px #f0f,
+                inset -15px 0 80px #0ff,
+                inset 15px 0 300px #f0f,
+                inset -15px 0 300px #0ff,
+                0 0 50px #fff,
+                -10px 0 80px #f0f,
+                10px 0 80px #0ff;
+        }
     </style>
 </head>
 
@@ -712,6 +742,8 @@
                         <input class="1_15_6" type="hidden" value="0">
                     </div>
                 </div>
+                <p class="padding"></p>
+                <button class="Second_Next"><span id="span" class="">&#xE834</span></button>
             </div>
         </div>
 
@@ -723,27 +755,111 @@
         var StartNumber = 0
 
         var array = {
-            0: {
+            1: {
                 "Second_Question1": "1", "BtBt1": "1_1_1", "BtBt2": "1_1_1", "BtBt3": "1_1_1", "BtBt4": "1_1_1", "BtBt5": "1_1_1",
                 "Second_Question2": "2", "BtBt1_2": "1_1_2", "BtBt2_2": "1_1_2", "BtBt3_2": "1_1_2", "BtBt4_2": "1_1_2", "BtBt5_2": "1_1_2",
                 "Second_Question3": "3", "BtBt1_3": "1_1_3", "BtBt2_3": "1_1_3", "BtBt3_3": "1_1_3", "BtBt4_3": "1_1_3", "BtBt5_3": "1_1_3",
                 "Second_Question4": "4", "BtBt1_4": "1_1_4", "BtBt2_4": "1_1_4", "BtBt3_4": "1_1_4", "BtBt4_4": "1_1_4", "BtBt5_4": "1_1_4",
                 "Second_Question5": "5", "BtBt1_5": "1_1_5", "BtBt2_5": "1_1_5", "BtBt3_5": "1_1_5", "BtBt4_5": "1_1_5", "BtBt5_5": "1_1_5"
             },
-            2: { "": "", },
-            3: { "": "", },
-            4: { "": "", },
-            5: { "": "", },
-            6: { "": "", },
-            7: { "": "", },
-            8: { "": "", },
-            9: { "": "", },
-            10: { "": "", },
-            11: { "": "", },
-            12: { "": "", },
-            13: { "": "", },
-            14: { "": "", },
-            15: { "": "", }
+            2: {
+                "Second_Question1": "1", "BtBt1": "1_2_1", "BtBt2": "1_2_1", "BtBt3": "1_2_1", "BtBt4": "1_2_1", "BtBt5": "1_2_1",
+                "Second_Question2": "2", "BtBt1_2": "1_2_2", "BtBt2_2": "1_2_2", "BtBt3_2": "1_2_2", "BtBt4_2": "1_2_2", "BtBt5_2": "1_2_2",
+                "Second_Question3": "3", "BtBt1_3": "1_2_3", "BtBt2_3": "1_2_3", "BtBt3_3": "1_2_3", "BtBt4_3": "1_2_3", "BtBt5_3": "1_2_3",
+                "Second_Question4": "4", "BtBt1_4": "1_2_4", "BtBt2_4": "1_2_4", "BtBt3_4": "1_2_4", "BtBt4_4": "1_2_4", "BtBt5_4": "1_2_4",
+                "Second_Question5": "5", "BtBt1_5": "1_2_5", "BtBt2_5": "1_2_5", "BtBt3_5": "1_2_5", "BtBt4_5": "1_2_5", "BtBt5_5": "1_2_5"
+            },
+            3: {
+                "Second_Question1": "1", "BtBt1": "1_3_1", "BtBt2": "1_3_1", "BtBt3": "1_3_1", "BtBt4": "1_3_1", "BtBt5": "1_3_1",
+                "Second_Question2": "2", "BtBt1_2": "1_3_2", "BtBt2_2": "1_3_2", "BtBt3_2": "1_3_2", "BtBt4_2": "1_3_2", "BtBt5_2": "1_3_2",
+                "Second_Question3": "3", "BtBt1_3": "1_3_3", "BtBt2_3": "1_3_3", "BtBt3_3": "1_3_3", "BtBt4_3": "1_3_3", "BtBt5_3": "1_3_3",
+                "Second_Question4": "4", "BtBt1_4": "1_3_4", "BtBt2_4": "1_3_4", "BtBt3_4": "1_3_4", "BtBt4_4": "1_3_4", "BtBt5_4": "1_3_4",
+                "Second_Question5": "5", "BtBt1_5": "1_3_5", "BtBt2_5": "1_3_5", "BtBt3_5": "1_3_5", "BtBt4_5": "1_3_5", "BtBt5_5": "1_3_5"
+            },
+            4: {
+                "Second_Question1": "1", "BtBt1": "1_4_1", "BtBt2": "1_4_1", "BtBt3": "1_4_1", "BtBt4": "1_4_1", "BtBt5": "1_4_1",
+                "Second_Question2": "2", "BtBt1_2": "1_4_2", "BtBt2_2": "1_4_2", "BtBt3_2": "1_4_2", "BtBt4_2": "1_4_2", "BtBt5_2": "1_4_2",
+                "Second_Question3": "3", "BtBt1_3": "1_4_3", "BtBt2_3": "1_4_3", "BtBt3_3": "1_4_3", "BtBt4_3": "1_4_3", "BtBt5_3": "1_4_3",
+                "Second_Question4": "4", "BtBt1_4": "1_4_4", "BtBt2_4": "1_4_4", "BtBt3_4": "1_4_4", "BtBt4_4": "1_4_4", "BtBt5_4": "1_4_4",
+                "Second_Question5": "5", "BtBt1_5": "1_4_5", "BtBt2_5": "1_4_5", "BtBt3_5": "1_4_5", "BtBt4_5": "1_4_5", "BtBt5_5": "1_4_5"
+            },
+            5: {
+                "Second_Question1": "1", "BtBt1": "1_5_1", "BtBt2": "1_5_1", "BtBt3": "1_5_1", "BtBt4": "1_5_1", "BtBt5": "1_5_1",
+                "Second_Question2": "2", "BtBt1_2": "1_5_2", "BtBt2_2": "1_5_2", "BtBt3_2": "1_5_2", "BtBt4_2": "1_5_2", "BtBt5_2": "1_5_2",
+                "Second_Question3": "3", "BtBt1_3": "1_5_3", "BtBt2_3": "1_5_3", "BtBt3_3": "1_5_3", "BtBt4_3": "1_5_3", "BtBt5_3": "1_5_3",
+                "Second_Question4": "4", "BtBt1_4": "1_5_4", "BtBt2_4": "1_5_4", "BtBt3_4": "1_5_4", "BtBt4_4": "1_5_4", "BtBt5_4": "1_5_4",
+                "Second_Question5": "5", "BtBt1_5": "1_5_5", "BtBt2_5": "1_5_5", "BtBt3_5": "1_5_5", "BtBt4_5": "1_5_5", "BtBt5_5": "1_5_5"
+            },
+            6: {
+                "Second_Question1": "1", "BtBt1": "1_6_1", "BtBt2": "1_6_1", "BtBt3": "1_6_1", "BtBt4": "1_6_1", "BtBt5": "1_6_1",
+                "Second_Question2": "2", "BtBt1_2": "1_6_2", "BtBt2_2": "1_6_2", "BtBt3_2": "1_6_2", "BtBt4_2": "1_6_2", "BtBt5_2": "1_6_2",
+                "Second_Question3": "3", "BtBt1_3": "1_6_3", "BtBt2_3": "1_6_3", "BtBt3_3": "1_6_3", "BtBt4_3": "1_6_3", "BtBt5_3": "1_6_3",
+                "Second_Question4": "4", "BtBt1_4": "1_6_4", "BtBt2_4": "1_6_4", "BtBt3_4": "1_6_4", "BtBt4_4": "1_6_4", "BtBt5_4": "1_6_4",
+                "Second_Question5": "5", "BtBt1_5": "1_6_5", "BtBt2_5": "1_6_5", "BtBt3_5": "1_6_5", "BtBt4_5": "1_6_5", "BtBt5_5": "1_6_5"
+            },
+            7: {
+                "Second_Question1": "1", "BtBt1": "1_7_1", "BtBt2": "1_7_1", "BtBt3": "1_7_1", "BtBt4": "1_7_1", "BtBt5": "1_7_1",
+                "Second_Question2": "2", "BtBt1_2": "1_7_2", "BtBt2_2": "1_7_2", "BtBt3_2": "1_7_2", "BtBt4_2": "1_7_2", "BtBt5_2": "1_7_2",
+                "Second_Question3": "3", "BtBt1_3": "1_7_3", "BtBt2_3": "1_7_3", "BtBt3_3": "1_7_3", "BtBt4_3": "1_7_3", "BtBt5_3": "1_7_3",
+                "Second_Question4": "4", "BtBt1_4": "1_7_4", "BtBt2_4": "1_7_4", "BtBt3_4": "1_7_4", "BtBt4_4": "1_7_4", "BtBt5_4": "1_7_4",
+                "Second_Question5": "5", "BtBt1_5": "1_7_5", "BtBt2_5": "1_7_5", "BtBt3_5": "1_7_5", "BtBt4_5": "1_7_5", "BtBt5_5": "1_7_5"
+            },
+            8: {
+                "Second_Question1": "1", "BtBt1": "1_8_1", "BtBt2": "1_8_1", "BtBt3": "1_8_1", "BtBt4": "1_8_1", "BtBt5": "1_8_1",
+                "Second_Question2": "2", "BtBt1_2": "1_8_2", "BtBt2_2": "1_8_2", "BtBt3_2": "1_8_2", "BtBt4_2": "1_8_2", "BtBt5_2": "1_8_2",
+                "Second_Question3": "3", "BtBt1_3": "1_8_3", "BtBt2_3": "1_8_3", "BtBt3_3": "1_8_3", "BtBt4_3": "1_8_3", "BtBt5_3": "1_8_3",
+                "Second_Question4": "4", "BtBt1_4": "1_8_4", "BtBt2_4": "1_8_4", "BtBt3_4": "1_8_4", "BtBt4_4": "1_8_4", "BtBt5_4": "1_8_4",
+                "Second_Question5": "5", "BtBt1_5": "1_8_5", "BtBt2_5": "1_8_5", "BtBt3_5": "1_8_5", "BtBt4_5": "1_8_5", "BtBt5_5": "1_8_5"
+            },
+            9: {
+                "Second_Question1": "1", "BtBt1": "1_9_1", "BtBt2": "1_9_1", "BtBt3": "1_9_1", "BtBt4": "1_9_1", "BtBt5": "1_9_1",
+                "Second_Question2": "2", "BtBt1_2": "1_9_2", "BtBt2_2": "1_9_2", "BtBt3_2": "1_9_2", "BtBt4_2": "1_9_2", "BtBt5_2": "1_9_2",
+                "Second_Question3": "3", "BtBt1_3": "1_9_3", "BtBt2_3": "1_9_3", "BtBt3_3": "1_9_3", "BtBt4_3": "1_9_3", "BtBt5_3": "1_9_3",
+                "Second_Question4": "4", "BtBt1_4": "1_9_4", "BtBt2_4": "1_9_4", "BtBt3_4": "1_9_4", "BtBt4_4": "1_9_4", "BtBt5_4": "1_9_4",
+                "Second_Question5": "5", "BtBt1_5": "1_9_5", "BtBt2_5": "1_9_5", "BtBt3_5": "1_9_5", "BtBt4_5": "1_9_5", "BtBt5_5": "1_9_5"
+            },
+            10: {
+                "Second_Question1": "1", "BtBt1": "1_10_1", "BtBt2": "1_10_1", "BtBt3": "1_10_1", "BtBt4": "1_10_1", "BtBt5": "1_10_1",
+                "Second_Question2": "2", "BtBt1_2": "1_10_2", "BtBt2_2": "1_10_2", "BtBt3_2": "1_10_2", "BtBt4_2": "1_10_2", "BtBt5_2": "1_10_2",
+                "Second_Question3": "3", "BtBt1_3": "1_10_3", "BtBt2_3": "1_10_3", "BtBt3_3": "1_10_3", "BtBt4_3": "1_10_3", "BtBt5_3": "1_10_3",
+                "Second_Question4": "4", "BtBt1_4": "1_10_4", "BtBt2_4": "1_10_4", "BtBt3_4": "1_10_4", "BtBt4_4": "1_10_4", "BtBt5_4": "1_10_4",
+                "Second_Question5": "5", "BtBt1_5": "1_10_5", "BtBt2_5": "1_10_5", "BtBt3_5": "1_10_5", "BtBt4_5": "1_10_5", "BtBt5_5": "1_10_5"
+            },
+            11: {
+                "Second_Question1": "1", "BtBt1": "1_11_1", "BtBt2": "1_11_1", "BtBt3": "1_11_1", "BtBt4": "1_11_1", "BtBt5": "1_11_1",
+                "Second_Question2": "2", "BtBt1_2": "1_11_2", "BtBt2_2": "1_11_2", "BtBt3_2": "1_11_2", "BtBt4_2": "1_11_2", "BtBt5_2": "1_11_2",
+                "Second_Question3": "3", "BtBt1_3": "1_11_3", "BtBt2_3": "1_11_3", "BtBt3_3": "1_11_3", "BtBt4_3": "1_11_3", "BtBt5_3": "1_11_3",
+                "Second_Question4": "4", "BtBt1_4": "1_11_4", "BtBt2_4": "1_11_4", "BtBt3_4": "1_11_4", "BtBt4_4": "1_11_4", "BtBt5_4": "1_11_4",
+                "Second_Question5": "5", "BtBt1_5": "1_11_5", "BtBt2_5": "1_11_5", "BtBt3_5": "1_11_5", "BtBt4_5": "1_11_5", "BtBt5_5": "1_11_5"
+            },
+            12: {
+                "Second_Question1": "1", "BtBt1": "1_12_1", "BtBt2": "1_12_1", "BtBt3": "1_12_1", "BtBt4": "1_12_1", "BtBt5": "1_12_1",
+                "Second_Question2": "2", "BtBt1_2": "1_12_2", "BtBt2_2": "1_12_2", "BtBt3_2": "1_12_2", "BtBt4_2": "1_12_2", "BtBt5_2": "1_12_2",
+                "Second_Question3": "3", "BtBt1_3": "1_12_3", "BtBt2_3": "1_12_3", "BtBt3_3": "1_12_3", "BtBt4_3": "1_12_3", "BtBt5_3": "1_12_3",
+                "Second_Question4": "4", "BtBt1_4": "1_12_4", "BtBt2_4": "1_12_4", "BtBt3_4": "1_12_4", "BtBt4_4": "1_12_4", "BtBt5_4": "1_12_4",
+                "Second_Question5": "5", "BtBt1_5": "1_12_5", "BtBt2_5": "1_12_5", "BtBt3_5": "1_12_5", "BtBt4_5": "1_12_5", "BtBt5_5": "1_12_5"
+            },
+            13: {
+                "Second_Question1": "1", "BtBt1": "1_13_1", "BtBt2": "1_13_1", "BtBt3": "1_13_1", "BtBt4": "1_13_1", "BtBt5": "1_13_1",
+                "Second_Question2": "2", "BtBt1_2": "1_13_2", "BtBt2_2": "1_13_2", "BtBt3_2": "1_13_2", "BtBt4_2": "1_13_2", "BtBt5_2": "1_13_2",
+                "Second_Question3": "3", "BtBt1_3": "1_13_3", "BtBt2_3": "1_13_3", "BtBt3_3": "1_13_3", "BtBt4_3": "1_13_3", "BtBt5_3": "1_13_3",
+                "Second_Question4": "4", "BtBt1_4": "1_13_4", "BtBt2_4": "1_13_4", "BtBt3_4": "1_13_4", "BtBt4_4": "1_13_4", "BtBt5_4": "1_13_4",
+                "Second_Question5": "5", "BtBt1_5": "1_13_5", "BtBt2_5": "1_13_5", "BtBt3_5": "1_13_5", "BtBt4_5": "1_13_5", "BtBt5_5": "1_13_5"
+            },
+            14: {
+                "Second_Question1": "1", "BtBt1": "1_14_1", "BtBt2": "1_14_1", "BtBt3": "1_14_1", "BtBt4": "1_14_1", "BtBt5": "1_14_1",
+                "Second_Question2": "2", "BtBt1_2": "1_14_2", "BtBt2_2": "1_14_2", "BtBt3_2": "1_14_2", "BtBt4_2": "1_14_2", "BtBt5_2": "1_14_2",
+                "Second_Question3": "3", "BtBt1_3": "1_14_3", "BtBt2_3": "1_14_3", "BtBt3_3": "1_14_3", "BtBt4_3": "1_14_3", "BtBt5_3": "1_14_3",
+                "Second_Question4": "4", "BtBt1_4": "1_14_4", "BtBt2_4": "1_14_4", "BtBt3_4": "1_14_4", "BtBt4_4": "1_14_4", "BtBt5_4": "1_14_4",
+                "Second_Question5": "5", "BtBt1_5": "1_14_5", "BtBt2_5": "1_14_5", "BtBt3_5": "1_14_5", "BtBt4_5": "1_14_5", "BtBt5_5": "1_14_5"
+            },
+            15: {
+                "Second_Question1": "1", "BtBt1": "1_15_1", "BtBt2": "1_15_1", "BtBt3": "1_15_1", "BtBt4": "1_15_1", "BtBt5": "1_15_1",
+                "Second_Question2": "2", "BtBt1_2": "1_15_2", "BtBt2_2": "1_15_2", "BtBt3_2": "1_15_2", "BtBt4_2": "1_15_2", "BtBt5_2": "1_15_2",
+                "Second_Question3": "3", "BtBt1_3": "1_15_3", "BtBt2_3": "1_15_3", "BtBt3_3": "1_15_3", "BtBt4_3": "1_15_3", "BtBt5_3": "1_15_3",
+                "Second_Question4": "4", "BtBt1_4": "1_15_4", "BtBt2_4": "1_15_4", "BtBt3_4": "1_15_4", "BtBt4_4": "1_15_4", "BtBt5_4": "1_15_4",
+                "Second_Question5": "5", "BtBt1_5": "1_15_5", "BtBt2_5": "1_15_5", "BtBt3_5": "1_15_5", "BtBt4_5": "1_15_5", "BtBt5_5": "1_15_5"
+            }
         }
 
         // For FadeOut [Main Page] and FadeIn [Second Page]
@@ -846,38 +962,41 @@
                     $('.Third_Page').fadeOut(500);
                     $('.Fourth_Page').fadeIn(500);
                 }, 500);
+                number++;
                 StartNumber++;
                 window.scrollTo(0, 0);
 
+                // Second Question <P> Insert through the array
                 $("#Second_Question1").html(array[number]["Second_Question1"]);
                 $("#Second_Question2").html(array[number]["Second_Question2"]);
                 $("#Second_Question3").html(array[number]["Second_Question3"]);
                 $("#Second_Question4").html(array[number]["Second_Question4"]);
                 $("#Second_Question5").html(array[number]["Second_Question5"]);
+                // Second Question <First Button> Insert through the array
                 $('#BtBt1').val(array[number]["BtBt1"]);
                 $('#BtBt2').val(array[number]["BtBt2"]);
                 $('#BtBt3').val(array[number]["BtBt3"]);
                 $('#BtBt4').val(array[number]["BtBt4"]);
                 $('#BtBt5').val(array[number]["BtBt5"]);
-
+                // Second Question <Second Button> Insert through the array
                 $('#BtBt1_2').val(array[number]["BtBt1_2"]);
                 $('#BtBt2_2').val(array[number]["BtBt2_2"]);
                 $('#BtBt3_2').val(array[number]["BtBt3_2"]);
                 $('#BtBt4_2').val(array[number]["BtBt4_2"]);
                 $('#BtBt5_2').val(array[number]["BtBt5_2"]);
-
+                // Second Question <Third Button> Insert through the array
                 $('#BtBt1_3').val(array[number]["BtBt1_3"]);
                 $('#BtBt2_3').val(array[number]["BtBt2_3"]);
                 $('#BtBt3_3').val(array[number]["BtBt3_3"]);
                 $('#BtBt4_3').val(array[number]["BtBt4_3"]);
                 $('#BtBt5_3').val(array[number]["BtBt5_3"]);
-
+                // Second Question <Fourth Button> Insert through the array
                 $('#BtBt1_4').val(array[number]["BtBt1_4"]);
                 $('#BtBt2_4').val(array[number]["BtBt2_4"]);
                 $('#BtBt3_4').val(array[number]["BtBt3_4"]);
                 $('#BtBt4_4').val(array[number]["BtBt4_4"]);
                 $('#BtBt5_4').val(array[number]["BtBt5_4"]);
-
+                // Second Question <Fifth Button> Insert through the array
                 $('#BtBt1_5').val(array[number]["BtBt1_5"]);
                 $('#BtBt2_5').val(array[number]["BtBt2_5"]);
                 $('#BtBt3_5').val(array[number]["BtBt3_5"]);
