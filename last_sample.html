@@ -743,13 +743,29 @@
                     </div>
                 </div>
                 <p class="padding"></p>
-                <button class="Second_Next"><span id="span" class="">&#xE834</span></button>
+                <button class="Second_Next" onclick="CopyUrlToClipboard()"><span id="span"
+                        class="">&#xE834</span></button>
             </div>
         </div>
 
     </div>
 
     <script>
+        // Move Page Function
+        function Move_Page() {
+            window.location.replace("./result_Sample.html");
+        }
+
+        // Copy Current URL to Clipboard
+        function CopyUrlToClipboard() {
+            var Dummy_Tag = document.createElement("input");
+            var Current_URL = location.href;
+            document.body.appendChild(Dummy_Tag);
+            Dummy_Tag.value = Current_URL;
+            Dummy_Tag.select();
+            document.execCommand("copy");
+            document.body.removeChild(Dummy_Tag);
+        }
 
         var number = 0
         var StartNumber = 0
