@@ -845,7 +845,7 @@
         <p class="Fifth_Page_Notice_P">
             &nbsp;많은 문항에 솔직한 답변을 주셔서 감사합니다. 하단의 버튼을 터치하면 당신의 스트레스 원인에 대한 안내와 당신만의 걱정인형을 확인 할 수 있습니다.
         </p>
-        <button class="Final_Step" onclick="CopyUrlToClipboard()"><span id="span3" class="">&#xE834</span></button>
+        <button class="Final_Step" onclick="Result()"><span id="span3" class="">&#xE834</span></button>
         <p class="Fifth_Page_Notice_P">
             &nbsp;억지로 그 무언가를 하려하지 마라. 삶이 흘러가게 두어라. 신은 매일 수백만 송이의 꽃을 피우지만, 그 어떤 꽃봉오리도 강제로 피우지 않는다.
         </p>
@@ -860,6 +860,14 @@
             &nbsp;(Rule number one is, don’t sweat the small stuff. Rule number two is, it’s all small stuff. - Robert
             Eliot -)
         </p>
+        <!-- KakaoAdFit Location -->
+        <div>
+            <p style="width: 320px; height: 100px; border: 1px solid black; margin: auto; margin-top: 1.0rem;">
+                KakaoAdFit
+            </p>
+            <p style="width: 320px; height: 100px; border: 1px solid black; margin: auto; margin-top: 1.0rem;">
+                KakaoAdFit
+        </div>
     </div>
 
     <script>
@@ -1793,6 +1801,143 @@
             $('html, body').animate({ scrollTop: offset.top }, 500);
         }
         )
+
+        // For Calculate The Result value
+        function Result() {
+            var Array_1 = $('.1_1_6').val();
+            var Array_2 = $('.1_2_6').val();
+            var Array_3 = $('.1_3_6').val();
+            var Array_4 = $('.1_4_6').val();
+            var Array_5 = $('.1_5_6').val();
+            var Array_6 = $('.1_6_6').val();
+            var Array_7 = $('.1_7_6').val();
+            var Array_8 = $('.1_8_6').val();
+            var Array_9 = $('.1_9_6').val();
+            var Array_10 = $('.1_10_6').val();
+            var Array_11 = $('.1_11_6').val();
+            var Array_12 = $('.1_12_6').val();
+            var Array_13 = $('.1_13_6').val();
+            var Array_14 = $('.1_14_6').val();
+            var Array_15 = $('.1_15_6').val();
+            var Result_Array = [
+                Array_1 * 1, Array_2 * 1, Array_3 * 1, Array_4 * 1, Array_5 * 1, Array_6 * 1, Array_7 * 1, Array_8 * 1, Array_9 * 1, Array_10 * 1, Array_11 * 1, Array_12 * 1, Array_13 * 1, Array_14 * 1, Array_15 * 1]
+            var TopScore = Math.max.apply(null, Result_Array);
+            if (Array_1 == Array_2 || Array_1 == Array_3 || Array_1 == Array_4 || Array_1 == Array_5 || Array_1 == Array_6 || Array_1 == Array_7 || Array_1 == Array_8 || Array_1 == Array_9 || Array_1 == Array_10 || Array_1 == Array_11 || Array_1 == Array_12 || Array_1 == Array_13 || Array_1 == Array_14 || Array_1 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_1 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_1_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_1) {
+                alert("직접적인 취업문제")
+            } else if (Array_2 == Array_3 || Array_2 == Array_4 || Array_2 == Array_5 || Array_2 == Array_6 || Array_2 == Array_7 || Array_2 == Array_8 || Array_2 == Array_9 || Array_2 == Array_10 || Array_2 == Array_11 || Array_2 == Array_12 || Array_2 == Array_13 || Array_2 == Array_14 || Array_2 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_2 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_2_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_2) {
+                alert("진로/적성문제")
+            } else if (Array_3 == Array_4 || Array_3 == Array_5 || Array_3 == Array_6 || Array_3 == Array_7 || Array_3 == Array_8 || Array_3 == Array_9 || Array_3 == Array_10 || Array_3 == Array_11 || Array_3 == Array_12 || Array_3 == Array_13 || Array_3 == Array_14 || Array_3 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_3 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_3_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_3) {
+                alert("사회구조적문제")
+            } else if (Array_4 == Array_5 || Array_4 == Array_6 || Array_4 == Array_7 || Array_4 == Array_8 || Array_4 == Array_9 || Array_4 == Array_10 || Array_4 == Array_11 || Array_4 == Array_12 || Array_4 == Array_13 || Array_4 == Array_14 || Array_4 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_4 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_4_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_4) {
+                alert("대인관계")
+            } else if (Array_5 == Array_6 || Array_5 == Array_7 || Array_5 == Array_8 || Array_5 == Array_9 || Array_5 == Array_10 || Array_5 == Array_11 || Array_5 == Array_12 || Array_5 == Array_13 || Array_5 == Array_14 || Array_5 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_5 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_5_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_5) {
+                alert("짝사랑")
+            } else if (Array_6 == Array_7 || Array_6 == Array_8 || Array_6 == Array_9 || Array_6 == Array_10 || Array_6 == Array_11 || Array_6 == Array_12 || Array_6 == Array_13 || Array_6 == Array_14 || Array_6 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_6 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_6_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_6) {
+                alert("권태기")
+            } else if (Array_7 == Array_8 || Array_7 == Array_9 || Array_7 == Array_10 || Array_7 == Array_11 || Array_7 == Array_12 || Array_7 == Array_13 || Array_7 == Array_14 || Array_7 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_7 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_7_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_7) {
+                alert("미련")
+            } else if (Array_8 == Array_9 || Array_8 == Array_10 || Array_8 == Array_11 || Array_8 == Array_12 || Array_8 == Array_13 || Array_8 == Array_14 || Array_8 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_8 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_8_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_8) {
+                alert("부모님")
+            } else if (Array_9 == Array_10 || Array_9 == Array_11 || Array_9 == Array_12 || Array_9 == Array_13 || Array_9 == Array_14 || Array_9 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_9 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_9_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_9) {
+                alert("형제자매")
+            } else if (Array_10 == Array_11 || Array_10 == Array_12 || Array_10 == Array_13 || Array_10 == Array_14 || Array_10 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_10 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_10_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_10) {
+                alert("건강")
+            } else if (Array_11 == Array_12 || Array_11 == Array_13 || Array_11 == Array_14 || Array_11 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_11 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_11_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_11) {
+                alert("신체")
+            } else if (Array_12 == Array_13 || Array_12 == Array_14 || Array_12 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_12 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_12_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_12) {
+                alert("외모")
+            } else if (Array_13 == Array_14 || Array_13 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_13 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_13_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_13) {
+                alert("생활비")
+            } else if (Array_14 == Array_15) {
+                var RandomPlusValue = Math.random() * 1;
+                var RandomMinusValue = Math.random() * -1;
+                var ModifiedValue = Array_14 * 1 + RandomPlusValue + RandomMinusValue
+                $('.1_14_6').attr('value', ModifiedValue);
+                Result();
+            } else if (TopScore == Array_14) {
+                alert("무기력증")
+            } else if (TopScore == Array_15) {
+                alert("번아웃")
+            }
+        }
 
     </script>
 </body>
