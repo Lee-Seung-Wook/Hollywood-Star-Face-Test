@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Jquery 적용 Script -->
+    <link rel="stylesheet" href="./fontello-09c69b1b/css/fontello.css">
+    <link rel="stylesheet" href="./fontello-09c69b1b/css/animation.css">
+    <!-- Fontello 적용 CSS -->
+    <title>나만의 걱정인형</title>
+    <!-- CSS 적용 Script -->
+    <style>
+        @import url(./CSS_My_worried_doll.css);
+    </style>
+</head>
+
+<body>
+    <!-- First Page -->
+    <div class="Main_Page"></div>
+
+    <!-- Second Page -->
+    <div class="Second_Page">
+        <article class="Second_Page_Notice">
+            나만의 걱정인형
+        </article>
+        <p class="Second_Page_Notice_P">
+            &nbsp;본 심리테스트는 현재 당신이 겪고 있는 스트레스의 원인파악을 목적으로 하고 있는 유희성 테스트로 전문적인 심리 상담이 아님을 미리 말씀드립니다.
+        </p>
+        <p class="Second_Page_Notice_P">
+            &nbsp;다양한 자극과 피로감에 둘러싸인 오늘날의 현대인이 겪고 있는 스트레스의 원인을 대분류와 하위분류로 나누어 테스트를 진행하며, 가급적 문항을 보자마자 느껴지는 감정을 그대로
+            입력해주시기 바랍니다.
+        </p>
+        <button class="Start">&#xE804</button>
+        <p class="Second_Page_Notice_P">
+            &nbsp;안내사항<br>
+        </p>
+        <p class="Second_Page_Notice_P_Notice">
+            · 해당 심리테스트는 의학적, 심리학적 전문성이 없는 단순 유희성 테스트입니다.<br>
+            · 결과로 도출되는 재화나 서비스 등에 대해 어떠한 유료광고도 포함하고 있지 않습니다.<br>
+            &nbsp;(CoupangAd, KakaoAdFit, GoogleAdsense 등 제외)<br>
+        </p>
+        <p class="Second_Page_Notice_P_Notice_Fontello">
+            · &#xE805 : <a href="mailto:blue_notion@naver.com">blue_notion@naver.com</a><br>
+            · &#xE801 : 고성현, 김세은, 이승욱 <br>
+            · &#xF1F9 : CopyRight [TeamName] All Rights Reserved.<br>
+        </p>
+    </div>
+
+    <!-- Third Page -->
+    <div class="Third_Page">
+        <div>
+            <p class="padding"></p>
+            <div class="Third_Page_Div">
+                <button class="First_Question_Bt" id="FQBt1">&#xE802</button>
+                <p class="First_Question">
+                    Q1. 취업이나 이직에 대한 생각을 하면 가슴이 답답해지나요?
+                </p>
+            </div>
+            <div class="Third_Page_Div2">
+                <p class="First_Question">
+                    Q2. 인간관계에 대한 고민으로 쉽게 잠을 이루지 못할 때가 있나요?
+                </p>
+                <button class="First_Question_Bt" id="FQBt2">&#xE803</button>
+            </div>
+            <div class="Third_Page_Div">
+                <button class="First_Question_Bt" id="FQBt3">&#xF2BE</button>
+                <p class="First_Question">
+                    Q3. 최근에 미용이나 건강에 관한 영상이나 기사를 찾아 본 적이 있나요?
+                </p>
+            </div>
+            <div class="Third_Page_Div2">
+                <p class="First_Question">
+                    Q4. 당신의 일상이 무너지고 있다는 생각을 할 때가 있나요?
+                </p>
+                <button class="First_Question_Bt" id="FQBt4"><span>&#xE806</span></button>
+            </div>
+            <!-- First Question Value -->
+            <div>
+                <input class="First_Question_value1" type="hidden" value="0">
+                <input class="First_Question_value2" type="hidden" value="0">
+                <input class="First_Question_value3" type="hidden" value="0">
+                <input class="First_Question_value4" type="hidden" value="0">
+            </div>
+            <div>
+                <br>
+                <button class="Next"><span id="span" class="">&#xE834</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fourth Page -->
+    <div class="Fourth_Page">
+        <div>
+            <p class="padding"></p>
+            <p class="Second_Question" id="Second_Question1">Question</p>
+            <div class="Second_Question_div">
+                <button class="Second_Question_Bt" id="BtBt1" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt2" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt3" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt4" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt5" value=""></button>
+                <button class="Second_Question_Bt_Plus" id="BtBt6"></button>
+            </div>
+            <p class="padding"></p>
+            <p class="Second_Question" id="Second_Question2">Question</p>
+            <div class="Second_Question_div">
+                <button class="Second_Question_Bt" id="BtBt1_2" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt2_2" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt3_2" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt4_2" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt5_2" value=""></button>
+                <button class="Second_Question_Bt_Plus" id="BtBt6_2"></button>
+            </div>
+            <p class="padding"></p>
+            <p class="Second_Question" id="Second_Question3">Question</p>
+            <div class="Second_Question_div">
+                <button class="Second_Question_Bt" id="BtBt1_3" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt2_3" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt3_3" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt4_3" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt5_3" value=""></button>
+                <button class="Second_Question_Bt_Plus" id="BtBt6_3"></button>
+            </div>
+            <p class="padding"></p>
+            <p class="Second_Question" id="Second_Question4">Question</p>
+            <div class="Second_Question_div">
+                <button class="Second_Question_Bt" id="BtBt1_4" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt2_4" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt3_4" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt4_4" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt5_4" value=""></button>
+                <button class="Second_Question_Bt_Plus" id="BtBt6_4"></button>
+            </div>
+            <p class="padding"></p>
+            <p class="Second_Question" id="Second_Question5">Question</p>
+            <div class="Second_Question_div">
+                <button class="Second_Question_Bt" id="BtBt1_5" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt2_5" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt3_5" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt4_5" value=""></button>
+                <button class="Second_Question_Bt" id="BtBt5_5" value=""></button>
+                <button class="Second_Question_Bt_Plus" id="BtBt6_5"></button>
+            </div>
+            <!-- Second Question Value -->
+            <div>
+                <div>
+                    <div class="Second_Question_Value1_1">
+                        <input class="1_1_1" type="hidden" value="0">
+                        <input class="1_1_2" type="hidden" value="0">
+                        <input class="1_1_3" type="hidden" value="0">
+                        <input class="1_1_4" type="hidden" value="0">
+                        <input class="1_1_5" type="hidden" value="0">
+                        <input class="1_1_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_2">
+                        <input class="1_2_1" type="hidden" value="0">
+                        <input class="1_2_2" type="hidden" value="0">
+                        <input class="1_2_3" type="hidden" value="0">
+                        <input class="1_2_4" type="hidden" value="0">
+                        <input class="1_2_5" type="hidden" value="0">
+                        <input class="1_2_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_3">
+                        <input class="1_3_1" type="hidden" value="0">
+                        <input class="1_3_2" type="hidden" value="0">
+                        <input class="1_3_3" type="hidden" value="0">
+                        <input class="1_3_4" type="hidden" value="0">
+                        <input class="1_3_5" type="hidden" value="0">
+                        <input class="1_3_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_4">
+                        <input class="1_4_1" type="hidden" value="0">
+                        <input class="1_4_2" type="hidden" value="0">
+                        <input class="1_4_3" type="hidden" value="0">
+                        <input class="1_4_4" type="hidden" value="0">
+                        <input class="1_4_5" type="hidden" value="0">
+                        <input class="1_4_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_5">
+                        <input class="1_5_1" type="hidden" value="0">
+                        <input class="1_5_2" type="hidden" value="0">
+                        <input class="1_5_3" type="hidden" value="0">
+                        <input class="1_5_4" type="hidden" value="0">
+                        <input class="1_5_5" type="hidden" value="0">
+                        <input class="1_5_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_6">
+                        <input class="1_6_1" type="hidden" value="0">
+                        <input class="1_6_2" type="hidden" value="0">
+                        <input class="1_6_3" type="hidden" value="0">
+                        <input class="1_6_4" type="hidden" value="0">
+                        <input class="1_6_5" type="hidden" value="0">
+                        <input class="1_6_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_7">
+                        <input class="1_7_1" type="hidden" value="0">
+                        <input class="1_7_2" type="hidden" value="0">
+                        <input class="1_7_3" type="hidden" value="0">
+                        <input class="1_7_4" type="hidden" value="0">
+                        <input class="1_7_5" type="hidden" value="0">
+                        <input class="1_7_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_8">
+                        <input class="1_8_1" type="hidden" value="0">
+                        <input class="1_8_2" type="hidden" value="0">
+                        <input class="1_8_3" type="hidden" value="0">
+                        <input class="1_8_4" type="hidden" value="0">
+                        <input class="1_8_5" type="hidden" value="0">
+                        <input class="1_8_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_9">
+                        <input class="1_9_1" type="hidden" value="0">
+                        <input class="1_9_2" type="hidden" value="0">
+                        <input class="1_9_3" type="hidden" value="0">
+                        <input class="1_9_4" type="hidden" value="0">
+                        <input class="1_9_5" type="hidden" value="0">
+                        <input class="1_9_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_10">
+                        <input class="1_10_1" type="hidden" value="0">
+                        <input class="1_10_2" type="hidden" value="0">
+                        <input class="1_10_3" type="hidden" value="0">
+                        <input class="1_10_4" type="hidden" value="0">
+                        <input class="1_10_5" type="hidden" value="0">
+                        <input class="1_10_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_11">
+                        <input class="1_11_1" type="hidden" value="0">
+                        <input class="1_11_2" type="hidden" value="0">
+                        <input class="1_11_3" type="hidden" value="0">
+                        <input class="1_11_4" type="hidden" value="0">
+                        <input class="1_11_5" type="hidden" value="0">
+                        <input class="1_11_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_12">
+                        <input class="1_12_1" type="hidden" value="0">
+                        <input class="1_12_2" type="hidden" value="0">
+                        <input class="1_12_3" type="hidden" value="0">
+                        <input class="1_12_4" type="hidden" value="0">
+                        <input class="1_12_5" type="hidden" value="0">
+                        <input class="1_12_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_13">
+                        <input class="1_13_1" type="hidden" value="0">
+                        <input class="1_13_2" type="hidden" value="0">
+                        <input class="1_13_3" type="hidden" value="0">
+                        <input class="1_13_4" type="hidden" value="0">
+                        <input class="1_13_5" type="hidden" value="0">
+                        <input class="1_13_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_14">
+                        <input class="1_14_1" type="hidden" value="0">
+                        <input class="1_14_2" type="hidden" value="0">
+                        <input class="1_14_3" type="hidden" value="0">
+                        <input class="1_14_4" type="hidden" value="0">
+                        <input class="1_14_5" type="hidden" value="0">
+                        <input class="1_14_6" type="hidden" value="0">
+                    </div>
+                    <div class="Second_Question_Value1_15">
+                        <input class="1_15_1" type="hidden" value="0">
+                        <input class="1_15_2" type="hidden" value="0">
+                        <input class="1_15_3" type="hidden" value="0">
+                        <input class="1_15_4" type="hidden" value="0">
+                        <input class="1_15_5" type="hidden" value="0">
+                        <input class="1_15_6" type="hidden" value="0">
+                    </div>
+                </div>
+                <div>
+                    <p class="padding"></p>
+                    <button class="Second_Next" onclick="NextStep()"><span id="span2" class="">&#xE834</span></button>
+                    <div class="CurrentPage_TotalPage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fifth Page -->
+    <div class="Fifth_Page">
+        <p class="Fifth_Page_Notice_P">
+            작은 변화에서 시작되는 기적적인 변화
+        </p>
+        <p class="Fifth_Page_Notice_P">
+            &nbsp;많은 문항에 솔직한 답변을 주셔서 감사합니다. 하단의 버튼을 터치하면 당신의 스트레스 원인에 대한 안내와 당신만의 걱정인형을 확인 할 수 있습니다.
+        </p>
+        <button class="Final_Step" onclick="Result()"><span id="span3" class="">&#xE834</span></button>
+        <p class="Fifth_Page_Notice_P">
+            &nbsp;억지로 그 무언가를 하려하지 마라. 삶이 흘러가게 두어라. 신은 매일 수백만 송이의 꽃을 피우지만, 그 어떤 꽃봉오리도 강제로 피우지 않는다.
+        </p>
+        <p class="Fifth_Page_Notice_P_E">
+            &nbsp;(Don’t try to force anything. Let life be a deep let-go. God opens millions of flowers every day
+            without forcing their buds. - Osho -)
+        </p>
+        <p class="Fifth_Page_Notice_P">
+            &nbsp;규칙 1, 사소한 일에 신경 쓰지 마라. 규칙 2, 모든 것은 사소한 일이다.
+        </p>
+        <p class="Fifth_Page_Notice_P_E">
+            &nbsp;(Rule number one is, don’t sweat the small stuff. Rule number two is, it’s all small stuff. - Robert
+            Eliot -)
+        </p>
+        <!-- KakaoAdFit Location -->
+        <div>
+            <p style="width: 320px; height: 100px; border: 1px solid black; margin: auto; margin-top: 1.0rem;">
+                KakaoAdFit
+            </p>
+            <p style="width: 320px; height: 100px; border: 1px solid black; margin: auto; margin-top: 1.0rem;">
+                KakaoAdFit
+        </div>
+    </div>
+
+    <!-- JavaScrip 적용 Script -->
+    <script src="./JavaScript_My_worried_doll.js">
+    </script>
+
+</body>
+
+<!-- Copyright (c) 2021 by quangdao (https://codepen.io/lincohn/pen/JjPZgXw)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
+</html>
