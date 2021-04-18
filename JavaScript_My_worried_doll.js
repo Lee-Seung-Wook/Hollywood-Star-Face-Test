@@ -148,7 +148,7 @@ $(document).ready(function () {
         setTimeout(function () {
             $('.Main_Page').fadeOut(500);
             $('.Second_Page').fadeIn(500);
-        }, 500);
+        }, 2500);
         StartNumber++;
         window.scrollTo(0, 0);
     }
