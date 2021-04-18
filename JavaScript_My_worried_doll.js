@@ -1,6 +1,16 @@
-// Move Page Function
-function MovePage() {
-    window.location.replace("./result_Sample.html");
+// Move Page To Main Function
+function MovePageToMain() {
+    window.location.replace("./My_worried_doll.html");
+}
+
+// Move Page To Other Characters Function
+function MovePageToOtherCharacters() {
+    window.location.replace("./My_worried_doll.html");
+}
+
+// Move Page To Result 1 Function
+function MovePageToResult1() {
+    window.location.replace("./My_worried_doll_Result_1.html");
 }
 
 // Copy Current URL to Clipboard
@@ -964,7 +974,7 @@ function Result() {
             $('.1_1_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_1) {
-            alert("직접적인 취업문제");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_2 == Array_3 || Array_2 == Array_4 || Array_2 == Array_5 || Array_2 == Array_6 || Array_2 == Array_7 || Array_2 == Array_8 || Array_2 == Array_9 || Array_2 == Array_10 || Array_2 == Array_11 || Array_2 == Array_12 || Array_2 == Array_13 || Array_2 == Array_14 || Array_2 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
