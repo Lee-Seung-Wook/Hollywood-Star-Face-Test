@@ -590,3 +590,108 @@ body {
     font-size: 1.0rem;
     color: #FFE8F5;
 }
+
+/* Result Duplicate Button */
+.Result_Duplicate_Bt {
+    width: 5rem;
+    height: 3rem;
+    background-color: rgb(32, 32, 32);
+    border: 0px;
+    border-radius: 10%;
+    color: rgb(114, 114, 114);
+    font-size: 1.3rem;
+    font-family: 'fontello';
+    transition: 0.5s;
+    justify-self: center;
+
+}
+
+/* MovePageToMain Button */
+.MovePageToMain {
+    width: 5rem;
+    height: 3rem;
+    background-color: rgb(32, 32, 32);
+    border: 0px;
+    border-radius: 10%;
+    color: rgb(114, 114, 114);
+    font-size: 1.3rem;
+    font-family: 'fontello';
+    transition: 0.5s;
+    justify-self: center;
+
+}
+
+/* MovePageToOtherCharacters Button */
+.MovePageToOtherCharacters {
+    width: 5rem;
+    height: 3rem;
+    background-color: rgb(32, 32, 32);
+    border: 0px;
+    border-radius: 10%;
+    color: rgb(114, 114, 114);
+    font-size: 1.3rem;
+    font-family: 'fontello';
+    transition: 0.5s;
+    justify-self: center;
+
+}
+
+/* Result Duplicate Button : Hover */
+.Result_Duplicate_Bt:hover {
+    color: whitesmoke;
+    border-radius: 10%;
+    box-shadow:
+        inset 0 0 60px whitesmoke,
+        inset 15px 0 80px rgb(134, 136, 0),
+        inset -15px 0 80px #0ff,
+        inset 15px 0 300px rgb(134, 136, 0),
+        inset -15px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px rgb(134, 136, 0),
+        10px 0 80px #0ff;
+}
+
+/* MovePageToMain Button : Hover */
+.MovePageToMain:hover {
+    color: whitesmoke;
+    border-radius: 10%;
+    box-shadow:
+        inset 0 0 60px whitesmoke,
+        inset 15px 0 80px #f0f,
+        inset -15px 0 80px #0ff,
+        inset 15px 0 300px #f0f,
+        inset -15px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+}
+
+/* MovePageToOtherCharacters Button : Hover */
+.MovePageToOtherCharacters:hover {
+    color: whitesmoke;
+    border-radius: 10%;
+    box-shadow:
+        inset 0 0 60px whitesmoke,
+        inset 15px 0 80px rgb(0, 90, 194),
+        inset -15px 0 80px #0ff,
+        inset 15px 0 300px rgb(0, 90, 194),
+        inset -15px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px rgb(0, 90, 194),
+        10px 0 80px #0ff;
+}
+
+/* Introduction to the Results button */
+.Introduction_Result_Bt {
+    width: 5rem;
+    height: 1rem;
+    background-color: rgb(32, 32, 32);
+    border: 0px;
+    border-radius: 5%;
+    color: rgb(192, 192, 192);
+    font-size: 0.5rem;
+    font-family: 'BMJUA';
+    font-weight: normal;
+    justify-self: center;
+
+}
