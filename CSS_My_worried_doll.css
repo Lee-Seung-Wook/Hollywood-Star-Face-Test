@@ -561,3 +561,32 @@ body {
     white-space: normal;
 
 }
+
+/* Result Title P Tag */
+.Result_Title {
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-family: 'BMJUA';
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #FFE8F5;
+}
+
+/* Result Image */
+.Result_IMG {
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+}
+
+/* Result Article */
+.Result_Article {
+    padding-top: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-family: 'BMJUA';
+    font-weight: normal;
+    font-size: 1.0rem;
+    color: #FFE8F5;
+}
