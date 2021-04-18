@@ -582,13 +582,37 @@ body {
 
 /* Result Article */
 .Result_Article {
-    padding-top: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    text-align: left;
+    padding-top: 1.0rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
     font-family: 'BMJUA';
     font-weight: normal;
     font-size: 1.0rem;
     color: #FFE8F5;
+}
+
+/* Result Image2 */
+.Result_IMG2 {
+    display: inline;
+    width: 41.5%;
+    height: 41.5%;
+    border: 1px solid black;
+}
+
+/* Introduction to the Result Image2 */
+.Introduction_Result_IMG2 {
+    text-align: left;
+    padding-top: 1.0rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.5rem;
+    color: #FFE8F5;
+    font-size: 1.0rem;
+    font-family: 'BMJUA';
+    font-weight: normal;
+    justify-self: center;
+
 }
 
 /* Result Duplicate Button */
