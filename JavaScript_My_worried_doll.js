@@ -1,16 +1,22 @@
 // Move Page To Main Function
 function MovePageToMain() {
-    window.location.replace("./My_worried_doll.html");
+    setTimeout(function () {
+        window.location.replace("./My_worried_doll.html");
+    }, 1000);
 }
 
 // Move Page To Other Characters Function
 function MovePageToOtherCharacters() {
-    window.location.replace("./My_worried_doll.html");
+    setTimeout(function () {
+        window.location.replace("./My_worried_doll.html");
+    }, 1000);
 }
 
 // Move Page To Result 1 Function
 function MovePageToResult1() {
-    window.location.replace("./My_worried_doll_Result_1.html");
+    setTimeout(function () {
+        window.location.replace("./My_worried_doll_Result_1.html");
+    }, 1000);
 }
 
 // Copy Current URL to Clipboard
