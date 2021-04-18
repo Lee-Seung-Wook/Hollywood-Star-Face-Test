@@ -136,6 +136,51 @@ body {
     transition: 0.5s;
 }
 
+/* Translation Button */
+.Translation {
+    margin-bottom: 0rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    width: 3rem;
+    height: 2rem;
+    background-color: rgb(32, 32, 32);
+    border: 0px;
+    border-radius: 10%;
+    color: rgb(114, 114, 114);
+    font-size: 1.5rem;
+    font-family: 'fontello';
+    transition: 0.5s;
+}
+
+/* Translation_Introduction Button */
+.Translation_Introduction {
+    width: 3rem;
+    height: 1rem;
+    background-color: rgb(32, 32, 32);
+    border: 0px;
+    border-radius: 10%;
+    font-size: 0.5rem;
+    transition: 0.5s;
+    font-family: 'BMJUA';
+    font-weight: normal;
+    color: #FFE8F5;
+}
+
+/* Translation Button : Hover */
+.Translation:hover {
+    color: whitesmoke;
+    border-radius: 10%;
+    box-shadow:
+        inset 0 0 30px whitesmoke,
+        inset 7.5px 0 40px rgb(0, 14, 138),
+        inset -7.5px 0 40px rgb(200, 255, 0),
+        inset 7.5px 0 150px rgb(0, 14, 138),
+        inset -7.5px 0 150px rgb(200, 255, 0),
+        0 0 25px #fff,
+        -5px 0 40px rgb(0, 14, 138),
+        5px 0 40px rgb(200, 255, 0);
+}
+
 /* Start Button : Hover */
 .Start:hover {
     color: whitesmoke;
