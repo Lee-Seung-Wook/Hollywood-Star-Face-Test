@@ -564,7 +564,7 @@ body {
 
 /* Result Title P Tag */
 .Result_Title {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
     font-family: 'BMJUA';
