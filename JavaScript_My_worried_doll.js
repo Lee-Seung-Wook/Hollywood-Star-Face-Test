@@ -8,7 +8,7 @@ function MovePageToMain() {
 // Move Page To Other Characters Function
 function MovePageToOtherCharacters() {
     setTimeout(function () {
-        window.location.replace("./My_worried_doll.html");
+        window.location.replace("./My_worried_doll_OtherCharacters.html");
     }, 1000);
 }
 
