@@ -765,3 +765,11 @@ body {
     justify-self: center;
 
 }
+
+/* Result Image2 */
+.Result_IMG3 {
+    display: inline;
+    width: 10.0%;
+    height: 10.0%;
+    border: 1px solid black;
+}
