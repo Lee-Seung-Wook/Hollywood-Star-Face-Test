@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery 적용 Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Fontello 적용 CSS -->
+    <link rel="stylesheet" href="./fontello-a2bd3a21/css/fontello.css">
+    <link rel="stylesheet" href="./fontello-a2bd3a21/css/animation.css">
+    <title>걱정인형 도감</title>
+    <!-- Basic CSS 적용 Script -->
+    <style>
+        @import url(./CSS_My_worried_doll.css);
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="Result_Title">걱정인형 도감</p>
+    </div>
+    <div>
+        <img id="1" class="Result_IMG3" src="./3.png">
+        <img id="2" class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+    </div>
+    <div>
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+        <img class="Result_IMG3" src="./3.png">
+    </div>
+    <div>
+        <article class="Result_Article">
+            &nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque praesentium quas fugiat commodi?
+            Impedit
+            voluptates, incidunt eius totam soluta cum voluptatum doloremque officiis natus quisquam dignissimos itaque
+            amet odit iste.
+        </article>
+    </div>
+    <div>
+        <p style="width: 320px; height: 100px; border: 1px solid black; margin: auto; margin-top: 1.0rem;">
+            CoupangAd
+        </p>
+    </div>
+    <div>
+        <br>
+        <div id="1_1" style="border: 1px black solid; margin-left: 1.5rem; margin-right: 1.5rem; overflow:auto;">
+            <div style="text-align: left; padding-left: 0.5rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">
+                <p style="font-family: 'fontello'; display: inline;">&#xf2c3</p>
+                <p style="display: inline; font-family: 'BMJUA'; font-weight: normal; color: #FFE8F5;">Lorem ipsum dolor
+                </p>
+            </div>
+            <div style="margin-bottom: 1rem; margin-right: 0.5rem; margin-left: 0.5rem;">
+                <div>
+                    <img style="width: 35%; height: 35%; float: left; border: 1px solid black; margin-bottom: 0.5rem;"
+                        src="./3.png">
+                </div>
+                <p
+                    style="margin-left: 0.5rem; display: inline; font-family: 'BMJUA'; font-weight: normal; color: #FFE8F5;">
+                    Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Ipsa eius omnis sit
+                    dolor, porro sed! Pariatur omnis, voluptate nostrum, fugiat aspernatur maiores culpa</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <br>
+        <div id="2_1" style="border: 1px black solid; margin-left: 1.5rem; margin-right: 1.5rem; overflow:auto;">
+            <div style="text-align: left; padding-left: 0.5rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">
+                <p style="font-family: 'fontello'; display: inline;">&#xf2c2</p>
+                <p style="display: inline; font-family: 'BMJUA'; font-weight: normal; color: #FFE8F5;">Lorem ipsum dolor
+                </p>
+            </div>
+            <div style="margin-bottom: 1rem; margin-right: 0.5rem; margin-left: 0.5rem;">
+                <div>
+                    <img style="width: 35%; height: 35%; float: left; border: 1px solid black; margin-bottom: 0.5rem;"
+                        src="./3.png">
+                </div>
+                <p
+                    style="margin-left: 0.5rem; display: inline; font-family: 'BMJUA'; font-weight: normal; color: #FFE8F5;">
+                    Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Ipsa eius omnis sit
+                    dolor, porro sed! Pariatur omnis, voluptate nostrum, fugiat aspernatur maiores culpa</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <br>
+        <button class="Result_Duplicate_Bt" onclick="CopyUrlToClipboard()">&#xE808</button>
+        <button class="MovePageToMain" onclick="MovePageToMain()">&#xF110</button>
+    </div>
+    <div>
+        <button class="Introduction_Result_Bt">링크복사</button>
+        <button class="Introduction_Result_Bt">다시하기</button>
+    </div>
+    <br>
+    <div>
+        <div id="3"
+            style="color: #FFE8F5; font-size: 1.5rem; font-family:'fontello'; position: fixed; bottom: 0.5rem; right: 0.5rem;">
+            &#xf0aa</div>
+    </div>
+    <!-- Basic JavaScrip 적용 Script -->
+    <script src="./JavaScript_My_worried_doll.js">
+    </script>
+    <script>
+        $('#1').click(function () {
+            var offset = $('#1_1').offset();
+            $('html, body').animate({ scrollTop: offset.top }, 500);
+        })
+        $('#2').click(function () {
+            var offset = $('#2_1').offset();
+            $('html, body').animate({ scrollTop: offset.top }, 500);
+        })
+        $('#3').click(function () {
+            window.scrollTo(0, 0);
+        })
+    </script>
+
+</body>
+
+</html>
