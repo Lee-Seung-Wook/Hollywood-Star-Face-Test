@@ -1,8 +1,9 @@
 // Move Page To Main Function
 function MovePageToMain() {
+    $('#MovePageToMain').addClass('icon-spin4-alt animate-spin');
     setTimeout(function () {
         window.location.replace("./My_worried_doll.html");
-    }, 1000);
+    }, 1500);
 }
 
 // Move Page To Other Characters Function
@@ -148,7 +149,7 @@ $(document).ready(function () {
         setTimeout(function () {
             $('.Main_Page').fadeOut(500);
             $('.Second_Page').fadeIn(500);
-        }, 2500);
+        }, 3500);
         StartNumber++;
         window.scrollTo(0, 0);
     }
@@ -236,7 +237,7 @@ $('#FQBt4').click(function () {
 
 // For FadeOut [Third Page] and FadeIn [Fourth Page]
 $('.Next').click(function () {
-    $('#span').addClass('icon-spin4-alt animate-spin');
+    // $('#span').addClass('icon-spin4-alt animate-spin');
     if (StartNumber == 2) {
         setTimeout(function () {
             $('.Third_Page').fadeOut(500);
@@ -446,7 +447,7 @@ function NextStep() {
             var TotalPage = array.length;
             $('.CurrentPage_TotalPage').html('<p>' + CurrentPage + "/" + TotalPage + '</p>')
         }
-    }, 1000);
+    }, 1500);
 }
 
 // For Second Value Sum
