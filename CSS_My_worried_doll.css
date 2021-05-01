@@ -40,7 +40,7 @@ body {
 /* Second Page Title */
 .Second_Page_Notice {
     color: #FFE8F5;
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 2.0rem;
@@ -51,7 +51,7 @@ body {
 /* Second Page P Tag */
 .Second_Page_Notice_P {
     color: #FFE8F5;
-    margin-top: 2.0rem;
+    margin-top: 1.5rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 0.5rem;
@@ -71,7 +71,7 @@ body {
     margin-bottom: 0.5rem;
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     white-space: normal;
 
 }
@@ -85,7 +85,7 @@ body {
     margin-bottom: 0.5rem;
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     white-space: normal;
 
 }
@@ -343,7 +343,7 @@ body {
 .First_Question {
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #FFE8F5;
 }
 
@@ -546,7 +546,7 @@ body {
     border: 0px;
     border-radius: 10%;
     color: rgb(114, 114, 114);
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     font-family: 'fontello';
     transition: 0.5s;
 }
@@ -607,7 +607,7 @@ body {
     padding-right: 3rem;
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #FFE8F5;
 }
 
@@ -628,12 +628,14 @@ body {
 
 /* Result Title P Tag */
 .Result_Title {
+    margin-top: 1.0rem;
+    margin-bottom: 0.5rem;
     padding-top: 0.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     color: #FFE8F5;
 }
 
@@ -646,13 +648,13 @@ body {
 
 /* Result Article */
 .Result_Article {
-    text-align: left;
+    text-align: center;
     padding-top: 1.0rem;
     padding-left: 2rem;
     padding-right: 1.5rem;
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     color: #FFE8F5;
 }
 
@@ -672,7 +674,7 @@ body {
     padding-right: 1.5rem;
     padding-bottom: 0.5rem;
     color: #FFE8F5;
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     justify-self: center;
