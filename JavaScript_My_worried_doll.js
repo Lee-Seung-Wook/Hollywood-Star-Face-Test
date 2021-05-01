@@ -578,7 +578,7 @@ function Sum() {
 // For Change Result Value and First Button CSS
 $('#BtBt1').click(function () {
     var type = $('#BtBt1').val();
-    $("." + type).val(1);
+    $("." + type).val(0);
     $('#BtBt1').attr('class', 'Second_Question_Bt_Click1');
     $('#BtBt2').attr('class', 'Second_Question_Bt');
     $('#BtBt3').attr('class', 'Second_Question_Bt');
@@ -638,7 +638,7 @@ $('#BtBt4').click(function () {
 // For Change Result Value and Fifth Button CSS
 $('#BtBt5').click(function () {
     var type = $('#BtBt1').val();
-    $("." + type).val(5);
+    $("." + type).val(6);
     $('#BtBt1').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt2').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt3').attr('class', 'Second_Question_Bt_Click5');
@@ -653,7 +653,7 @@ $('#BtBt5').click(function () {
 // For Change Result Value and First 2 Button CSS
 $('#BtBt1_2').click(function () {
     var type = $('#BtBt1_2').val();
-    $("." + type).val(1);
+    $("." + type).val(0);
     $('#BtBt1_2').attr('class', 'Second_Question_Bt_Click1');
     $('#BtBt2_2').attr('class', 'Second_Question_Bt');
     $('#BtBt3_2').attr('class', 'Second_Question_Bt');
@@ -713,7 +713,7 @@ $('#BtBt4_2').click(function () {
 // For Change Result Value and Fifth 2 Button CSS
 $('#BtBt5_2').click(function () {
     var type = $('#BtBt5_2').val();
-    $("." + type).val(5);
+    $("." + type).val(6);
     $('#BtBt1_2').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt2_2').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt3_2').attr('class', 'Second_Question_Bt_Click5');
@@ -728,7 +728,7 @@ $('#BtBt5_2').click(function () {
 // For Change Result Value and First 3 Button CSS
 $('#BtBt1_3').click(function () {
     var type = $('#BtBt1_3').val();
-    $("." + type).val(1);
+    $("." + type).val(0);
     $('#BtBt1_3').attr('class', 'Second_Question_Bt_Click1');
     $('#BtBt2_3').attr('class', 'Second_Question_Bt');
     $('#BtBt3_3').attr('class', 'Second_Question_Bt');
@@ -788,7 +788,7 @@ $('#BtBt4_3').click(function () {
 // For Change Result Value and Fifth 3 Button CSS
 $('#BtBt5_3').click(function () {
     var type = $('#BtBt5_3').val();
-    $("." + type).val(5);
+    $("." + type).val(6);
     $('#BtBt1_3').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt2_3').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt3_3').attr('class', 'Second_Question_Bt_Click5');
@@ -803,7 +803,7 @@ $('#BtBt5_3').click(function () {
 // For Change Result Value and First 4 Button CSS
 $('#BtBt1_4').click(function () {
     var type = $('#BtBt1_4').val();
-    $("." + type).val(1);
+    $("." + type).val(0);
     $('#BtBt1_4').attr('class', 'Second_Question_Bt_Click1');
     $('#BtBt2_4').attr('class', 'Second_Question_Bt');
     $('#BtBt3_4').attr('class', 'Second_Question_Bt');
@@ -863,7 +863,7 @@ $('#BtBt4_4').click(function () {
 // For Change Result Value and Fifth 4 Button CSS
 $('#BtBt5_4').click(function () {
     var type = $('#BtBt5_4').val();
-    $("." + type).val(5);
+    $("." + type).val(6);
     $('#BtBt1_4').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt2_4').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt3_4').attr('class', 'Second_Question_Bt_Click5');
@@ -878,7 +878,7 @@ $('#BtBt5_4').click(function () {
 // For Change Result Value and First 5 Button CSS
 $('#BtBt1_5').click(function () {
     var type = $('#BtBt1_5').val();
-    $("." + type).val(1);
+    $("." + type).val(0);
     $('#BtBt1_5').attr('class', 'Second_Question_Bt_Click1');
     $('#BtBt2_5').attr('class', 'Second_Question_Bt');
     $('#BtBt3_5').attr('class', 'Second_Question_Bt');
@@ -938,7 +938,7 @@ $('#BtBt4_5').click(function () {
 // For Change Result Value and Fifth 5 Button CSS
 $('#BtBt5_5').click(function () {
     var type = $('#BtBt5_5').val();
-    $("." + type).val(5);
+    $("." + type).val(6);
     $('#BtBt1_5').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt2_5').attr('class', 'Second_Question_Bt_Click5');
     $('#BtBt3_5').attr('class', 'Second_Question_Bt_Click5');
