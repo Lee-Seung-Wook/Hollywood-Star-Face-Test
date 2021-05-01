@@ -343,7 +343,7 @@ body {
 .First_Question {
     font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #FFE8F5;
 }
 
@@ -546,7 +546,7 @@ body {
     border: 0px;
     border-radius: 10%;
     color: rgb(114, 114, 114);
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     font-family: 'fontello';
     transition: 0.5s;
 }
