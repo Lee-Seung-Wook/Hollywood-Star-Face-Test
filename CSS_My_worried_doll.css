@@ -510,6 +510,8 @@ body {
 .Second_Question_Bt_Click5_Plus {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
     width: 0.5rem;
     height: 2.2rem;
     border: 0px;
