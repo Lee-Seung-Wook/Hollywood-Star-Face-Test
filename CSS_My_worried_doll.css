@@ -401,7 +401,9 @@ body {
 
 /* Second Question Button Plus */
 .Second_Question_Bt_Plus {
-    width: 0.3rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    width: 0.5rem;
     height: 2.28rem;
     border: 0px;
     border-radius: 5%;
