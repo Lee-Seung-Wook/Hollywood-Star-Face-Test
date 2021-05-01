@@ -29,11 +29,19 @@ body {
     font-style: normal;
 }
 
+/* 빙그레 싸만코체 Bold */
+@font-face {
+    font-family: 'BinggraeSamanco-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Second Page Title */
 .Second_Page_Notice {
     color: #FFE8F5;
     margin-top: 3.5rem;
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 2.0rem;
     white-space: normal;
@@ -47,7 +55,7 @@ body {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 0.5rem;
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 1.0rem;
     white-space: normal;
@@ -61,7 +69,7 @@ body {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 0.5rem;
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 1.1rem;
     white-space: normal;
@@ -75,7 +83,7 @@ body {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 0.5rem;
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 1.0rem;
     white-space: normal;
@@ -333,7 +341,7 @@ body {
 
 /* First Question P Tag */
 .First_Question {
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 1.1rem;
     color: #FFE8F5;
@@ -597,7 +605,7 @@ body {
     margin-top: 0.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 1.2rem;
     color: #FFE8F5;
@@ -623,7 +631,7 @@ body {
     padding-top: 0.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 1.5rem;
     color: #FFE8F5;
@@ -642,7 +650,7 @@ body {
     padding-top: 1.0rem;
     padding-left: 2rem;
     padding-right: 1.5rem;
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     font-size: 1.0rem;
     color: #FFE8F5;
@@ -665,7 +673,7 @@ body {
     padding-bottom: 0.5rem;
     color: #FFE8F5;
     font-size: 1.0rem;
-    font-family: 'BMJUA';
+    font-family: 'BinggraeSamanco-Bold';
     font-weight: normal;
     justify-self: center;
 
