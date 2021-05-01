@@ -3,7 +3,7 @@ body {
     margin: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgb(62, 60, 98);
+    background-color: rgb(90, 90, 125);
     text-align: center;
 }
 
@@ -63,7 +63,7 @@ body {
     margin-bottom: 0.5rem;
     font-family: 'BMJUA';
     font-weight: normal;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     white-space: normal;
 
 }
@@ -140,7 +140,6 @@ body {
 .Translation {
     margin-bottom: 0rem;
     margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
     width: 3rem;
     height: 2rem;
     background-color: rgb(32, 32, 32);
@@ -156,7 +155,7 @@ body {
 .Translation_Introduction {
     width: 3rem;
     height: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     background-color: rgb(32, 32, 32);
     border: 0px;
     border-radius: 10%;
@@ -203,7 +202,7 @@ body {
 
 /* Third Page Div1 Tag */
 .Third_Page_Div {
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
     margin-left: 1rem;
     margin-right: 1rem;
     display: grid;
@@ -213,7 +212,7 @@ body {
 
 /* Third Page Div2 Tag */
 .Third_Page_Div2 {
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
     margin-left: 1rem;
     margin-right: 1rem;
     display: grid;
@@ -233,7 +232,7 @@ body {
     font-family: 'fontello';
     transition: 0.5s;
     justify-self: center;
-
+    align-self: center;
 }
 
 /* First Question One Button : Click */
@@ -247,6 +246,7 @@ body {
     font-family: 'fontello';
     font-size: 1.5rem;
     justify-self: center;
+    align-self: center;
     transition: 0.5s;
     box-shadow:
         inset 0 0 60px whitesmoke,
@@ -270,6 +270,7 @@ body {
     font-family: 'fontello';
     font-size: 1.5rem;
     justify-self: center;
+    align-self: center;
     transition: 0.5s;
     box-shadow:
         inset 0 0 60px whitesmoke,
@@ -293,6 +294,7 @@ body {
     font-family: 'fontello';
     font-size: 1.5rem;
     justify-self: center;
+    align-self: center;
     transition: 0.5s;
     box-shadow:
         inset 0 0 60px whitesmoke,
@@ -316,6 +318,7 @@ body {
     font-family: 'fontello';
     font-size: 1.5rem;
     justify-self: center;
+    align-self: center;
     transition: 0.5s;
     box-shadow:
         inset 0 0 60px whitesmoke,
@@ -332,7 +335,7 @@ body {
 .First_Question {
     font-family: 'BMJUA';
     font-weight: normal;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     color: #FFE8F5;
 }
 
@@ -369,6 +372,8 @@ body {
 /* Add Padding(0.5rem) */
 .padding {
     padding: 0.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
 .Fourth_Page {
@@ -378,7 +383,7 @@ body {
 /* Second Question Div */
 .Second_Question_div {
     margin: auto;
-    margin-top: 2.5rem;
+    margin-top: 1.0rem;
     width: 18rem;
     height: 5rem;
     text-align: center;
@@ -388,7 +393,7 @@ body {
 /* Second Question Button */
 .Second_Question_Bt {
     width: 3rem;
-    height: 5rem;
+    height: 4rem;
     border: 0px;
     border-radius: 5%;
     background-color: rgb(32, 32, 32);
@@ -397,7 +402,7 @@ body {
 /* Second Question Button Plus */
 .Second_Question_Bt_Plus {
     width: 0.5rem;
-    height: 3rem;
+    height: 2.3rem;
     border: 0px;
     border-radius: 5%;
     background-color: rgb(32, 32, 32);
@@ -409,7 +414,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 3rem;
-    height: 5rem;
+    height: 4rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -428,7 +433,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 3rem;
-    height: 5rem;
+    height: 4rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -447,7 +452,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 3rem;
-    height: 5rem;
+    height: 4rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -466,7 +471,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 3rem;
-    height: 5rem;
+    height: 4rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -485,7 +490,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 3rem;
-    height: 5rem;
+    height: 4rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -504,7 +509,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 0.5rem;
-    height: 3rem;
+    height: 2.2rem;
     border: 0px;
     border-radius: 5%;
     transform: translate(0, -35%);
@@ -521,7 +526,7 @@ body {
 
 /* Next Question Move Button */
 .Second_Next {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     width: 8rem;
     height: 4rem;
@@ -585,11 +590,12 @@ body {
 
 /* Second Question P Tag */
 .Second_Question {
+    margin-top: 0.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
     font-family: 'BMJUA';
     font-weight: normal;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     color: #FFE8F5;
 }
 
