@@ -58,13 +58,16 @@
         <div id="1_1" style="border: 1px black solid; margin-left: 1.5rem; margin-right: 1.5rem; overflow:auto;">
             <div style="text-align: left; padding-left: 0.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">
                 <p style="font-family: 'fontello'; display: inline;">&#xf2bc</p>
-                <p style="display: inline; font-family: 'BinggraeSamanco-Bold'; font-weight: normal; color: #FFE8F5; font-size: 1.3rem;">Lorem ipsum dolor
+                <p
+                    style="display: inline; font-family: 'BinggraeSamanco-Bold'; font-weight: normal; color: #FFE8F5; font-size: 1.3rem;">
+                    Lorem ipsum dolor
                 </p>
             </div>
             <div style="margin-bottom: 1rem; margin-right: 0.5rem; margin-left: 0.5rem;">
                 <div>
-                    <a href="./My_worried_doll_Result_1.html"><img style="width: 35%; height: 35%; float: left; border: 1px solid black; margin-bottom: 0.5rem;"
-                        src="./3.png"></a>
+                    <a href="./My_worried_doll_Result_1.html"><img
+                            style="width: 35%; height: 35%; float: left; border: 1px solid black; margin-bottom: 0.5rem;"
+                            src="./3.png"></a>
                 </div>
                 <p
                     style="margin-left: 0.5rem; display: inline; font-family: 'BinggraeSamanco-Bold'; font-weight: normal; color: #FFE8F5; font-size: 1.2rem;">
@@ -79,7 +82,9 @@
         <div id="2_1" style="border: 1px black solid; margin-left: 1.5rem; margin-right: 1.5rem; overflow:auto;">
             <div style="text-align: left; padding-left: 0.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">
                 <p style="font-family: 'fontello'; display: inline;">&#xf2c2</p>
-                <p style="display: inline; font-family: 'BinggraeSamanco-Bold'; font-weight: normal; color: #FFE8F5; font-size: 1.3rem;">Lorem ipsum dolor
+                <p
+                    style="display: inline; font-family: 'BinggraeSamanco-Bold'; font-weight: normal; color: #FFE8F5; font-size: 1.3rem;">
+                    Lorem ipsum dolor
                 </p>
             </div>
             <div style="margin-bottom: 1rem; margin-right: 0.5rem; margin-left: 0.5rem;">
@@ -107,13 +112,23 @@
     <br>
     <div>
         <div id="3"
-            style="color: #FFE8F5; font-size: 1.5rem; font-family:'fontello'; position: fixed; bottom: 0.5rem; right: 0.5rem;">
+            style="color: #FFE8F5; font-size: 1.5rem; font-family:'fontello'; position: fixed; bottom: 0.5rem; right: 0.5rem; display: none;">
             &#xf0aa</div>
     </div>
     <!-- Basic JavaScrip 적용 Script -->
     <script src="./JavaScript_My_worried_doll.js">
     </script>
     <script>
+        window.onscroll = function () { ScrollBtShow_Hide() };
+
+        function ScrollBtShow_Hide() {
+            if (document.body.scroll < 100 || document.documentElement.scroll < 100) {
+                $('#3').css('display', 'none');
+            } else {
+                $('#3').css('display', 'block');
+            }
+        };
+
         $('#1').click(function () {
             var offset = $('#1_1').offset();
             $('html, body').animate({ scrollTop: offset.top }, 500);
