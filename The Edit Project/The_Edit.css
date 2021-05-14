@@ -109,12 +109,20 @@
     .Second_Page_Notice_P {
         text-align: left;
         margin-top: 0rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
         padding-top: 0.5rem;
         color: rgb(112, 111, 116);
         font-family: fontello;
         font-size: 0.5rem;
     }
+
+    .Second_Page_Foot {
+        margin-top: 0rem; 
+        margin-bottom: 0rem; 
+        color: rgb(128, 128, 128); 
+        text-align: left; 
+        font-size: 0.5rem; 
+        font-family: 'BinggraeSamanco-Bold';}
 
     .Second_Page_Notice_P_2 {
         padding-bottom: 1rem;
