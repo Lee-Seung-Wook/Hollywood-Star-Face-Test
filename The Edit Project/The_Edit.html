@@ -31,14 +31,6 @@
         font-style: normal;
     }
 
-    /* HS봄바람체 3.0 Regular */
-    @font-face {
-        font-family: 'HSBombaram3_Regular';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
     body {
         background-color: rgb(255, 250, 245);
         text-align: center;
@@ -580,7 +572,7 @@
     .Fifth_Page_Foot_Bt_A {
         text-decoration: none;
     }
-    
+
     #Reco_Youtube>a {
         text-decoration: none;
     }
@@ -795,7 +787,7 @@
         </div>
         <div class="Fourth_Page_P_div_2">
             <article>
-                <p class="Fourth_Page_P_3">&nbsp;간단했지만 기나긴 테스트에 성실히 임해주셔서 감사합니다.</p>
+                <p class="Fourth_Page_P_3">&nbsp;기나긴 테스트에 성실히 임해주셔서 감사합니다.</p>
                 <p class="Fourth_Page_P_4">&nbsp;아래 버튼을 클릭해 당신의 소비성향을 확인해보세요. 그리고 당신과 찰떡궁합인 The Edit의 Editor와 영상, 뉴스레터를
                     알아보세요.</p>
             </article>
@@ -942,10 +934,10 @@
         </div>
         <div>
             <br>
-            <script src="https://ads-partners.coupang.com/g.js"></script>
+            <!-- <script src="https://ads-partners.coupang.com/g.js"></script>
                 <script>
                     new PartnersCoupang.G({ "id": 480506, "template": "carousel", "trackingCode": "AF8995958", "width": "360", "height": "100" });
-                </script>
+                </script> -->
         </div>
         <br>
         <div>
@@ -983,6 +975,12 @@
     </div>
 
     <script>
+        // Audio fifle var
+        var audio = new Audio("./Mouse-Click-00-c-FesliyanStudios.com.mp3");
+
+        // Audio2 fifle var
+        var audio2 = new Audio("./menu-sfx--select---8-sound-effect-69717408.mp3");
+
         // Move Page To Main Function
         function MovePageToMain() {
             $('#Restart').addClass('icon-spin3-alt animate-spin');
@@ -1119,18 +1117,17 @@
         // Second Page FadeOut + Insert Question
         $('#Start_Bt').click(function () {
             if (StartNumber == 1) {
-                var audio = new Audio("./Mouse-Click-00-c-FesliyanStudios.com.mp3");
                 audio.loop = false;
                 audio.volume = 1;
                 audio.play();
                 setTimeout(function () {
                     $('#Start_Bt').css('color', 'rgb(78, 217, 102)');
                     $('#Start_Bt').html("&#xF205");
-                }, 500)
+                }, 50)
                 setTimeout(function () {
                     $('.Second_Page').fadeOut(500);
                     $('.Third_Page').fadeIn(500);
-                }, 1000);
+                }, 500);
                 CurrentPage++
                 array = array.filter(item => item);
                 var TotalPage = array.length;
@@ -1206,10 +1203,9 @@
         // Inset the value of arrayy in third page [Second]
         function NextStep() {
             setTimeout(function () {
-                var audio = new Audio("./menu-sfx--select---8-sound-effect-69717408.mp3");
-                audio.loop = false;
-                audio.volume = 0.2;
-                audio.play();
+                audio2.loop = false;
+                audio2.volume = 0.2;
+                audio2.play();
                 $('#span').addClass('icon-spin6-alt animate-spin');
             }, 100);
             setTimeout(function () {
@@ -1712,10 +1708,9 @@
         // For Calculate The Result value
         function Result() {
             setTimeout(function () {
-                var audio = new Audio("./menu-sfx--select---8-sound-effect-69717408.mp3");
-                audio.loop = false;
-                audio.volume = 0.2;
-                audio.play();
+                audio2.loop = false;
+                audio2.volume = 0.2;
+                audio2.play();
                 $('#Fourth_Page_Bt').addClass('icon-spin6-alt animate-spin');
             }, 100);
             setTimeout(function () {
