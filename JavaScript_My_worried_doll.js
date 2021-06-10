@@ -21,98 +21,98 @@ function MovePageToResult1() {
 }
 
 // Move Page To Result 2 Function
-function MovePageToResult1() {
+function MovePageToResult2() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_2.html");
     }, 1000);
 }
 
 // Move Page To Result 3 Function
-function MovePageToResult1() {
+function MovePageToResult3() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_3.html");
     }, 1000);
 }
 
 // Move Page To Result 4 Function
-function MovePageToResult1() {
+function MovePageToResult4() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_4.html");
     }, 1000);
 }
 
 // Move Page To Result 5 Function
-function MovePageToResult1() {
+function MovePageToResult5() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_5.html");
     }, 1000);
 }
 
 // Move Page To Result 6 Function
-function MovePageToResult1() {
+function MovePageToResult6() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_6.html");
     }, 1000);
 }
 
 // Move Page To Result 7 Function
-function MovePageToResult1() {
+function MovePageToResult7() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_7.html");
     }, 1000);
 }
 
 // Move Page To Result 8 Function
-function MovePageToResult1() {
+function MovePageToResult8() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_8.html");
     }, 1000);
 }
 
 // Move Page To Result 9 Function
-function MovePageToResult1() {
+function MovePageToResult9() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_9.html");
     }, 1000);
 }
 
 // Move Page To Result 10 Function
-function MovePageToResult1() {
+function MovePageToResult10() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_10.html");
     }, 1000);
 }
 
 // Move Page To Result 11 Function
-function MovePageToResult1() {
+function MovePageToResult11() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_11.html");
     }, 1000);
 }
 
 // Move Page To Result 12 Function
-function MovePageToResult1() {
+function MovePageToResult12() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_12.html");
     }, 1000);
 }
 
 // Move Page To Result 13 Function
-function MovePageToResult1() {
+function MovePageToResult13() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_13.html");
     }, 1000);
 }
 
 // Move Page To Result 14 Function
-function MovePageToResult1() {
+function MovePageToResult14() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_14.html");
     }, 1000);
 }
 
 // Move Page To Result 15 Function
-function MovePageToResult1() {
+function MovePageToResult15() {
     setTimeout(function () {
         window.location.replace("./My_worried_doll_Result_15.html");
     }, 1000);
