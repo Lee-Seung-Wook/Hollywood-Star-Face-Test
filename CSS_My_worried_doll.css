@@ -214,7 +214,7 @@ body {
     margin-left: 1rem;
     margin-right: 1rem;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
     border-bottom: 1px dashed rgb(32, 32, 32);
 }
 
@@ -224,7 +224,7 @@ body {
     margin-left: 1rem;
     margin-right: 1rem;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 65% 35%;
     border-bottom: 1px dashed rgb(32, 32, 32);
 }
 
