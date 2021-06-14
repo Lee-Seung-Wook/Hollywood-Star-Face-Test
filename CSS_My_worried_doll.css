@@ -401,7 +401,7 @@ body {
 /* Second Question Button */
 .Second_Question_Bt {
     width: 2rem;
-    height: 3rem;
+    height: 2.5rem;
     border: 0px;
     border-radius: 5%;
     background-color: rgb(32, 32, 32);
@@ -412,11 +412,11 @@ body {
     padding-left: 0.1rem;
     padding-right: 0.1rem;
     width: 0.5rem;
-    height: 1.2rem;
+    height: 1.0rem;
     border: 0px;
     border-radius: 5%;
     background-color: rgb(32, 32, 32);
-    transform: translate(0, -70%);
+    transform: translate(0, -75%);
 }
 
 /* Second Question One Button : Click */
@@ -424,7 +424,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 2rem;
-    height: 3rem;
+    height: 2.5rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -443,7 +443,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 2rem;
-    height: 3rem;
+    height: 2.5rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -462,7 +462,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 2rem;
-    height: 3rem;
+    height: 2.5rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -481,7 +481,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 2rem;
-    height: 3rem;
+    height: 2.5rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -500,7 +500,7 @@ body {
     background-color: rgb(32, 32, 32);
     border-radius: 5%;
     width: 2rem;
-    height: 3rem;
+    height: 2.5rem;
     border: 0px;
     transition: 0.5s;
     box-shadow:
@@ -521,10 +521,10 @@ body {
     padding-left: 0.1rem;
     padding-right: 0.1rem;
     width: 0.5rem;
-    height: 1.2rem;
+    height: 1.0rem;
     border: 0px;
     border-radius: 5%;
-    transform: translate(0, -70%);
+    transform: translate(0, -75%);
     box-shadow:
         inset 0 0 15px rgba(245, 245, 245, 0.9),
         inset 3.25px 0 20px rgb(204, 0, 0),
