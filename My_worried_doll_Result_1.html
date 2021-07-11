@@ -14,7 +14,7 @@
     <script src="https://ads-partners.coupang.com/g.js"></script>
     <title>깜장 아기 고양이 먕먕이</title>
     <!-- 공유버튼 적용 Script / Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6004fcf55dee0441"></script>
+    <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6004fcf55dee0441"></script> -->
     <!-- Basic CSS 적용 Script -->
     <style>
         @import url(./CSS_My_worried_doll.css);
@@ -42,8 +42,7 @@
             </a>
             <br>
             &nbsp;“나도 10년만 늦게 태어났으면 좋았을 텐데…” 인구감소에 대한 뉴스를 보면 다들 한번쯤 이런 생각하게 됩니다. 그리고 최근 취업시장을 보면 한숨이 앞서죠. 다들 경력 있는 신입을
-            원하면 신입은 도대체 어디서 경력을 쌓아야 할까요? 그래서 때로는 모든 걸 포기하고 싶어집니다. 내가 맞는 방향으로 가고 있는지, 얼마나 걸릴지도 모르는 이 기분. 지금, 당신의 걱정인형이
-            도와드릴게요.
+            원하면 신입은 도대체 어디서 경력을 쌓아야 할까요? 그래서 때로는 모든 걸 포기하고 싶어집니다. 내가 맞는 방향으로 가고 있는지, 얼마나 걸릴지도 모르는 이 기분. 지금, 당신의 걱정인형이 도와드릴게요.
         </article>
         <article class="Result_Article" style="font-family: KyoboHand; font-size: 1.0rem; text-align: justify;">
             <span class="Second_Page_Notice_P_Notice_Fontello"
@@ -114,6 +113,11 @@
         <button class="Introduction_Result_Bt">다른 결과보기</button>
     </div>
     <div>
+        <div id="ToTheTop"
+            style="color: #FFE8F5; font-size: 2.0rem; font-family:'fontello'; position: fixed; bottom: 0.5rem; right: 0.5rem; display: none;">
+            &#xf0aa</div>
+    </div>
+    <div>
         <br>
         <!-- 공유버튼 Script -->
         <div class="addthis_inline_share_toolbox_yhq1"></div>
@@ -122,6 +126,24 @@
 
     <!-- Basic JavaScrip 적용 Script -->
     <script src="./JavaScript_My_worried_doll.js">
+    </script>
+
+    <script>
+        // To the TOP button
+        window.onscroll = function () { ScrollBtShow_Hide() };
+
+        function ScrollBtShow_Hide() {
+            if (document.body.scroll < 100 || document.documentElement.scroll < 100) {
+                $('#ToTheTop').css('display', 'none');
+            } else {
+                $('#ToTheTop').css('display', 'block');
+            }
+        };
+
+        // Move Button //
+        $('#ToTheTop').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        })
     </script>
 
 </body>
