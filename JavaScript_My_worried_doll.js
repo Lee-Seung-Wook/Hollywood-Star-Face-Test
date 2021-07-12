@@ -1118,7 +1118,7 @@ function Result() {
             $('.1_2_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_2) {
-            alert("진로/적성문제");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_3 == Array_4 || Array_3 == Array_5 || Array_3 == Array_6 || Array_3 == Array_7 || Array_3 == Array_8 || Array_3 == Array_9 || Array_3 == Array_10 || Array_3 == Array_11 || Array_3 == Array_12 || Array_3 == Array_13 || Array_3 == Array_14 || Array_3 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1127,7 +1127,7 @@ function Result() {
             $('.1_3_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_3) {
-            alert("사회구조적문제");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_4 == Array_5 || Array_4 == Array_6 || Array_4 == Array_7 || Array_4 == Array_8 || Array_4 == Array_9 || Array_4 == Array_10 || Array_4 == Array_11 || Array_4 == Array_12 || Array_4 == Array_13 || Array_4 == Array_14 || Array_4 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1136,7 +1136,7 @@ function Result() {
             $('.1_4_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_4) {
-            alert("대인관계");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_5 == Array_6 || Array_5 == Array_7 || Array_5 == Array_8 || Array_5 == Array_9 || Array_5 == Array_10 || Array_5 == Array_11 || Array_5 == Array_12 || Array_5 == Array_13 || Array_5 == Array_14 || Array_5 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1145,7 +1145,7 @@ function Result() {
             $('.1_5_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_5) {
-            alert("짝사랑");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_6 == Array_7 || Array_6 == Array_8 || Array_6 == Array_9 || Array_6 == Array_10 || Array_6 == Array_11 || Array_6 == Array_12 || Array_6 == Array_13 || Array_6 == Array_14 || Array_6 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1154,7 +1154,7 @@ function Result() {
             $('.1_6_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_6) {
-            alert("권태기");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_7 == Array_8 || Array_7 == Array_9 || Array_7 == Array_10 || Array_7 == Array_11 || Array_7 == Array_12 || Array_7 == Array_13 || Array_7 == Array_14 || Array_7 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1163,7 +1163,7 @@ function Result() {
             $('.1_7_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_7) {
-            alert("미련");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_8 == Array_9 || Array_8 == Array_10 || Array_8 == Array_11 || Array_8 == Array_12 || Array_8 == Array_13 || Array_8 == Array_14 || Array_8 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1172,7 +1172,7 @@ function Result() {
             $('.1_8_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_8) {
-            alert("부모님");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_9 == Array_10 || Array_9 == Array_11 || Array_9 == Array_12 || Array_9 == Array_13 || Array_9 == Array_14 || Array_9 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1181,7 +1181,7 @@ function Result() {
             $('.1_9_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_9) {
-            alert("형제자매");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_10 == Array_11 || Array_10 == Array_12 || Array_10 == Array_13 || Array_10 == Array_14 || Array_10 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1190,7 +1190,7 @@ function Result() {
             $('.1_10_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_10) {
-            alert("건강");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_11 == Array_12 || Array_11 == Array_13 || Array_11 == Array_14 || Array_11 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1199,7 +1199,7 @@ function Result() {
             $('.1_11_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_11) {
-            alert("신체");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_12 == Array_13 || Array_12 == Array_14 || Array_12 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1208,7 +1208,7 @@ function Result() {
             $('.1_12_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_12) {
-            alert("외모");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_13 == Array_14 || Array_13 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1217,7 +1217,7 @@ function Result() {
             $('.1_13_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_13) {
-            alert("생활비");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (Array_14 == Array_15) {
             var RandomPlusValue = Math.random() * 1;
@@ -1226,10 +1226,10 @@ function Result() {
             $('.1_14_6').attr('value', ModifiedValue);
             Result();
         } else if (TopScore == Array_14) {
-            alert("무기력증");
+            MovePageToResult1();
             $('#span3').removeClass();
         } else if (TopScore == Array_15) {
-            alert("번아웃");
+            MovePageToResult1();
             $('#span3').removeClass();
         }
     }, 500);
