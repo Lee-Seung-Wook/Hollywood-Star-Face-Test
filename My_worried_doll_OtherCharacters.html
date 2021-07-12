@@ -42,8 +42,7 @@
         <img class="Result_IMG3" src="./3.png">
     </div>
     <div>
-        <article class="Result_Article"
-            style="text-align: justify; font-family: EliceDigitalBaeum_Bold; font-size: 1.0rem;">
+        <article class="Result_Article">
             &nbsp;우리는 매일매일 수많은 걱정과 함께 살아가고 있습니다. 그리고 그 걱정은 하루아침에 마법처럼 사라지기도 하고, 예보 없이 내리는 소나기처럼 갑자기 찾아오기도 합니다.
             <br>
             그래서 당신의 걱정인형은 오늘도 다양한 경험을 쌓고 새로운 이야기를 만들고 있습니다.
@@ -138,17 +137,6 @@
     <script src="./JavaScript_My_worried_doll.js">
     </script>
     <script>
-        // To the TOP button
-        window.onscroll = function () { ScrollBtShow_Hide() };
-
-        function ScrollBtShow_Hide() {
-            if (document.body.scroll < 100 || document.documentElement.scroll < 100) {
-                $('#ToTheTop').css('display', 'none');
-            } else {
-                $('#ToTheTop').css('display', 'block');
-            }
-        };
-
         // Move Button //
         $('#1').click(function () {
             var offset = $('#1_1').offset();
@@ -157,9 +145,6 @@
         $('#2').click(function () {
             var offset = $('#2_1').offset();
             $('html, body').animate({ scrollTop: offset.top }, 500);
-        })
-        $('#ToTheTop').click(function () {
-            $('html, body').animate({ scrollTop: 0 }, 'slow');
         })
     </script>
 
