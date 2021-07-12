@@ -107,6 +107,21 @@ body {
 
 }
 
+/* Fifth Page P3 Tag */
+.Fifth_Page_Notice_P3 {
+    color: #FFE8F5;
+    margin-top: 2.0rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'KyoboHand';
+    font-weight: normal;
+    font-size: 1.0rem;
+    white-space: normal;
+    text-align: justify;
+
+}
+
 /* Fifth Page P_E Tag */
 .Fifth_Page_Notice_P_E {
     color: #FFE8F5;
@@ -672,22 +687,15 @@ body {
     color: #FFE8F5;
 }
 
-/* Result Image */
-.Result_IMG {
-    width: 50%;
-    height: 50%;
-    border: 1px solid black;
-}
-
 /* Result Article */
 .Result_Article {
-    text-align: center;
+    text-align: justify;
     padding-top: 1.0rem;
     padding-left: 2rem;
     padding-right: 1.5rem;
-    font-family: 'BinggraeSamanco-Bold';
+    font-family: 'EliceDigitalBaeum_Bold';
     font-weight: normal;
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     color: #FFE8F5;
 }
 
@@ -825,4 +833,149 @@ body {
     width: 10.0%;
     height: 10.0%;
     border: 1px solid black;
+}
+
+/* Result Page CSS */
+
+/* Result Title_RESULT P Tag */
+.Result_Title_RESULT {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-family: 'BinggraeSamanco-Bold';
+    font-weight: normal;
+    font-size: 2.0rem;
+    color: #FFE8F5;
+}
+
+/* Result Image */
+.Result_IMG {
+    width: 80%;
+    height: 80%;
+    border: none;
+    margin-top: 1rem;
+}
+
+/* Result Article_RESULT1 */
+.Result_Article_RESULT1 {
+    text-align: justify;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    font-family: 'EliceDigitalBaeum_Bold';
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: #FFE8F5;
+}
+
+/* Result_a */
+.Result_a {
+    text-decoration: none;
+}
+
+/* Result Article_RESULT2 */
+.Result_Article_RESULT2 {
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    font-family: 'EliceDigitalBaeum_Bold';
+    font-weight: normal;
+    font-size: 0.4rem;
+    color: #FFE8F5;
+}
+
+/* Result Article_RESULT3 */
+.Result_Article_RESULT3 {
+    text-align: justify;
+    padding-top: 1.0rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    font-family: 'KyoboHand';
+    font-weight: normal;
+    font-size: 1.0rem;
+    color: #FFE8F5;
+}
+
+/* Second Page Fontello in Notice_RESULT */
+.Second_Page_Notice_P_Notice_Fontello_RESULT {
+    text-align: left;
+    color: #FFE8F5;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 1.0rem;
+    font-family: 'fontello';
+    font-weight: normal;
+    font-size: 1.5rem;
+    white-space: normal;
+}
+
+/* Result_AD_Div */
+.Result_AD_Div {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Result_AD_IMG */
+.Result_AD_IMG {
+    width: 320px;
+}
+
+/* Result_Recomand_P_Tag */
+.Result_Recomand_P_Tag {
+    font-family: 'EliceDigitalBaeum_Bold';
+    color: #FFE8F5;
+    font-size: 0.8rem;
+    margin-bottom: 1.0rem;
+}
+
+/* Result_BWF_Div */
+.Result_BWF_Div {
+    margin-top: 0.5rem;
+}
+
+/* Result Image2_RESULT */
+.Result_IMG2_RESULT {
+    display: inline;
+    width: 40%;
+    border: none;
+    border-right: 1px solid black;
+}
+
+/* Result Image2_RESULT2 */
+.Result_IMG2_RESULT2 {
+    display: inline;
+    width: 40%;
+    border: none;
+  
+}/* Introduction to the Result Image2_RESULT */
+.Introduction_Result_IMG2_RESULT {
+    text-align: justify;
+    padding-top: 1.0rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.5rem;
+    color: #FFE8F5;
+    font-size: 1.0rem;
+    font-family: 'KyoboHand';
+    font-weight: normal;
+    justify-self: center;
+}
+
+/* Coupang_AD_Div */
+.Coupang_AD_Div {
+    margin-top: 1.0rem;
+}
+
+/* ToTheTop */
+#ToTheTop {
+    color: #ffe8f5;
+    font-size: 2.0rem;
+    font-family: 'fontello';
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    display: none;
 }
