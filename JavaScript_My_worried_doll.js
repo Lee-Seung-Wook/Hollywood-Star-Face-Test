@@ -1,3 +1,19 @@
+// To the TOP button
+window.onscroll = function () { ScrollBtShow_Hide() };
+
+function ScrollBtShow_Hide() {
+    if (document.body.scroll < 100 || document.documentElement.scroll < 100) {
+        $('#ToTheTop').css('display', 'none');
+    } else {
+        $('#ToTheTop').css('display', 'block');
+    }
+};
+
+// Move Button //
+$('#ToTheTop').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+})
+
 // Move Page To Main Function
 function MovePageToMain() {
     $('#MovePageToMain').addClass('icon-spin4-alt animate-spin');
