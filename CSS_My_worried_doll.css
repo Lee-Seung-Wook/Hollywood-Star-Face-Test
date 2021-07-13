@@ -830,7 +830,7 @@ body {
 /* Result Image2 */
 .Result_IMG3 {
     display: inline;
-    width: 10.0%;
+    width: 20.0%;
     height: 10.0%;
     border: 1px solid black;
 }
@@ -934,21 +934,29 @@ body {
 /* Result_BWF_Div */
 .Result_BWF_Div {
     margin-top: 0.5rem;
+    column-count: 2;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* Result_BWF_Div2 */
+.Result_BWF_Div2 {
+    margin-top: 0.5rem;
 }
 
 /* Result Image2_RESULT */
 .Result_IMG2_RESULT {
     display: inline;
-    width: 40%;
+    width: 80%;
     border: none;
-    border-right: 1px solid black;
 }
 
 /* Result Image2_RESULT2 */
 .Result_IMG2_RESULT2 {
     display: inline;
-    width: 40%;
+    width: 110%;
     border: none;
+    padding-top: 1rem;
   
 }/* Introduction to the Result Image2_RESULT */
 .Introduction_Result_IMG2_RESULT {
