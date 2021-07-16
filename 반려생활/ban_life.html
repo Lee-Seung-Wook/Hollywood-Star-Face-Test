@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery 적용 Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Fontello 적용 CSS -->
+    <link rel="stylesheet" href="../The Edit Project/fontello-ade37eae/css/fontello.css">
+    <link rel="stylesheet" href="../The Edit Project/fontello-ade37eae/css/animation.css">
+    <title>반려생활</title>
+    <style>
+        /* 인피니티산스 Regular */
+        @font-face {
+            font-family: 'InfinitySans-RegularA1';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 빙그레 싸만코체 Bold */
+        @font-face {
+            font-family: 'BinggraeSamanco-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            text-align: center;
+            background-color: orange;
+        }
+
+        .Second_Page_Notice_div {
+            background-color: rgb(242, 241, 246);
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        .Second_Page_Notice_P {
+            text-align: left;
+            margin-top: 0rem;
+            margin-bottom: 1rem;
+            padding-top: 0.5rem;
+            color: rgb(112, 111, 116);
+            font-family: fontello;
+            font-size: 0.5rem;
+        }
+
+        .Second_Page_Foot {
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+            color: rgb(128, 128, 128);
+            text-align: left;
+            font-size: 0.5rem;
+            font-family: 'BinggraeSamanco-Bold';
+        }
+
+        .Second_Page_Notice_P_2 {
+            padding-bottom: 1rem;
+            color: rgb(180, 180, 180);
+            font-size: 1.0rem;
+            font-family: BinggraeSamanco-Bold;
+        }
+
+        .Second_Page_Notice_a {
+            text-decoration: none;
+            color: rgb(112, 111, 116);
+        }
+
+        .Second_Page_Notice_a_2 {
+            text-decoration: none;
+            color: rgb(67, 130, 245);
+        }
+
+        .Second_Page_Bt_div {
+            background-color: white;
+            border-bottom: 0.1rem solid rgb(200, 200, 200);
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .Second_Page_Bt_P {
+            display: inline;
+            vertical-align: middle;
+            color: rgb(14, 14, 14);
+            font-family: 'InfinitySans-RegularA1';
+            font-size: 1.0rem;
+            font-weight: bold;
+            padding-left: 3rem;
+        }
+
+        .Start_Bt {
+            display: inline;
+            vertical-align: middle;
+            background-color: rgb(255, 255, 255);
+            padding-left: 1.5rem;
+            border: 0px;
+            color: rgb(233, 232, 235);
+            font-family: 'fontello';
+            font-size: 2.0rem;
+        }
+
+        .Start_Bt1 {
+            display: inline;
+            vertical-align: middle;
+            background-color: rgb(255, 255, 255);
+            padding-left: 1.5rem;
+            border: 0px;
+            color: rgb(233, 232, 235);
+            font-family: 'fontello';
+            font-size: 2.0rem;
+        }
+
+        .Start_Bt2 {
+            display: inline;
+            vertical-align: middle;
+            background-color: rgb(255, 255, 255);
+            padding-left: 1.5rem;
+            border: 0px;
+            color: rgb(233, 232, 235);
+            font-family: 'fontello';
+            font-size: 2.0rem;
+        }
+
+        .Start_Bt3 {
+            display: inline;
+            vertical-align: middle;
+            background-color: rgb(255, 255, 255);
+            padding-left: 1.5rem;
+            border: 0px;
+            color: rgb(233, 232, 235);
+            font-family: 'fontello';
+            font-size: 2.0rem;
+        }
+
+        .Start_Bt4 {
+            display: inline;
+            vertical-align: middle;
+            background-color: rgb(255, 255, 255);
+            padding-left: 1.5rem;
+            border: 0px;
+            color: rgb(233, 232, 235);
+            font-family: 'fontello';
+            font-size: 2.0rem;
+        }
+
+        .Start_Bt5 {
+            display: inline;
+            vertical-align: middle;
+            background-color: rgb(255, 255, 255);
+            padding-left: 1.5rem;
+            border: 0px;
+            color: rgb(233, 232, 235);
+            font-family: 'fontello';
+            font-size: 2.0rem;
+        }
+
+        .NextStep_Bt {
+            margin-top: 0.5rem;
+            border: none;
+            background: none;
+        }
+
+        #span {
+            font-family: fontello;
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+
+        #span:hover {
+            font-family: fontello;
+            font-size: 1.5rem;
+            color: rgb(226 38 77);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Audio fifle var
+        var audio = new Audio("../The Edit Project/Mouse-Click-00-c-FesliyanStudios.com.mp3");
+        // Audio2 fifle var
+        var audio2 = new Audio("../The Edit Project/menu-sfx--select---8-sound-effect-69717408.mp3");
+    </script>
+
+    <!-- First Page -->
+    <div style="text-align: center;" class="First_Page">
+        <div style="background-color: orange;" class="First_Page_IMG">
+            <img style="width: 100%;" src="./main.png" alt="First_IMG">
+        </div>
+        <div>
+            <img style="width: 50%; margin-top: 1rem; background-color: orange;" src="./QRCodeImg.jpg" alt="QRCodeImg">
+        </div>
+    </div>
+
+    <!-- Second Page -->
+    <div style="text-align: center; display: none;" class="Second_Page">
+        <div style="background-color: orange;" class="First_Page_IMG">
+            <img style="width: 100%; background-color: orange;" src="./main.png" alt="First_IMG">
+        </div>
+        <div style="background-color: orange;">
+            <br>
+            <p style="margin-bottom: 0.5rem; margin-top: 0px; font-family: BinggraeSamanco-Bold; font-size: 1.3rem;">당신과
+                반려동물의 궁합을 한번 알아볼까요?
+            </p>
+            <P style="margin-top: 0px; margin-bottom: 0px; font-family: BinggraeSamanco-Bold; font-size: 1.3rem;">아래 버튼을
+                터치해 질문에 답해주세요.
+            </P>
+            <br>
+        </div>
+        <div class="Second_Page_Bt_div">
+            <p class="Second_Page_Bt_P">테스트 시작하기</p>
+            <button id="Start_Bt" class="Start_Bt">&#xF204</button>
+        </div>
+        <div class="Second_Page_Notice_div">
+            <p class="Second_Page_Notice_P">
+                &nbsp;· &#xE808 : <a class="Second_Page_Notice_a"
+                    href="mailto:blue_notion@naver.com">blue_notion@naver.com</a><br>
+                &nbsp;· &#xE809 : 이승욱 <br>
+                &nbsp;· &#xF1F9 : CopyRight <a class="Second_Page_Notice_a_2" href="http://www.ban-life.com/"
+                    target="_blank">㈜반려생활</a> All Rights Reserved.<br>
+            </p>
+            <p class="Second_Page_Foot">&nbsp;· 해당 서비스는 ㈜반려생활 입사를 위한 포트폴리오 가작입니다.</p>
+            <p class="Second_Page_Foot">&nbsp;· 해당 서비스는 ㈜반려생활과 무관하며, 사용된 이미지 자료의 권리는 모두 ㈜반려생활에게 있습니다.</p>
+            <p class="Second_Page_Notice_P_2">㈜반려생활</p>
+        </div>
+    </div>
+
+    <!-- Third Page -->
+    <div style="display: none;" class="Third_Page">
+        <P style="margin-top: 2rem; font-family: BinggraeSamanco-Bold; font-size: 1.5rem; margin-bottom: 0px;">우선 당신의
+            취향을 한번 말해줄래요?</P>
+        <P style="margin-top: 0.1rem; font-family: BinggraeSamanco-Bold; font-size: 0.8rem;">※ 긍정의 경우 버튼을 터치해주세요.</P>
+        <div
+            style="display: grid; grid-template-columns: 75% 25%; margin-top: 1.2rem; margin-left: 1rem; margin-right: 1rem;">
+            <P
+                style="padding-bottom: 1rem; margin-top: 2rem; font-family: BinggraeSamanco-Bold; font-size: 1.1rem; text-align: justify; padding-left:0.5rem;">
+                &nbsp;당신은 매일 같은 음식만 먹어도 행복할까요?</P>
+            <button id="Start_Bt1" class="Start_Bt1"
+                style="align-self: center; justify-self: center; background-color: orange; color: white; padding-left: 1.0rem;">&#xF204</button>
+        </div>
+        <div
+            style="display: grid; grid-template-columns: 75% 25%; margin-top: 0rem; margin-left: 1rem; margin-right: 1rem;">
+            <P
+                style="padding-bottom: 1rem; margin-top: 2rem; font-family: BinggraeSamanco-Bold; font-size: 1.1rem; text-align: justify; padding-left: 0.5rem;">
+                &nbsp;당신은 요즘처럼 외부활동을 하지 않아도 행복한가요?</P>
+            <button id="Start_Bt2" class="Start_Bt2"
+                style="align-self: center; justify-self: center; background-color: orange; color: white; padding-left: 1.0rem;">&#xF204</button>
+        </div>
+        <div
+            style="display: grid; grid-template-columns: 75% 25%; margin-top: 0rem; margin-left: 1rem; margin-right: 1rem;">
+            <P
+                style="padding-bottom: 1rem; margin-top: 2rem; font-family: BinggraeSamanco-Bold; font-size: 1.1rem; text-align: justify; padding-left: 0.5rem;">
+                &nbsp;당신은 그리운 누군가를 오랫동안 기다리면 행복한가요?</P>
+            <button id="Start_Bt3" class="Start_Bt3"
+                style="align-self: center; justify-self: center; background-color: orange; color: white; padding-left: 1.0rem;">&#xF204</button>
+        </div>
+        <div
+            style="display: grid; grid-template-columns: 75% 25%; margin-top: 0rem; margin-left: 1rem; margin-right: 1rem;">
+            <P
+                style="padding-bottom: 1rem; margin-top: 2rem; font-family: BinggraeSamanco-Bold; font-size: 1.1rem; text-align: justify; padding-left: 0.5rem;">
+                &nbsp;당신은 피부상태와 상관없이 아무 목욕용품을 사용하시나요?</P>
+            <button id="Start_Bt4" class="Start_Bt4"
+                style="align-self: center; justify-self: center; background-color: orange; color: white; padding-left: 1.0rem;">&#xF204</button>
+        </div>
+        <div
+            style="display: grid; grid-template-columns: 75% 25%; margin-top: 0rem; margin-left: 1rem; margin-right: 1rem;">
+            <P
+                style="padding-bottom: 1rem; margin-top: 2rem; font-family: BinggraeSamanco-Bold; font-size: 1.1rem; text-align: justify; padding-left: 0.5rem;">
+                &nbsp;당신은 통증이 있더라도 탈색이나 염색 등을 즐겨하시나요</P>
+            <button id="Start_Bt5" class="Start_Bt5"
+                style="align-self: center; justify-self: center; background-color: orange; color: white; padding-left: 1.0rem;">&#xF204</button>
+        </div>
+        <div class="Question_Value">
+            <input type="hidden" class="Q1A" value="0">
+            <input type="hidden" class="Q2A" value="0">
+            <input type="hidden" class="Q3A" value="0">
+            <input type="hidden" class="Q4A" value="0">
+            <input type="hidden" class="Q5A" value="0">
+        </div>
+        <div>
+            <button class="NextStep_Bt" onclick="NextStep()"><span id="span">&#xE839</span></button>
+        </div>
+    </div>
+
+    <!-- Result Page -->
+    <div style="display: none;" class="Result_Page">
+        <div class="Result_P"></div>
+        <P
+            style="text-align: justify; margin-top: 2rem; padding-left: 2rem; padding-right: 2rem; margin-bottom: 0px; font-family: BinggraeSamanco-Bold; font-size: 1.1rem;">
+            &nbsp;그런데 위의 질문을 당신의 반려동물에게 했을 때는 몇개의 긍정의 답이 나올까요?</P>
+        <P
+            style="text-align: justify; margin-top: 1rem; padding-left: 2rem; padding-right: 2rem; margin-bottom: 0px; font-family: BinggraeSamanco-Bold; font-size: 1.1rem;">
+            &nbsp;혹시 긍정의 답이 많이 나오거나 도움이 필요하다면 저희 반려생활이 당신에게 도움을 드릴 수 있을 것 같아요.</P>
+        <P
+            style="text-align: justify; margin-top: 1rem; padding-left: 2rem; padding-right: 2rem; margin-bottom: 0px; font-family: BinggraeSamanco-Bold; font-size: 1.1rem;">
+            &nbsp;이번 생에 반려인은 처음이라 혹은 지금까지는 잘 알지 못해 위의 질문에 가슴이 답답해졌거나, 나도 모르게 반려동물을 바라봤다면 아직 늦지 않았습니다. 반려생활에는 반려동물과 관련된
+            다양한 서비스뿐만 아니라 생활에 필수적인 팁과 다양한 반려인들의 정보가 공유되고 있습니다.</P>
+        <P
+            style="text-align: justify; margin-top: 1rem; padding-left: 2rem; padding-right: 2rem; margin-bottom: 0px; font-family: BinggraeSamanco-Bold; font-size: 1.1rem;">
+            &nbsp;그리고 단순히 반려동물과 관련된 질문이나 궁금한 점이 있어도 언제든지 놀러오세요. 저희 반려생활은 언제나 사랑스런 반려인들을 기다립니다.</P>
+        <div>
+            <a target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.banlife.banlifeapp&referrer=utm_source%3Dhomepage%26utm_medium%3Dorganic%26utm_campaign%3Dmain_down"><img
+                    src="./download_app.png" alt="Download_app"></a>
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        var StartNumber = 0
+
+        // First Page FadeOut
+        $(document).ready(function () {
+            function isMobile() {
+                var UserAgent = navigator.userAgent;
+                if (UserAgent.match(/iPhone|iPod|iPad|iPad Pro|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            if (StartNumber == 0) {
+                setTimeout(function () {
+                    if (isMobile()) {
+                        $('.First_Page').fadeOut(500);
+                        $('.Second_Page').fadeIn(500);
+                    } else {
+                        alert("모바일 환경에 최적화 되어 있습니다. 아래 QR코드를 통해 모바일로 접속해주세요.")
+                    }
+                }, 500);
+                StartNumber++;
+                window.scrollTo(0, 0);
+            }
+        })
+
+        // Second Page FadeOut + Insert Question
+        $('#Start_Bt').click(function () {
+            if (StartNumber == 1) {
+                audio.loop = false;
+                audio.volume = 1;
+                audio.play();
+                setTimeout(function () {
+                    $('#Start_Bt').css('color', 'rgb(78, 217, 102)');
+                    $('#Start_Bt').html("&#xF205");
+                }, 50)
+                setTimeout(function () {
+                    $('.Second_Page').fadeOut(500);
+                    $('.Third_Page').fadeIn(500);
+                }, 500);
+            }
+        })
+
+        // Bt1 Click
+        $('#Start_Bt1').click(function () {
+            var value = $('.Q1A').val();
+            if (value == 0) {
+                $('.Q1A').val(1);
+                audio.loop = false;
+                audio.volume = 1;
+                audio.play();
+                setTimeout(function () {
+                    $('#Start_Bt1').css('color', 'rgb(78, 217, 102)');
+                    $('#Start_Bt1').html("&#xF205");
+                }, 50)
+            } else if (value == 1) {
+                $('.Q1A').val(0);
+                setTimeout(function () {
+                    $('#Start_Bt1').css('color', 'white');
+                    $('#Start_Bt1').html("&#xF204");
+
+                }, 50)
+            }
+        })
+        // Bt2 Click
+        $('#Start_Bt2').click(function () {
+            var value = $('.Q2A').val();
+            if (value == 0) {
+                $('.Q2A').val(1);
+                audio.loop = false;
+                audio.volume = 1;
+                audio.play();
+                setTimeout(function () {
+                    $('#Start_Bt2').css('color', 'rgb(78, 217, 102)');
+                    $('#Start_Bt2').html("&#xF205");
+                }, 50)
+            } else if (value == 1) {
+                $('.Q2A').val(0);
+                setTimeout(function () {
+                    $('#Start_Bt2').css('color', 'white');
+                    $('#Start_Bt2').html("&#xF204");
+
+                }, 50)
+            }
+        })
+        // Bt3 Click
+        $('#Start_Bt3').click(function () {
+            var value = $('.Q3A').val();
+            if (value == 0) {
+                $('.Q3A').val(1);
+                audio.loop = false;
+                audio.volume = 1;
+                audio.play();
+                setTimeout(function () {
+                    $('#Start_Bt3').css('color', 'rgb(78, 217, 102)');
+                    $('#Start_Bt3').html("&#xF205");
+                }, 50)
+            } else if (value == 1) {
+                $('.Q3A').val(0);
+                setTimeout(function () {
+                    $('#Start_Bt3').css('color', 'white');
+                    $('#Start_Bt3').html("&#xF204");
+
+                }, 50)
+            }
+        })
+        // Bt4 Click
+        $('#Start_Bt4').click(function () {
+            var value = $('.Q4A').val();
+            if (value == 0) {
+                $('.Q4A').val(1);
+                audio.loop = false;
+                audio.volume = 1;
+                audio.play();
+                setTimeout(function () {
+                    $('#Start_Bt4').css('color', 'rgb(78, 217, 102)');
+                    $('#Start_Bt4').html("&#xF205");
+                }, 50)
+            } else if (value == 1) {
+                $('.Q4A').val(0);
+                setTimeout(function () {
+                    $('#Start_Bt4').css('color', 'white');
+                    $('#Start_Bt4').html("&#xF204");
+
+                }, 50)
+            }
+        })
+        // Bt5 Click
+        $('#Start_Bt5').click(function () {
+            var value = $('.Q5A').val();
+            if (value == 0) {
+                $('.Q5A').val(1);
+                audio.loop = false;
+                audio.volume = 1;
+                audio.play();
+                setTimeout(function () {
+                    $('#Start_Bt5').css('color', 'rgb(78, 217, 102)');
+                    $('#Start_Bt5').html("&#xF205");
+                }, 50)
+            } else if (value == 1) {
+                $('.Q5A').val(0);
+                setTimeout(function () {
+                    $('#Start_Bt5').css('color', 'white');
+                    $('#Start_Bt5').html("&#xF204");
+
+                }, 50)
+            }
+        })
+
+        // Result Page Fade in
+        function NextStep() {
+            setTimeout(function () {
+                audio2.loop = false;
+                audio2.volume = 0.2;
+                audio2.play();
+                $('#span').addClass('icon-spin6-alt animate-spin');
+            }, 100);
+            setTimeout(function () {
+                Sum();
+                window.scrollTo(0, 0);
+                $('.Third_Page').fadeOut(500);
+                $('.Result_Page').fadeIn(500);
+                var value = $('.Q5A').val();
+                $('.Result_P').html('<P style="text-align: justify; margin-top: 2rem; margin-bottom: 0px; font-family: BinggraeSamanco-Bold; font-size: 1.5rem; padding-left: 2rem; padding-right: 2rem;">&nbsp;당신은 위의 질문에서 긍정적인 답변을 "' + value + '" 개 했습니다.</P>')
+                window.scrollTo(0, 0);
+            }, 1500);
+        }
+
+        function Sum() {
+            var value1 = $('.Q1A').val();
+            var value2 = $('.Q2A').val();
+            var value3 = $('.Q3A').val();
+            var value4 = $('.Q4A').val();
+            var value5 = $('.Q5A').val();
+            var value6 = value1 * 1 + value2 * 1 + value3 * 1 + value4 * 1 + value5 * 1;
+            $('.Q5A').val(value6);
+        }
+
+    </script>
+
+</body>
+
+</html>
